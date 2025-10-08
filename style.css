@@ -791,19 +791,64 @@ html {
 /* ==============================
    MOVING TEXT SLIDE
 ============================== */
+
+
 .moving-text {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  background: linear-gradient(90deg, #075c0b, #c2730d);
-  padding: 14px 0;
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 2px;
+   font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 800;
   color: #fff;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
+  display: inline-block;
+  background: linear-gradient(90deg, #e3b04b, #075c0b, #d4af37, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 100%;
+  animation: shine 6s linear infinite, float 3s ease-in-out infinite;
   white-space: nowrap;
+  text-align: center;
+   display: flex;
+  justify-content: center;
+}
+
+/* Shimmering gold effect */
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Gentle floating motion */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Add a subtle glowing effect */
+.moving-text::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(rgba(255, 215, 0, 0.15), transparent 70%);
+  transform: translate(-50%, -50%);
+  animation: pulse 5s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .moving-text {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
 }
 
 .moving-text span {
@@ -907,6 +952,115 @@ html {
   margin: 0 20px 40px 20px;
   line-height: 1.5;
 }
+
+
+/* ==============================
+   DISCOVER SCENTS
+============================== */
+
+.scents-section {
+  background: linear-gradient(135deg, #1110, #c2730d 50%, #075c0b 100%);
+  color: #fff;
+  padding: 100px 8%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.scents-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: black;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  animation: fadeInDown 1.5s ease;
+}
+
+.scents-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #e6e6e6;
+  margin-bottom: 60px;
+  animation: fadeIn 2s ease;
+}
+
+.scent-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.scent-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 40px 25px;
+  flex: 1 1 30%;
+  transition: all 0.5s ease;
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.scent-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(227, 176, 75, 0.3);
+}
+
+.scent-card h3 {
+  color: black;
+  font-family: 'Playfair Display', serif;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+.scent-card p {
+  font-family: 'Poppins', sans-serif;
+  color: #f5f5f5;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.scent-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.scent-card:hover .scent-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Keyframes for soft entry and motion */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .scent-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scent-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
 
 
 /* ==============================
