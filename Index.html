@@ -6,33 +6,171 @@
   <title>AnnointedScents</title>
   <link rel="icon" type="image/png" href="Images/logo/1759151239466.png">
   <link rel="apple-touch-icon" href="Images/logo/1759151239466.png">
-<link rel="shortcut icon" href="Images/logo/1759151239466.png" type="image/png">
+  <link rel="shortcut icon" href="Images/logo/1759151239466.png" type="image/png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Top Info Bar -->
+
+  <!-- ==============================
+       TOP INFO BAR
+  ============================== -->
   <div class="topbar">
     <p>COUNTERFEITED. BUY ONLY FROM OFFICIAL WEBSITE AND AUTHORIZED AFFILIATES.</p>
   </div>
 
+ <!-- ==============================
+     NAVBAR + SHOP BY BRAND
+============================== -->
 <header class="navbar">
-  <div class="logo">Annointed<span>SCENTS</span></div>
+  <div class="logo">
+    <img src="Images/logo/1759151239466.png" alt="Logo">
+    Annointed<span>SCENTS</span>
+  </div>
 
   <!-- Hamburger Icon -->
   <div class="menu-toggle" id="menu-toggle">
     <i class="bi bi-list"></i>
   </div>
 
+  <!-- Navigation Menu -->
   <nav id="nav-menu">
-    <ul>
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="shop-by-brand.html">Shop by Brand</a></li>
+
+      <!-- DROPDOWN: SHOP BY BRAND -->
+      <li class="dropdown">
+        <a href="#">Shop by Brand <i class="bi bi-caret-down-fill"></i></a>
+        <div class="dropdown-menu brand-menu">
+
+          <!-- Dropdown jump -->
+          <div class="brand-navigation">
+            <label for="brandSelect">Jump to Brand:</label>
+            <select id="brandSelect" onchange="scrollToBrand()">
+              <option value="">Select a brand</option>
+              <option value="Arabiyat prestige">Arabiyat prestige</option>
+              <option value="Afnan">Afnan</option>
+              <option value="armaf">Armaf</option>
+              <option value="lattafa">Lattafa</option>
+              <option value="French avenue">French avenue</option>
+              <option value="Fragrance world">Fragrance world</option>
+              <option value="Janan">Janan</option>
+              <option value="Maison asrar">Maison asrar</option>
+            </select>
+          </div>
+
+ <!-- BRANDS SECTION< -->
+    <section class="perfume-section" id="french">
+      <br>
+    <h2>ARABIYAT PRESTIGE COLLECTION</h2>
+    <div class="perfume-grid">
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/ARABIYAT/Arabiyat Prestige.webp" alt="Zenith Blue">
+        <h3>Arabiyat Prestige - Lutfah – Light in the Heart | EDP 80ML | Men</h3>
+        <p class="price">R700</p>
+      </div>
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/ARABIYAT/Arabiyat Prestige - Nyla.webp" alt="Amber Saffron">
+        <h3>Product Creative Arabiyat Prestige - Nyla | EDP 80ML | Unisex</h3>
+        <p class="price">R700</p>
+      </div>
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/ARABIYAT/Arabiyat Prestige - Bahiya Garnet.webp" alt="French Avenue Sample">
+        <h3>Arabiyat Prestige - Bahiya Garnet | EDP 100ML | Women</h3>
+        <p class="price">R900</p>
+      </div>
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/ARABIYAT/Arabiyat - Oud al Layl.webp" alt="French Avenue Aroma">
+        <h3>Arabiyat - Oud al Layl | EDP 100ML | Unisex</h3>
+        <p class="price">R400</p>
+      </div>
+    </div>
+    <button class="show-more">+ Show More</button>
+  </section>
+
+  <br>
+
+  <!-- AFNAN COLLECTION-->
+  <section class="perfume-section" id="fragrance">
+    <h2>AFNAN COLLECTION</h2>
+    <div class="perfume-grid">
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/AFNAN/TURATHI BLUE.webp" alt="Proud Of You Tobacco">
+        <h3>TURATHI BLUE</h3>
+        <p class="price">R900</p>
+      </div>
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/AFNAN/SUPREMACY COLLECTOR'S EDITION.webp" alt="Urban Man Paradise">
+        <h3>SUPREMACY COLLECTOR'S EDITION</h3>
+        <p class="price">R1200</p>
+      </div>
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/AFNAN/SUPREMACY NOT ONLY INTENSE - LUXURY COLLECTION -MEN.webp" alt="Urban Man Amaze">
+        <h3>SUPREMACY NOT ONLY INTENSE - LUXURY COLLECTION - MEN</h3>
+        <p class="price">R1500</p>
+      </div>
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/AFNAN/9 AM Dive.webp" alt="Urban Man Ultra">
+        <h3>9 AM Dive</h3>
+        <p class="price">R900</p>
+      </div>
+      </div>
+      <button class="show-more">+ Show More</button>
+  </section>
+
+  <br>
+
+  <!-- ARMAF COLLECTION -->
+  <section class="perfume-section" id="lattafa">
+    <h2>ARMAF COLLECTION</h2>
+    <div class="perfume-grid">
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/ARMAF/CLUB DE NUIT INTENSE MAN.webp" alt="Badee Al Oud Noble Blush">
+        <h3>CLUB DE NUIT INTENSE MAN</h3>
+        <p class="price">R900</p>
+      </div>
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/ARMAF/CLUB DE NUIT INTENSE MAN LIMITED EDITION.webp" alt="Yara Tous">
+        <h3>CLUB DE NUIT INTENSE MAN LIMITED EDITION</h3>
+        <p class="price">R1800</p>
+      </div>
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/ARMAF/CLUB DE NUIT OUD.webp" alt="Yara Candy">
+        <h3>CLUB DE NUIT OUD</h3>
+        <p class="price">R1800</p>
+      </div>
+      <div class="perfume-card">
+        <img src="SHOP BY BRAND/ARMAF/CLUB DE NUIT UNTOLD.webp" alt="Yara">
+        <h3>CLUB DE NUIT UNTOLD</h3>
+        <p class="price">R1000</p>
+      </div>
+      <!-- Hidden perfumes -->
+      <div class="perfume-card hidden">
+        <img src="https://share.google/nIDkek8Pzn0cpaH5X" alt="Khamrah Qahwa">
+        <h3>Khamrah Qahwa</h3>
+        <p class="price">R700</p>
+      </div>
+      <div class="perfume-card hidden">
+        <img src="https://share.google/VxrBLEDmNzXWCn9mz" alt="Khamrah">
+        <h3>Khamrah</h3>
+        <p class="price">R600</p>
+      </div>
+      <div class="perfume-card hidden">
+        <img src="https://share.google/Hn6Capl9YCVYXeEXo" alt="Ameer Al Oudh Intense">
+        <h3>Ameer Al Oudh Intense</h3>
+        <p class="price">R500</p>
+      </div>
+    </div>
+    <button class="show-more">+ Show More</button>
+  </section>
+
+  <script src="shop.js"></script>
+
+      <!-- Other nav links -->
       <li><a href="new-launch.html">New Launch</a></li>
       <li><a href="catalog.html">Catalog</a></li>
       <li><a href="collections.html">Collections</a></li>
       <li><a href="social-hub.html">Social Hub</a></li>
-      <li><a href="house-of-myperfumes.html">House of MyPerfumes</a></li>
       <li><a href="contact-us.html">Contact Us</a></li>
     </ul>
   </nav>
@@ -42,79 +180,87 @@
     <i class="bi bi-search"></i>
     <i class="bi bi-instagram"></i>
   </div>
-  
 </header>
 
 
-  <!-- Hero Section -->
+  <!-- ==============================
+       HERO SECTION
+  ============================== -->
   <section class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
       <img src="Images/logo/1759151239466.png" alt="Perfume Bottle" class="perfume-img">
       <p class="slogan">Making People Smell Expensive.</p>
-      <h2>AUTUMN SALE</h2>
-      <h1>BUY1 GET2</h1>
-      <a href="#" class="btn">SHOP NOW</a>
+      <h4>OUD SLY ABSOLUTE</h4>
+      <h1>BUY 1 GET 2</h1>
+      <a href="#" class="btn">Shop Now</a>
     </div>
 
     <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/+27782559811" class="whatsapp-float" target="_blank">
-  <i class="bi bi-whatsapp"></i>
-</a>
+    <a href="https://wa.me/+27782559811" class="whatsapp-float" target="_blank">
+      <i class="bi bi-whatsapp"></i>
+    </a>
   </section>
 
-    <!-- New Launch Section -->
+  <!-- ==============================
+       NEW LAUNCH SECTION
+  ============================== -->
   <section class="new-launch">
-    <h2 class="section-title">NEW LAUNCH</h2> <div class="hero-content">
-    <p class="moving-text">Luxury • Elegance • Timeless • Fragrance</p>
-  </div>
+    <h2 class="section-title">NEW LAUNCH</h2>
+    <div class="hero-content">
+      <p class="moving-text">Luxury • Elegance • Timeless • Fragrance</p>
+    </div>
+
     <div class="products">
-      
       <!-- Product 1 -->
       <div class="product-card">
-        <span class="badge preorder">PRE-ORDER</span>
-        <img src="Images/category/goods/armaf-unisex.jpg" alt="Perfume 1" class="product-img">
-        <p class="product-name">armaf-unisex - club de nuit(UNTOLD)| EDP 100ML | UNISEX</p>
-        <p class="product-price">ZAR. 120.00</p>
+        <span class="badge preorder">RASASI</span>
+        <img src="BG HOME NEW LAUNCH/360_F_804189169_zJ1F9XWTijCSnoWGKxgGKsyC2tNe5569.jpg" alt="Perfume 1" class="product-img">
+       
         <button class="add-btn">+</button>
       </div>
 
       <!-- Product 2 -->
       <div class="product-card">
-        <span class="badge new">NEW LAUNCH</span>
-        <img src="Images/category/goods/Badee Al Oud Noble Blush.webp" alt="Perfume 2" class="product-img">
-        <p class="product-name">Badee Al Oud Noble Blush | EDP 100ML | UNISEX</p>
-        <p class="product-price">ZAR. 120.00</p>
+        <span class="badge new">ARABIYAT</span>
+        <img src="BG HOME NEW LAUNCH/360_F_1552331333_NcnglTYBSlswMv6zYb6uPI6oxvPbpFpF.jpg" alt="Perfume 2" class="product-img">
+    
         <button class="add-btn">+</button>
       </div>
 
       <!-- Product 3 -->
       <div class="product-card">
-        <span class="badge new">NEW LAUNCH</span>
-        <img src="Images/category/goods/eclaire2.jpg" alt="Perfume 3" class="product-img">
-        <p class="product-name">Eclaire| EDP 100ML | UNISEX</p>
-        <p class="product-price">ZAR. 120.00</p>
+        <span class="badge new">AFNAN</span>
+        <img src="BG HOME NEW LAUNCH/elegant-perfume-bottle-sitting-on-black-silk-cloth-with-orange-flowers-in-background-photo.jpg" alt="Perfume 3" class="product-img">
+        
         <button class="add-btn">+</button>
       </div>
 
       <!-- Product 4 -->
       <div class="product-card">
-        <span class="badge new">NEW LAUNCH</span>
-        <img src="Images/category/goods/khamrahqahwa2.jpg" alt="Perfume 4" class="product-img">
-        <p class="product-name">khamrah | EDP 100ML | UNISEX</p>
-        <p class="product-price">ZAR. 120.00</p>
+        <span class="badge new">ARMAF</span>
+        <img src="BG HOME NEW LAUNCH/pngtree-perfume-sprayer-bottle-close-up-and-with-colorful-lightflare-background-image_16215079.jpg" alt="Perfume 4" class="product-img">
+        
         <button class="add-btn">+</button>
       </div>
-
     </div>
 
     <div class="view-all">
       <a href="#">VIEW ALL</a>
     </div>
   </section>
-  <!-- Image Grid -->
+
+  <!-- ==============================
+       IMAGE GRID SECTION
+  ============================== -->
   <section class="grid-container">
-    <div class="grid-item tall red">SHOP FOR R5000 & WIN R1000<br>SHOPPING VOUCHER</div>
+    <div class="grid-item tall red">
+  <i class="bi bi-cart-fill"></i> <!-- Shopping cart -->
+   <span>✨ Shop For R5000 & Win R1000 Shopping Voucher ✨</span>
+ 
+  <i class="bi bi-gift-fill"></i> <!-- Gift icon -->
+  <i class="bi bi-stars"></i> <!-- Sparkles -->
+</div>
     <div class="grid-item"><img src="Images/category/goods/zarar for men.jpg" alt="Perfume 1"></div>
     <div class="grid-item"><img src="Images/category/goods/unisex.webp" alt="Background 1"></div>
     <div class="grid-item"><img src="Images/category/goods/new2.webp" alt="Perfume 2"></div>
@@ -124,68 +270,94 @@
     <div class="grid-item"><img src="Images/category/goods/for woman.webp" alt="Perfume 5"></div>
     <div class="grid-item"><img src="Images/category/hero/hero3.webp" alt="Model"></div>
     <div class="grid-item"><img src="Images/category/goods/for woman.jpg" alt="Perfume 6"></div>
-    
   </section>
 
+  <!-- ==============================
+       BEST SELLERS POPUP SECTION
+  ============================== -->
   <section class="image-popup-section">
   <h2 class="section-title">OUR BEST SELLERS</h2>
   <div class="image-grid">
     <div class="image-card"><img src="images popup/images.png" alt="Perfume 1"></div>
-    <div class="image-card"><img src="images popup/images (3).jpg" alt="Perfume 2"></div>
+    <div class="image-card"><img src="OUR BEST SELLERS/Look-Alyfe-Arabiyat-Lamsat-Harir-Unisex-Eau-De-Par-0.webp" alt="Perfume 2"></div>
     <div class="image-card"><img src="images popup/5500730.jpg" alt="Perfume 3"></div>
-    <div class="image-card"><img src="images popup/Perfume-No-Background.png" alt="Perfume 4"></div>
+    <div class="image-card"><img src="OUR BEST SELLERS/Screenshot-2023-02-18-at-09.59.58.png" alt="Perfume 4"></div>
   </div>
 </section>
-  <!-- Footer Section -->
-<footer class="footer">
-  <div class="footer-container">
-    <!-- About -->
-    <div class="footer-about">
-      <h3>AnnointedSCENTS</h3>
-      <p>Making People Smell Expensive.</p>
-    </div>
 
-    <!-- Quick Links -->
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li> <!-- NEW -->
-      <li><a href="#">Shop by Brand</a></li>
-<li><a href="#">New Launch</a></li>
-<li><a href="#">Catalog</a></li>
-<li><a href="#">Collections</a></li>
-<li><a href="#">Social Hub</a></li>
-<li><a href="#">House of MyPerfumes</a></li>
-<li><a href="#">Contact Us</a></li>
-    </div>
 
-    <!-- Contact -->
-    <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p>Email: frag@annointedscents.com</p>
-      <p>Phone: +27 78 255 9811</p>
-      <div class="social-icons">
-        <a href="#"><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-twitter"></i></a>
-        <a href="#"><i class="bi bi-youtube"></i></a>
+<!-- ==============================
+       THE ESSENCE OF ELEGANCE
+  ============================== -->
+<section class="essence-section">
+  <div class="essence-overlay"></div>
+  <div class="essence-content">
+    <h2>THE ESSENCE OF ELEGANCE</h2>
+    <p>Discover fragrances that speak the language of luxury — timeless, bold, and unforgettable.</p>
+   
+  </div>
+
+  <div class="floating-bottles">
+    <img src="THE ESSENCE OF ELEGANCE/French-Avenue-Rabat.png" alt="Perfume Bottle 1" class="bottle bottle1">
+    <img src="THE ESSENCE OF ELEGANCE/images.jpg" alt="Perfume Bottle 2" class="bottle bottle2">
+    <img src="THE ESSENCE OF ELEGANCE/red-velvet-maison-asrar-edp-100ml.png" alt="Perfume Bottle 3" class="bottle bottle3">
+  </div>
+</section>
+
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- About -->
+      <div class="footer-about">
+        <h3>AnnointedSCENTS</h3>
+        <p>Making People Smell Expensive.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+         <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop-by-brand.html">Shop by Brand</a></li>
+        <li><a href="new-launch.html">New Launch</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="social-hub.html">Social Hub</a></li>
+        <li><a href="house-of-myperfumes.html">House of MyPerfumes</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: frag@annointedscents.com</p>
+        <p>Phone: +27 78 255 9811</p>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-     <!-- ✅ Payment Icons -->
-      <div class="payment-icons">
-        <img src="Images/bankicons/kisspng-credit-card-visa-debit-card-payment-card.jpg" alt="Visa">
-        <img src="Images/bankicons/visa.png" alt="MasterCard">
-        <img src="Images/bankicons/payflex-logo.avif" alt="PayFlex">
-        <img src="Images/bankicons/payfast.jpg.webp" alt="PayFast">
-      </div>
-    </div>
-  </div>
 
-  <div class="footer-bottom">
-    <p>&copy; 2023 AnnointedSCENTS. All Rights Reserved.</p>
-  </div>
-</footer>
+    <!-- Payment Icons -->
+    <div class="payment-icons">
+      <img src="Images/bankicons/kisspng-credit-card-visa-debit-card-payment-card.jpg" alt="Visa">
+      <img src="Images/bankicons/visa.png" alt="MasterCard">
+      <img src="Images/bankicons/payflex-logo.avif" alt="PayFlex">
+      <img src="Images/bankicons/payfast.jpg.webp" alt="PayFast">
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2023 AnnointedSCENTS. All Rights Reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
