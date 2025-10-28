@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- ==============================
@@ -24,7 +25,7 @@
 ============================== -->
 <header class="navbar">
   <div class="logo">
-    <img src="Images/logo/1759151239466.png" alt="Logo">
+
     Annointed<span>SCENTS</span>
   </div>
 
@@ -57,6 +58,7 @@
               <option value="Janan">Janan</option>
               <option value="Maison asrar">Maison asrar</option>
             </select>
+               <div class="menu-toggle" id="menuToggle">&#9776;</div>
           </div>
 
  <!-- BRANDS SECTION< -->
@@ -186,143 +188,218 @@
   <!-- ==============================
        HERO SECTION
   ============================== -->
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <img src="Images/logo/1759151239466.png" alt="Perfume Bottle" class="perfume-img">
-      <p class="slogan">Making People Smell Expensive.</p>
-      <h4>OUD SLY ABSOLUTE</h4>
-      <h1>BUY 1 GET 2</h1>
-      <a href="#" class="btn">Shop Now</a>
-    </div>
+  
+<section class="hero" id="home">
+  <!-- Background Image -->
+  <div class="hero-bg-image"></div>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/+27782559811" class="whatsapp-float" target="_blank">
-      <i class="bi bi-whatsapp"></i>
-    </a>
-  </section>
+  <!-- Dark overlay -->
+  <div class="hero-overlay"></div>
 
-  <!-- ==============================
-       NEW LAUNCH SECTION
-  ============================== -->
-  <section class="new-launch">
-    <h2 class="section-title">NEW LAUNCH</h2>
-    <div class="hero-content">
-      <p class="moving-text">Luxury • Elegance • Timeless • Fragrance</p>
-    </div>
+  <!-- Floating Gold Particles -->
+  <div class="particles">
+    <span style="top:10%; left:15%; animation-delay:0s;"></span>
+    <span style="top:30%; left:45%; animation-delay:2s;"></span>
+    <span style="top:50%; left:70%; animation-delay:4s;"></span>
+    <span style="top:75%; left:25%; animation-delay:6s;"></span>
+    <span style="top:85%; left:60%; animation-delay:8s;"></span>
+  </div>
 
-    <div class="products">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <span class="badge preorder">RASASI</span>
-        <img src="BG HOME NEW LAUNCH/360_F_804189169_zJ1F9XWTijCSnoWGKxgGKsyC2tNe5569.jpg" alt="Perfume 1" class="product-img">
-       
-        <button class="add-btn">+</button>
-      </div>
+  <!-- Pulsing magical background -->
+  <div class="hero-background"></div>
 
-      <!-- Product 2 -->
-      <div class="product-card">
-        <span class="badge new">ARABIYAT</span>
-        <img src="BG HOME NEW LAUNCH/360_F_1552331333_NcnglTYBSlswMv6zYb6uPI6oxvPbpFpF.jpg" alt="Perfume 2" class="product-img">
-    
-        <button class="add-btn">+</button>
-      </div>
 
-      <!-- Product 3 -->
-      <div class="product-card">
-        <span class="badge new">AFNAN</span>
-        <img src="BG HOME NEW LAUNCH/elegant-perfume-bottle-sitting-on-black-silk-cloth-with-orange-flowers-in-background-photo.jpg" alt="Perfume 3" class="product-img">
-        
-        <button class="add-btn">+</button>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="product-card">
-        <span class="badge new">ARMAF</span>
-        <img src="BG HOME NEW LAUNCH/pngtree-perfume-sprayer-bottle-close-up-and-with-colorful-lightflare-background-image_16215079.jpg" alt="Perfume 4" class="product-img">
-        
-        <button class="add-btn">+</button>
-      </div>
-    </div>
-
-    <div class="view-all">
-      <a href="#">VIEW ALL</a>
-    </div>
-  </section>
-
-  <!-- ==============================
-       IMAGE GRID SECTION
-  ============================== -->
-    <h2 class="section-title">SHOPPING VOUCHERS</h2>
-  <section class="grid-container">
-    <div class="grid-item tall red">
-  <i class="bi bi-cart-fill"></i> <!-- Shopping cart -->
-   <span>✨ Shop For R5000 & Win R500 Shopping Voucher ✨</span>
- 
-  <i class="bi bi-gift-fill"></i> <!-- Gift icon -->
-  <i class="bi bi-stars"></i> <!-- Sparkles -->
-</div>
-    <div class="grid-item"><img src="Images/category/goods/zarar for men.jpg" alt="Perfume 1"></div>
-    <div class="grid-item"><img src="Images/category/goods/unisex.webp" alt="Background 1"></div>
-    <div class="grid-item"><img src="Images/category/goods/new2.webp" alt="Perfume 2"></div>
-    <div class="grid-item"><img src="Images/category/goods/new.jpg" alt="Apple"></div>
-    <div class="grid-item"><img src="Images/category/goods/Lattafa Teriaq Intense2.jpg" alt="Perfume 3"></div>
-    <div class="grid-item"><img src="Images/category/goods/khamrahqahwa2.jpg" alt="Perfume 4"></div>
-    <div class="grid-item"><img src="Images/category/goods/for woman.webp" alt="Perfume 5"></div>
-    <div class="grid-item"><img src="Images/category/hero/hero3.webp" alt="Model"></div>
-    <div class="grid-item"><img src="Images/category/goods/for woman.jpg" alt="Perfume 6"></div>
-  </section>
-
-  <section class="scents-section">
-    <h2 class="section-title">DISCOVER ESSENCE</h2>
-  <div class="scents-container">
-    <h2 class="scents-title">Discover the Essence of Every Scent</h2>
-    <p class="scents-subtitle">
-      Every fragrance tells a story — unfolding in layers of emotion, memory, and art.
+  <div class="hero-content">
+    <h4>Annointed Scents</h4>
+    <p class="slogan">
+      <span class="moving-text">Luxury&nbsp;•&nbsp;Purity&nbsp;•&nbsp;Grace&nbsp;•&nbsp;Power</span>
     </p>
+    <a href="#shop" class="btn">Shop Now</a>
+  </div>
 
-    <div class="scent-cards">
-      <div class="scent-card">
-        <img src="DISCOVER ESSENCE/top-view-sticky-notes-on-260nw-173710952.webp" alt="Top Notes" class="scent-icon" />
-        <h3>Top Notes</h3>
-        <p>
-          The first impression — light, fresh, and uplifting. Commonly citrus, fruity,
-          or herbal tones that draw you in instantly.
-        </p>
-      </div>
-
-      <div class="scent-card">
-        <img src="DISCOVER ESSENCE/Heart Notes.png" alt="Heart Notes" class="scent-icon" />
-        <h3>Heart Notes</h3>
-        <p>
-          The soul of the fragrance — floral, spicy, or green. These notes define
-          the perfume’s true personality and emotional depth.
-        </p>
-      </div>
-
-      <div class="scent-card">
-        <img src="DISCOVER ESSENCE/BASE (1).png" alt="Base Notes" class="scent-icon" />
-        <h3>Base Notes</h3>
-        <p>
-          The lasting memory — warm, woody, and sensual. Notes like amber, vanilla,
-          or musk that linger beautifully on the skin.
-        </p>
-      </div>
-    </div>
+  <!-- Extra gold particles for sparkle -->
+  <div class="gold-particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
   </div>
 </section>
 
 
-  <!-- ==============================
-       BEST SELLERS POPUP SECTION
-  ============================== -->
-  <section class="image-popup-section">
+
+
+   
+  </div>
+
+  <!-- Floating elements for a luxury vibe -->
+  <div class="floating-elements">
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+  </div>
+</section>
+
+<!-- ==============================
+   NEW LAUNCH SECTION (Highlights — 1-2 per brand)
+   ============================== -->
+<section class="new-launch" id="new-launch">
+  <h2 class="section-title">NEW LAUNCH</h2>
+
+  <div class="products">
+    <!-- ARABIYAT: Lutfah -->
+    <div class="product-card" data-brand="Arabiyat" data-target="#french">
+      <span class="badge new">ARABIYAT</span>
+      <img src="SHOP BY BRAND/ARABIYAT/Arabiyat Prestige.webp" alt="Lutfah" class="product-img">
+     
+      <div class="product-info">
+        <h3>Lutfah</h3>
+        <p class="sub">Arabiyat Prestige — EDP 80ML</p>
+      </div>
+    </div>
+
+    <!-- ARABIYAT: Khashab & Oud -->
+    <div class="product-card" data-brand="Arabiyat" data-target="#french">
+      <span class="badge new">ARABIYAT</span>
+      <img src="SHOP BY BRAND/ARABIYAT/Arabiyat - Oud al Layl.webp" alt="Khashab & Oud" class="product-img">
+      
+      <div class="product-info">
+        <h3>Khashab & Oud</h3>
+        <p class="sub">Arabiyat — EDP 100ML</p>
+      </div>
+    </div>
+
+    <!-- AFNAN: 9AM Dive -->
+    <div class="product-card" data-brand="Afnan" data-target="#fragrance">
+      <span class="badge new">AFNAN</span>
+      <img src="SHOP BY BRAND/AFNAN/9 AM Dive.webp" alt="9AM Dive" class="product-img">
+      
+      <div class="product-info">
+        <h3>9AM Dive</h3>
+        <p class="sub">Afnan — EDP</p>
+      </div>
+    </div>
+
+    <!-- AFNAN: Supremacy Not Only Intense -->
+    <div class="product-card" data-brand="Afnan" data-target="#fragrance">
+      <span class="badge new">AFNAN</span>
+      <img src="SHOP BY BRAND/AFNAN/SUPREMACY NOT ONLY INTENSE - LUXURY COLLECTION -MEN.webp" alt="Supremacy Not Only Intense" class="product-img">
+      
+      <div class="product-info">
+        <h3>Supremacy Not Only Intense</h3>
+        <p class="sub">Collector's / Luxury</p>
+      </div>
+    </div>
+
+    <!-- ARMAF: Club de Nuit Intense -->
+    <div class="product-card" data-brand="Armaf" data-target="#lattafa">
+      <span class="badge new">ARMAF</span>
+      <img src="SHOP BY BRAND/ARMAF/CLUB DE NUIT INTENSE MAN.webp" alt="Club de Nuit Intense" class="product-img">
+      
+      <div class="product-info">
+        <h3>Club de Nuit Intense</h3>
+        <p class="sub">Armaf — Iconic Intense</p>
+      </div>
+    </div>
+
+    <!-- ARMAF: Odyssey Homme (placeholder image if not available) -->
+    <div class="product-card" data-brand="Armaf" data-target="#lattafa">
+      <span class="badge new">ARMAF</span>
+      <img src="SHOP BY BRAND/ARMAF/CLUB DE NUIT UNTOLD.webp" alt="Odyssey Homme" class="product-img">
+     
+      <div class="product-info">
+        <h3>Odyssey Homme</h3>
+        <p class="sub">Armaf — New Arrival</p>
+      </div>
+    </div>
+
+    <!-- RASASI: Hawas for Him -->
+    <div class="product-card" data-brand="Rasasi" data-target="#rasasi">
+      <span class="badge preorder">RASASI</span>
+      <img src="BG HOME NEW LAUNCH/360_F_804189169_zJ1F9XWTijCSnoWGKxgGKsyC2tNe5569.jpg" alt="Hawas For Him" class="product-img">
+   
+      <div class="product-info">
+        <h3>Hawas for Him</h3>
+        <p class="sub">Rasasi — Fresh Woody</p>
+      </div>
+    </div>
+
+    <!-- RASASI: La Yuqawam -->
+    <div class="product-card" data-brand="Rasasi" data-target="#rasasi">
+      <span class="badge preorder">RASASI</span>
+      <img src="BG HOME NEW LAUNCH/360_F_1552331333_NcnglTYBSlswMv6zYb6uPI6oxvPbpFpF.jpg" alt="La Yuqawam" class="product-img">
+    
+      <div class="product-info">
+        <h3>La Yuqawam</h3>
+        <p class="sub">Rasasi — Oud Leather</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="view-all">
+    <a href="catalog.html">VIEW ALL</a>
+  </div>
+</section>
+
+<div class="gold-particles"></div>
+
+<!-- ============================== SHOPPING VOUCHERS ============================== -->
+<section class="shopping-vouchers">
+  <h2 class="section-title">SHOPPING VOUCHERS</h2>
+  <div class="voucher-grid">
+    <!-- Voucher 1 -->
+    <div class="voucher-card">
+      <div class="card-bg"></div>
+      <img src="OUR BEST SELLERS/s-l1200.jpg" alt="Perfume 1">
+      <span class="voucher-label">✨ Shop R5000 & Win R500 Voucher ✨</span>
+    </div>
+    <!-- Voucher 2 -->
+    <div class="voucher-card">
+      <div class="card-bg"></div>
+      <img src="OUR BEST SELLERS/Look-Alyfe-Arabiyat-Lamsat-Harir-Unisex-Eau-De-Par-0.webp" alt="Perfume 2">
+      <span class="voucher-label">✨ Shop R5000 & Win R500 Voucher ✨</span>
+    </div>
+    <!-- Voucher 3 -->
+    <div class="voucher-card">
+      <div class="card-bg"></div>
+      <img src="OUR BEST SELLERS/P0999999.jpg" alt="Perfume 3">
+      <span class="voucher-label">✨ Shop R5000 & Win R500 Voucher ✨</span>
+    </div>
+    <!-- Voucher 4 -->
+    <div class="voucher-card">
+      <div class="card-bg"></div>
+      <img src="OUR BEST SELLERS/Screenshot-2023-02-18-at-09.59.58.png" alt="Perfume 4">
+      <span class="voucher-label">✨ Shop R5000 & Win R500 Voucher ✨</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== BEST SELLERS MAGIC ============================== -->
+<section class="best-sellers">
   <h2 class="section-title">OUR BEST SELLERS</h2>
-  <div class="image-grid">
-    <div class="image-card"><img src="OUR BEST SELLERS/s-l1200.jpg" alt="Perfume 1"></div>
-    <div class="image-card"><img src="OUR BEST SELLERS/Look-Alyfe-Arabiyat-Lamsat-Harir-Unisex-Eau-De-Par-0.webp" alt="Perfume 2"></div>
-    <div class="image-card"><img src="OUR BEST SELLERS/P0999999.jpg" alt="Perfume 3"></div>
-    <div class="image-card"><img src="OUR BEST SELLERS/Screenshot-2023-02-18-at-09.59.58.png" alt="Perfume 4"></div>
+  <div class="bestseller-grid">
+    <div class="bestseller-card">
+      <div class="card-bg"></div>
+      <img src="OUR BEST SELLERS/hot picx.webp" alt="Perfume 1">
+      <span class="label">Hot Pick</span>
+    </div>
+    <div class="bestseller-card">
+      <div class="card-bg"></div>
+      <img src="OUR BEST SELLERS/Fan Favorite.jpg" alt="Perfume 2">
+      <span class="label">Fan Favorite</span>
+    </div>
+    <div class="bestseller-card">
+      <div class="card-bg"></div>
+      <img src="OUR BEST SELLERS/top rated.jpg" alt="Perfume 3">
+      <span class="label">Top Rated</span>
+    </div>
+    <div class="bestseller-card">
+      <div class="card-bg"></div>
+      <img src="OUR BEST SELLERS/musttttt.jpg" alt="Perfume 4">
+      <span class="label">Must Try</span>
+    </div>
   </div>
 </section>
 
@@ -335,14 +412,29 @@
   <div class="essence-content">
     <h2>THE ESSENCE OF ELEGANCE</h2>
     <p>Discover fragrances that speak the language of luxury — timeless, bold, and unforgettable.</p>
-   
+  
+  <div class="brand-bg"></div>
+  <div class="brand-content">
+    <h2>Our Story</h2>
+    <p>
+      At Annointed Scents, we craft fragrances that define elegance and sophistication.
+      Each scent tells a story — from exotic spices to rare floral notes, our perfumes
+      embody luxury, purity, and grace.
+    </p>
+ 
   </div>
 
-  <div class="floating-bottles">
-    <img src="THE ESSENCE OF ELEGANCE/French-Avenue-Rabat.png" alt="Perfume Bottle 1" class="bottle bottle1">
-    <img src="THE ESSENCE OF ELEGANCE/images.jpg" alt="Perfume Bottle 2" class="bottle bottle2">
-    <img src="THE ESSENCE OF ELEGANCE/red-velvet-maison-asrar-edp-100ml.png" alt="Perfume Bottle 3" class="bottle bottle3">
   </div>
+
+
+</section>
+<section class="newsletter">
+  <h2>Stay in the Loop</h2>
+  <p>Subscribe to our newsletter for new launches and exclusive offers.</p>
+  <form action="#">
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
 </section>
 
 
@@ -355,7 +447,16 @@
       <div class="footer-about">
         <h3>AnnointedSCENTS</h3>
         <p>Making People Smell Expensive.</p>
+        <div class="footer-extra">
+  <ul>
+   
+    <li><a href="#">Shipping & Returns</a></li>
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Terms & Conditions</a></li>
+  </ul>
+</div>
       </div>
+
 
       <!-- Quick Links -->
       <div class="footer-links">
@@ -367,7 +468,7 @@
         <li><a href="catalog.html">Catalog</a></li>
         <li><a href="collections.html">Collections</a></li>
         <li><a href="social-hub.html">Social Hub</a></li>
-        <li><a href="house-of-myperfumes.html">House of MyPerfumes</a></li>
+       
         <li><a href="contact-us.html">Contact Us</a></li>
       </ul>
       </div>
@@ -399,6 +500,140 @@
       <p>&copy; 2023 AnnointedSCENTS. All Rights Reserved.</p>
     </div>
   </footer>
+ <script>
+    // ======= Toggle Mobile Menu =======
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.onclick = () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    };
+  </script>
+  <script>
+  // ===== Toggle Mobile Menu =====
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
 
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // ===== Toggle Dropdown on Mobile =====
+  document.querySelectorAll('.dropdown > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        const dropdown = link.parentElement;
+        dropdown.classList.toggle('active');
+      }
+    });
+  });
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero');
+    const particles = document.querySelectorAll('.gold-particles span');
+    const scrollPos = window.scrollY;
+    const speed = 0.3;
+    const opacity = Math.max(1 - scrollPos / 600, 0);
+
+    // Parallax "closing" hero background
+    hero.style.backgroundPositionY = `${scrollPos * speed}px`;
+    hero.style.opacity = opacity;
+    hero.style.transform = `scale(${1 + scrollPos / 3000})`;
+
+    // 3D floating particles movement
+    particles.forEach((p, i) => {
+      const depth = 0.05 + (i % 5) * 0.03;
+      const offsetX = Math.sin((scrollPos * depth + i * 20) / 100) * 30;
+      const offsetY = scrollPos * depth;
+      p.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${1 + depth})`;
+    });
+  });
+</script>
+<script>
+  // Carousel scroll controls
+  document.querySelectorAll('.perfume-section').forEach(section => {
+    const grid = section.querySelector('.perfume-grid');
+    const leftArrow = document.createElement('div');
+    const rightArrow = document.createElement('div');
+    
+    leftArrow.classList.add('scroll-arrow', 'left');
+    rightArrow.classList.add('scroll-arrow', 'right');
+    leftArrow.innerHTML = '‹';
+    rightArrow.innerHTML = '›';
+    
+    section.appendChild(leftArrow);
+    section.appendChild(rightArrow);
+
+    leftArrow.addEventListener('click', () => {
+      grid.scrollBy({ left: -250, behavior: 'smooth' });
+    });
+    rightArrow.addEventListener('click', () => {
+      grid.scrollBy({ left: 250, behavior: 'smooth' });
+    });
+  });
+</script>
+<script>
+  document.querySelectorAll('.new-launch, .perfume-section').forEach(section => {
+    const grid = section.querySelector('.products, .perfume-grid');
+    if (!grid) return;
+    const leftArrow = document.createElement('div');
+    const rightArrow = document.createElement('div');
+    
+    leftArrow.classList.add('scroll-arrow', 'left');
+    rightArrow.classList.add('scroll-arrow', 'right');
+    leftArrow.innerHTML = '‹';
+    rightArrow.innerHTML = '›';
+    
+    section.appendChild(leftArrow);
+    section.appendChild(rightArrow);
+
+    leftArrow.addEventListener('click', () => {
+      grid.scrollBy({ left: -250, behavior: 'smooth' });
+    });
+    rightArrow.addEventListener('click', () => {
+      grid.scrollBy({ left: 250, behavior: 'smooth' });
+    });
+  });
+</script>
+  <!-- Optional JS for floating sparkles -->
+  <script>
+    // create sparkles randomly over tall item
+    const tallItem = document.querySelector('.grid-item.tall');
+    for(let i=0;i<8;i++){
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.top = Math.random()*80 + '%';
+      sparkle.style.left = Math.random()*80 + '%';
+      sparkle.style.animationDelay = (Math.random()*3) + 's';
+      tallItem.appendChild(sparkle);
+    }
+  </script>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/27822559811?text=Hello%20Annointed%20Scents!" 
+   class="whatsapp-btn" target="_blank" rel="noopener">
+  <i class="bi bi-whatsapp"></i> Contact Us
+</a>
+<script>
+let lastScroll = 0;
+const whatsappBtn = document.querySelector('.whatsapp-btn');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 200) {
+    // Scrolling down
+    whatsappBtn.classList.add('hide');
+  } else {
+    // Scrolling up
+    whatsappBtn.classList.remove('hide');
+  }
+
+  lastScroll = currentScroll;
+});
+</script>
+<link rel="stylesheet" href="dynamite.css">
+<script src="dynamite.js" defer></script>
 </body>
 </html>

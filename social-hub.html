@@ -18,7 +18,7 @@
 ============================== -->
 <header class="navbar">
   <div class="logo">
-    <img src="Images/logo/1759151239466.png" alt="Logo">
+  
     Annointed<span>SCENTS</span>
   </div>
 
@@ -152,6 +152,31 @@
       <a href="index.html" class="btn">Back to Home</a>
     </div>
   </section>
+ <!-- Social Media Gallery -->
+  <section class="social-gallery">
+    <div class="social-card">
+      <img src="he social hub/nl.webp" alt="Perfume launch">
+      <div class="social-overlay">✨ New Launch | Hawas Fire</div>
+    </div>
+
+    <div class="social-card">
+      <img src="he social hub/bts.webp" alt="Behind the scenes">
+      <div class="social-overlay">🎥 Behind the Scenes</div>
+    </div>
+
+
+    <div class="social-card">
+      <img src="he social hub/cf.webp" alt="Customer favorites">
+      <div class="social-overlay">❤️ Customer Favorites</div>
+    </div>
+
+    <div class="social-card">
+      <img src="he social hub/taw.jpg" alt="Team at work">
+      <div class="social-overlay">👑 Signature Scent Curation</div>
+    </div>
+  </section>
+
+ 
 
   <section class="new-launch">
     <h2 class="section-title">Social Media Feed</h2>
@@ -172,7 +197,7 @@
           <li><a href="catalog.html">Catalog</a></li>
           <li><a href="collections.html">Collections</a></li>
           <li><a href="social-hub.html">Social Hub</a></li>
-          <li><a href="house-of-myperfumes.html">House of MyPerfumes</a></li>
+          
           <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
       </div>
@@ -198,5 +223,14 @@
   </a>
 
   <script src="script.js"></script>
+    <script>
+    // Responsive Navbar Toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show-menu");
+    });
+  </script>
 </body>
 </html>
