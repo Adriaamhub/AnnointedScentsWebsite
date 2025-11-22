@@ -3,107 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Cart - AnnointedSCENTS</title>
-  <link rel="stylesheet" href="cart.css">
+  <title>Your Cart - AnnointedSCENTS</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    .cart-section { max-width: 1100px; margin: 120px auto 50px; padding: 0 20px; }
+    #cart-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    #cart-table th, #cart-table td { padding: 15px; text-align: center; border-bottom: 1px solid #ddd; }
+    #cart-table th { background-color: #000; color: #fff; }
+    .cart-img { width: 80px; border-radius: 8px; }
+    .remove-btn { background-color: #ff4c4c; border: none; padding: 8px 10px; border-radius: 5px; cursor: pointer; color: #fff; transition: background-color 0.3s; }
+    .remove-btn:hover { background-color: #e60000; }
+    .cart-total { text-align: right; font-size: 22px; font-weight: bold; margin-top: 10px; }
+  </style>
 </head>
 <body>
 
-<!-- ==============================
-     NAVBAR (Fully Functional)
-============================== -->
+<!-- Navbar -->
 <header class="navbar">
-  <div class="logo">
-    <img src="Images/logo/1759151239466.png" alt="Logo">
-    Annointed<span>SCENTS</span>
-  </div>
-
-  <!-- Hamburger Icon -->
-  <div class="menu-toggle" id="menu-toggle">
-    <i class="bi bi-list"></i>
-  </div>
-
-  <!-- Navigation Menu -->
-  <nav id="nav-menu">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-
-      <!-- Dropdown: Shop by Brand -->
-      <li class="dropdown">
-        <a href="#">Shop by Brand <i class="bi bi-caret-down-fill"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="shop-by-brand.html#Arabiyat">Arabiyat Prestige</a></li>
-          <li><a href="shop-by-brand.html#Afnan">Afnan</a></li>
-          <li><a href="shop-by-brand.html#Armaf">Armaf</a></li>
-          <li><a href="shop-by-brand.html#Lattafa">Lattafa</a></li>
-          <li><a href="shop-by-brand.html#FrenchAvenue">French Avenue</a></li>
-          <li><a href="shop-by-brand.html#FragranceWorld">Fragrance World</a></li>
-          <li><a href="shop-by-brand.html#Janan">Janan</a></li>
-          <li><a href="shop-by-brand.html#MaisonAsrar">Maison Asrar</a></li>
-        </ul>
-      </li>
-
-      <li><a href="new-launch.html">New Launch</a></li>
-      <li><a href="social-hub.html">Social Hub</a></li>
-      <li><a href="contact-us.html">Contact Us</a></li>
-    </ul>
-  </nav>
-
-  <div class="icons">
-    <a href="cart.html"><i class="bi bi-cart3"></i><span id="cart-count">0</span></a>
-    <i class="bi bi-search"></i>
-    <i class="bi bi-instagram"></i>
-  </div>
+  <div class="logo">ANNOINTEDSCENTS</div>
+  <ul class="desktop-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
+    <li><a href="new-launch.html">New Launch</a></li>
+    <li><a href="social-hub.html">Social Hub</a></li>
+    <li><a href="contact-us.html">Contact Us</a></li>
+    <li><a href="cart.html"><i class="bi bi-cart3"></i> Cart <span id="cart-count">0</span></a></li>
+  </ul>
+  <div class="menu-icon" id="menuToggle">☰</div>
 </header>
 
-<!-- ==============================
-     CART SECTION
-============================== -->
+<!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobileMenu">
+  <div class="close-btn" id="closeMenu">✕</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
+    <li><a href="new-launch.html">New Launch</a></li>
+    <li><a href="social-hub.html">Social Hub</a></li>
+    <li><a href="contact-us.html">Contact Us</a></li>
+    <li><a href="cart.html"><i class="bi bi-cart3"></i> Cart <span id="cart-count-mobile">0</span></a></li>
+  </ul>
+</nav>
+
 <section class="cart-section">
   <h1>Your Shopping Cart</h1>
   <table id="cart-table">
     <thead>
       <tr>
-        <th>Product</th>
+        <th>Item</th>
         <th>Name</th>
-        <th>Price</th>
-        <th>Remove</th>
+        <th>Price (R)</th>
+        <th>Action</th>
       </tr>
     </thead>
-    <tbody>
-      <!-- Cart items injected via JS -->
+    <tbody id="cart-body">
+      <!-- Items will be populated via JavaScript -->
     </tbody>
   </table>
-  <div class="cart-total">
-    <h3>Total: R<span id="total-price">0.00</span></h3>
-  </div>
+  <div class="cart-total" id="cart-total">Total: R0</div>
 </section>
 
-<!-- ==============================
-     PAYMENT ICONS
-============================== -->
-<section class="payment-icons">
-  <h3>Pay With:</h3>
-  <form id="payfast-form" action="https://www.payfast.co.za/eng/process" method="POST">
-    <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
-    <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
-    <input type="hidden" name="return_url" value="https://yourwebsite.co.za/payment-success.html">
-    <input type="hidden" name="cancel_url" value="https://yourwebsite.co.za/payment-cancel.html">
-    <input type="hidden" name="notify_url" value="https://yourwebsite.co.za/payment-notify.php">
-    <input type="hidden" name="amount" id="pf-amount" value="0">
-    <input type="hidden" name="item_name" id="pf-item_name" value="">
-    <button type="submit"><img src="Images/bankicons/payfast.jpg.webp" alt="PayFast"></button>
-  </form>
+<!-- Add this after the cart table and total -->
+<div style="text-align:right; margin-top:20px;">
+  <button id="checkout-btn" style="padding:12px 25px; background-color:#ffb400; border:none; border-radius:5px; font-weight:bold; cursor:pointer;">
+    Proceed to Payment
+  </button>
+</div>
 
-  <a href="#" class="payment-link" id="pay-visa"><img src="Images/bankicons/kisspng-credit-card-visa-debit-card-payment-card.jpg" alt="Visa"></a>
-  <a href="#" class="payment-link" id="pay-mastercard"><img src="Images/bankicons/visa.png" alt="MasterCard"></a>
-  <a href="#" class="payment-link" id="pay-payflex"><img src="Images/bankicons/payflex-logo.avif" alt="PayFlex"></a>
-</section>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  const checkoutButton = document.getElementById('checkout-btn');
 
-<!-- ==============================
-     FOOTER (Same as Home)
-============================== -->
+  checkoutButton.addEventListener('click', () => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    if(cart.length === 0){
+      alert("Your cart is empty!");
+      return;
+    }
+
+    // Prepare line items for Stripe
+    const line_items = cart.map(item => ({
+      price_data: {
+        currency: 'zar', // South African Rand
+        product_data: { name: item.name },
+        unit_amount: item.price * 100, // Stripe uses cents
+      },
+      quantity: 1,
+    }));
+
+    fetch('create-checkout-session.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: line_items })
+    })
+    .then(res => res.json())
+    .then(session => {
+      const stripe = Stripe('YOUR_STRIPE_PUBLISHABLE_KEY');
+      return stripe.redirectToCheckout({ sessionId: session.id });
+    })
+    .then(result => {
+      if (result.error) alert(result.error.message);
+    })
+    .catch(err => console.error(err));
+  });
+</script>
+
+
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-about">
@@ -113,7 +120,6 @@
     <div class="footer-links">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="shop-by-brand.html">Shop by Brand</a></li>
         <li><a href="new-launch.html">New Launch</a></li>
         <li><a href="social-hub.html">Social Hub</a></li>
@@ -124,12 +130,6 @@
       <h4>Contact Us</h4>
       <p>Email: frag@annointedscents.com</p>
       <p>Phone: +27 78 255 9811</p>
-      <div class="social-icons">
-        <a href="#"><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-twitter"></i></a>
-        <a href="#"><i class="bi bi-youtube"></i></a>
-      </div>
     </div>
   </div>
   <div class="footer-bottom">
@@ -137,65 +137,56 @@
   </div>
 </footer>
 
-<!-- ==============================
-     JS
-============================== -->
 <script>
-  // Hamburger toggle
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
-
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-
-  // Cart functionality
+document.addEventListener('DOMContentLoaded', () => {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const tbody = document.querySelector('#cart-table tbody');
-  const totalPriceEl = document.getElementById('total-price');
-  const pfAmount = document.getElementById('pf-amount');
-  const pfItemName = document.getElementById('pf-item_name');
+  const cartBody = document.getElementById('cart-body');
+  const cartTotalElem = document.getElementById('cart-total');
   const cartCount = document.getElementById('cart-count');
+  const cartCountMobile = document.getElementById('cart-count-mobile');
 
-  function renderCart() {
-    tbody.innerHTML = '';
+  function updateCartDisplay() {
+    cartBody.innerHTML = '';
     let total = 0;
-    let itemNames = [];
 
     cart.forEach((item, index) => {
       total += item.price;
-      itemNames.push(item.name);
+
       const tr = document.createElement('tr');
       tr.innerHTML = `
-        <td><img src="${item.image || 'Images/default-perfume.png'}" class="cart-img"></td>
+        <td><img src="images/default-perfume.png" class="cart-img" alt="${item.name}"></td>
         <td>${item.name}</td>
-        <td>R${item.price.toFixed(2)}</td>
-        <td><button class="remove-btn" data-index="${index}"><i class="bi bi-trash"></i></button></td>
+        <td>R${item.price}</td>
+        <td><button class="remove-btn" data-index="${index}">Remove</button></td>
       `;
-      tbody.appendChild(tr);
+      cartBody.appendChild(tr);
     });
 
-    totalPriceEl.textContent = total.toFixed(2);
+    cartTotalElem.textContent = `Total: R${total}`;
     cartCount.textContent = cart.length;
-    pfAmount.value = total.toFixed(2);
-    pfItemName.value = itemNames.join(', ');
+    if(cartCountMobile) cartCountMobile.textContent = cart.length;
 
-    document.querySelectorAll('.remove-btn').forEach(btn => {
+    // Attach remove button listeners
+    const removeButtons = document.querySelectorAll('.remove-btn');
+    removeButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const index = btn.getAttribute('data-index');
-        cart.splice(index, 1);
+        const idx = btn.dataset.index;
+        cart.splice(idx, 1);
         localStorage.setItem('cart', JSON.stringify(cart));
-        renderCart();
+        updateCartDisplay();
       });
     });
   }
 
-  renderCart();
+  updateCartDisplay();
 
-  // Mock payment links
-  document.getElementById('pay-visa').addEventListener('click', () => alert('Redirecting to Visa payment gateway...'));
-  document.getElementById('pay-mastercard').addEventListener('click', () => alert('Redirecting to MasterCard payment gateway...'));
-  document.getElementById('pay-payflex').addEventListener('click', () => alert('Redirecting to PayFlex payment gateway...'));
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  menuToggle.addEventListener('click', () => mobileMenu.style.left = '0');
+  closeMenu.addEventListener('click', () => mobileMenu.style.left = '-100%');
+});
 </script>
 
 </body>

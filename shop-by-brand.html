@@ -1,422 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfume Gallery</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <style>
-        .grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .item {
-            text-align: center;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 10px;
-            flex: 1 1 calc(25% - 20px);
-            box-sizing: border-box;
-        }
-        .perfume-img {
-            max-width: 100%;
-            height: auto;
-        }
-        .add-to-cart {
-            margin-top: 10px;
-            padding: 8px 12px;
-            background-color: #ffb400;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-        .add-to-cart:hover {
-            background-color: #e69500;
-        }
-        #cart-count {
-            background-color: red;
-            color: white;
-            font-size: 12px;
-            padding: 2px 6px;
-            border-radius: 50%;
-            position: relative;
-            top: -10px;
-            left: -5px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop By Brand</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    .grid { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+    .item { text-align: center; border: 1px solid #ddd; padding: 15px; border-radius: 10px; flex: 1 1 calc(25% - 20px); box-sizing: border-box; }
+    .perfume-img { max-width: 100%; height: auto; }
+    .add-to-cart { margin-top: 10px; padding: 8px 12px; background-color: #ffb400; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background-color 0.3s ease; }
+    .add-to-cart:hover { background-color: #e69500; }
+    #cart-count { background-color: red; color: white; font-size: 12px; padding: 2px 6px; border-radius: 50%; position: relative; top: -10px; left: -5px; }
+    h1, h2 { margin-top: 100px; } /* To give space below fixed navbar */
+  </style>
 </head>
 <body>
-   <!-- ==============================
-     NAVBAR + SHOP BY BRAND
-============================== -->
+
+<!-- Top Bar -->
+<div class="top-bar-bold">
+  <div class="top-bar-left"><span class="announcement">🔥 20% OFF! Tap to Shop →</span></div>
+  <div class="top-bar-right">
+    <a href="cart.html" class="shop-now-btn">Track Order</a>
+    <select class="currency-select">
+      <option value="ZAR">ZAR</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+  </div>
+</div>
+
+<!-- Mobile Badge -->
+<div class="mobile-top-badge" id="mobileBadge" onclick="window.location.href='shop-by-brand.html'">
+  🔥 20% OFF! Tap to Shop →
+</div>
+
+<!-- Navbar -->
 <header class="navbar">
-  <div class="logo">
-    <img src="Images/logo/1759151239466.png" alt="Logo">
-    Annointed<span>SCENTS</span>
-  </div>
+  <div class="logo">ANNOINTEDSCENTS</div>
 
-  <!-- Hamburger Icon -->
-  <div class="menu-toggle" id="menu-toggle">
-    <i class="bi bi-list"></i>
-  </div>
+  <ul class="desktop-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
+    <li><a href="new-launch.html">New Launch</a></li>
+    <li><a href="social-hub.html">Social Hub</a></li>
+    <li><a href="contact-us.html">Contact Us</a></li>
+    <li><a href="cart.html"><i class="bi bi-cart3"></i> Cart <span id="cart-count">0</span></a></li>
+  </ul>
 
-  <!-- Navigation Menu -->
-  <nav id="nav-menu">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-
-      <!-- DROPDOWN: SHOP BY BRAND -->
-      <li class="dropdown">
-        <a href="#">Shop by Brand <i class="bi bi-caret-down-fill"></i></a>
-        <div class="dropdown-menu brand-menu">
-
-          <!-- Dropdown jump -->
-          <div class="brand-navigation">
-            <label for="brandSelect">Jump to Brand:</label>
-            <select id="brandSelect" onchange="scrollToBrand()">
-              <option value="">Select a brand</option>
-              <option value="Arabiyat prestige">Arabiyat prestige</option>
-              <option value="Afnan">Afnan</option>
-              <option value="armaf">Armaf</option>
-              <option value="lattafa">Lattafa</option>
-              <option value="French avenue">French avenue</option>
-              <option value="Fragrance world">Fragrance world</option>
-              <option value="Janan">Janan</option>
-              <option value="Maison asrar">Maison asrar</option>
-            </select>
-          </div>
-
- <!-- BRANDS SECTION< -->
-    <section class="perfume-section" id="french">
-      <br>
-    <h2>ARABIYAT PRESTIGE COLLECTION</h2>
-    <div class="perfume-grid">
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/ARABIYAT/Arabiyat Prestige.webp" alt="Zenith Blue">
-        <h3>Arabiyat Prestige - Lutfah – Light in the Heart | EDP 80ML | Men</h3>
-        <p class="price">R700</p>
-      </div>
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/ARABIYAT/Arabiyat Prestige - Nyla.webp" alt="Amber Saffron">
-        <h3>Product Creative Arabiyat Prestige - Nyla | EDP 80ML | Unisex</h3>
-        <p class="price">R700</p>
-      </div>
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/ARABIYAT/Arabiyat Prestige - Bahiya Garnet.webp" alt="French Avenue Sample">
-        <h3>Arabiyat Prestige - Bahiya Garnet | EDP 100ML | Women</h3>
-        <p class="price">R900</p>
-      </div>
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/ARABIYAT/Arabiyat - Oud al Layl.webp" alt="French Avenue Aroma">
-        <h3>Arabiyat - Oud al Layl | EDP 100ML | Unisex</h3>
-        <p class="price">R400</p>
-      </div>
-    </div>
-    <button class="show-more">+ Show More</button>
-  </section>
-
-  <br>
-
-  <!-- AFNAN COLLECTION-->
-  <section class="perfume-section" id="fragrance">
-    <h2>AFNAN COLLECTION</h2>
-    <div class="perfume-grid">
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/AFNAN/TURATHI BLUE.webp" alt="Proud Of You Tobacco">
-        <h3>TURATHI BLUE</h3>
-        <p class="price">R900</p>
-      </div>
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/AFNAN/SUPREMACY COLLECTOR'S EDITION.webp" alt="Urban Man Paradise">
-        <h3>SUPREMACY COLLECTOR'S EDITION</h3>
-        <p class="price">R1200</p>
-      </div>
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/AFNAN/SUPREMACY NOT ONLY INTENSE - LUXURY COLLECTION -MEN.webp" alt="Urban Man Amaze">
-        <h3>SUPREMACY NOT ONLY INTENSE - LUXURY COLLECTION - MEN</h3>
-        <p class="price">R1500</p>
-      </div>
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/AFNAN/9 AM Dive.webp" alt="Urban Man Ultra">
-        <h3>9 AM Dive</h3>
-        <p class="price">R900</p>
-      </div>
-      </div>
-      <button class="show-more">+ Show More</button>
-  </section>
-
-  <br>
-
-  <!-- ARMAF COLLECTION -->
-  <section class="perfume-section" id="lattafa">
-    <h2>ARMAF COLLECTION</h2>
-    <div class="perfume-grid">
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/ARMAF/CLUB DE NUIT INTENSE MAN.webp" alt="Badee Al Oud Noble Blush">
-        <h3>CLUB DE NUIT INTENSE MAN</h3>
-        <p class="price">R900</p>
-      </div>
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/ARMAF/CLUB DE NUIT INTENSE MAN LIMITED EDITION.webp" alt="Yara Tous">
-        <h3>CLUB DE NUIT INTENSE MAN LIMITED EDITION</h3>
-        <p class="price">R1800</p>
-      </div>
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/ARMAF/CLUB DE NUIT OUD.webp" alt="Yara Candy">
-        <h3>CLUB DE NUIT OUD</h3>
-        <p class="price">R1800</p>
-      </div>
-      <div class="perfume-card">
-        <img src="SHOP BY BRAND/ARMAF/CLUB DE NUIT UNTOLD.webp" alt="Yara">
-        <h3>CLUB DE NUIT UNTOLD</h3>
-        <p class="price">R1000</p>
-      </div>
-      <!-- Hidden perfumes -->
-      <div class="perfume-card hidden">
-        <img src="https://share.google/nIDkek8Pzn0cpaH5X" alt="Khamrah Qahwa">
-        <h3>Khamrah Qahwa</h3>
-        <p class="price">R700</p>
-      </div>
-      <div class="perfume-card hidden">
-        <img src="https://share.google/VxrBLEDmNzXWCn9mz" alt="Khamrah">
-        <h3>Khamrah</h3>
-        <p class="price">R600</p>
-      </div>
-      <div class="perfume-card hidden">
-        <img src="https://share.google/Hn6Capl9YCVYXeEXo" alt="Ameer Al Oudh Intense">
-        <h3>Ameer Al Oudh Intense</h3>
-        <p class="price">R500</p>
-      </div>
-    </div>
-    <button class="show-more">+ Show More</button>
-  </section>
-
-  <script src="shop.js"></script>
-
-      <!-- Other nav links -->
-      <li><a href="new-launch.html">New Launch</a></li>
-      <li><a href="social-hub.html">Social Hub</a></li>
-      <li><a href="contact-us.html">Contact Us</a></li>
-    </ul>
-  </nav>
-
-  <div class="icons">
-    <i class="bi bi-cart"></i>
-    <i class="bi bi-search"></i>
-    <i class="bi bi-instagram"></i>
-  </div>
+  <div class="menu-icon" id="menuToggle">☰</div>
 </header>
 
-<h1 class="title">Perfume Gallery</h1>
-
-<!-- CART ICON NAVBAR -->
-<nav>
-    <a href="cart.html" class="cart-icon">
-        <i class="bi bi-cart3"></i>
-        <span id="cart-count">0</span>
-    </a>
+<!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobileMenu">
+  <div class="close-btn" id="closeMenu">✕</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
+    <li><a href="new-launch.html">New Launch</a></li>
+    <li><a href="social-hub.html">Social Hub</a></li>
+    <li><a href="contact-us.html">Contact Us</a></li>
+    <li><a href="cart.html"><i class="bi bi-cart3"></i> Cart <span id="cart-count-mobile">0</span></a></li>
+  </ul>
 </nav>
 
-<!-- CATEGORY 1 -->
-<h2 class="category-title"></h2>
-<div class="grid">
-
-    <div class="item">
-        <p class="number">Arabiyat Prestige - Lutfah – Light in the Heart | EDP 80ML | Men</p>
-        <img src="didi/galary/Arabiyat Prestige.jpg" class="perfume-img">
-        <p class="price">R700,00</p>
-        <button class="add-to-cart" data-name="Arabiyat Prestige - Lutfah" data-price="700">Add to Cart</button>
-    </div>
-
-    <div class="item">
-        <p class="number">Arabiyat Prestige - Nyla | EDP 80ML | Unisex</p>
-        <img src="images/nyla_e6ac4ba9-eb53-43e7-8072-6458b51a547b_1100x-removebg-preview.png" class="perfume-img">
-        <p class="price">R700,00</p>
-        <button class="add-to-cart" data-name="Arabiyat Prestige - Nyla" data-price="700">Add to Cart</button>
-    </div>
-
-    <div class="item">
-        <p class="number">Arabiyat Prestige - Bahiya Garnet | EDP 100ML | Women</p>
-        <img src="images/bahiya_1_bottle_1100x-removebg-preview.png" class="perfume-img">
-        <p class="price">R900,00</p>
-        <button class="add-to-cart" data-name="Arabiyat Prestige - Bahiya Garnet" data-price="900">Add to Cart</button>
-    </div>
-
-    <div class="item">
-        <p class="number">Arabiyat - Oud al Layl | EDP 100ML | Unisex</p>
-        <img src="images/oud_lalybottle-removebg-preview.png" class="perfume-img">
-        <p class="price">R400,00</p>
-        <button class="add-to-cart" data-name="Arabiyat - Oud al Layl" data-price="400">Add to Cart</button>
-    </div>
-
+<div class="page-title-container">
+  <h1>Shop By Brand</h1>
 </div>
 
-<!-- CATEGORY 2 -->
-<h2 class="category-title"></h2>
-<div class="grid">
-
-    <div class="item">
-        <p class="name">Turathi Blue</p>
-        <img src="images/Turathi_Blue-1-removebg-preview.png" class="perfume-img">
-        <p class="price">R900,00</p>
-        <button class="add-to-cart" data-name="Turathi Blue" data-price="900">Add to Cart</button>
-    </div>
-
-    <div class="item">
-        <p class="name">Supremacy Collector's Edition</p>
-        <img src="images/SupremacyCollectionsEditionFront_Gray-removebg-preview.png" class="perfume-img">
-        <p class="price">R1200,00</p>
-        <button class="add-to-cart" data-name="Supremacy Collector's Edition" data-price="1200">Add to Cart</button>
-    </div>
-
-    <div class="item">
-        <p class="number">Supremacy Not Only Intense - Luxury Collection</p>
-        <img src="images/SupremacyIntense-Product-01-removebg-preview.png" class="perfume-img">
-        <p class="price">R1500,00</p>
-        <button class="add-to-cart" data-name="Supremacy Not Only Intense" data-price="1500">Add to Cart</button>
-    </div>
-
-    <div class="item">
-        <p class="name">9 AM Dive</p>
-        <img src="images/9AM-Dive-01_d4bc61ac-c620-48b5-984b-c18d267d8e82-removebg-preview.png" class="perfume-img">
-        <p class="price">R900,00</p>
-        <button class="add-to-cart" data-name="9 AM Dive" data-price="900">Add to Cart</button>
-    </div>
-
+<!-- Brand: Afnan -->
+<div class="brand-title-container">
+  <h2>Afnan</h2>
 </div>
 
-<!-- CATEGORY 3 -->
-<h2 class="category-title"></h2>
 <div class="grid">
-
-    <div class="item">
-        <p class="number">9 PM Rebel</p>
-        <img src="images/9PM_ELIXIR-1-removebg-preview.png" class="perfume-img">
-        <p class="price">R900,00</p>
-        <button class="add-to-cart" data-name="9 PM Rebel" data-price="900">Add to Cart</button>
-    </div>
-
-    <div class="item">
-        <p class="number">9 PM Elixir</p>
-        <img src="images/Untitled_design_51-removebg-preview.png" class="perfume-img">
-        <p class="price">R1000,00</p>
-        <button class="add-to-cart" data-name="9 PM Elixir" data-price="1000">Add to Cart</button>
-    </div>
-
-    <div class="item">
-        <p class="number">9 PM Product</p>
-        <img src="images/9PM-Product-01_-removebg-preview.png" class="perfume-img">
-        <p class="price">R800,00</p>
-        <button class="add-to-cart" data-name="9 PM Product" data-price="800">Add to Cart</button>
-    </div>
-
-    <div class="item">
-        <p class="name">9 PM</p>
-        <img src="images/SupremacyOud-Product-01__1_-removebg-preview.png" class="perfume-img">
-        <p class="price">R900,00</p>
-        <button class="add-to-cart" data-name="9 PM" data-price="900">Add to Cart</button>
-    </div>
-
+  <div class="item">
+    <p class="number">Afnan Supremacy | EDP 100ML | Unisex</p>
+    <img src="didi/images/SupremacyCollectionsEditionFront_Gray-removebg-preview.png" class="perfume-img">
+    <p class="price">R800</p>
+    <button class="add-to-cart" data-name="Afnan Supremacy" data-price="800">Add to Cart</button>
+  </div>
+  <div class="item">
+    <p class="number">Afnan Rare | EDP 80ML | Men</p>
+    <img src="didi/Afnan Rare.jpeg" class="perfume-img">
+    <p class="price">R700</p>
+    <button class="add-to-cart" data-name="Afnan Rare" data-price="700">Add to Cart</button>
+  </div>
 </div>
 
-<!-- CATEGORY 4 -->
-<h2 class="category-title"></h2>
+<!-- Brand: Armaf -->
+<div class="brand-title-container">
+  <h2>Armaf</h2>
+</div>
 <div class="grid">
+  <div class="item">
+    <p class="number">Armaf Club De Nuit Intense | EDP 105ML | Men</p>
+    <img src="didi/images/Q-10.png" class="perfume-img">
+    <p class="price">R1800</p>
+    <button class="add-to-cart" data-name="Armaf Club De Nuit Intense" data-price="1800">Add to Cart</button>
+  </div>
+  <div class="item">
+    <p class="number">Armaf Tres Nuit | EDP 100ML | Men</p>
+    <img src="didi/armaf-tres-nuit-lyric-100-ml-110-og.jpg" class="perfume-img">
+    <p class="price">R1200</p>
+    <button class="add-to-cart" data-name="Armaf Tres Nuit" data-price="1200">Add to Cart</button>
+  </div>
+</div>
 
-    <div class="item">
-        <p class="number">9 AM - Pour Femme </p>
-        <img src="images/9AM-01_1-removebg-preview.png" class="perfume-img">
-        <p class="price">R900,00</p>
-        <button class="add-to-cart" data-name="9 AM - Pour Femme" data-price="900">Add to Cart</button>
-    </div>
+<!-- Brand: Lattafa -->
+<div class="brand-title-container">
+  <h2>Lattafa</h2>
+</div>
+<div class="grid">
+  <div class="item">
+    <p class="number">Lattafa Ana Abiyedh | EDP 100ML | Unisex</p>
+    <img src="images/lattafa_anaabiyedh.jpg" class="perfume-img">
+    <p class="price">R900</p>
+    <button class="add-to-cart" data-name="Lattafa Ana Abiyedh" data-price="900">Add to Cart</button>
+  </div>
+</div>
 
-    <div class="item">
-        <p class="number">SUPREMACY IN OUD - LUXURY COLLECTION</p>
-        <img src="images/SupremacyOud-Product-01__1_-removebg-preview.png" class="perfume-img">
-        <p class="price">R1500,00</p>
-        <button class="add-to-cart" data-name="SUPREMACY IN OUD - LUXURY COLLECTION" data-price="1500">Add to Cart</button>
-    </div>
+<!-- Brand: French Avenue -->
+<div class="brand-title-container">
+  <h2>French Avenue</h2>
+</div>
+<div class="grid">
+  <div class="item">
+    <p class="number">French Avenue Paris | EDP 100ML | Women</p>
+    <img src="images/frenchavenue_paris.jpg" class="perfume-img">
+    <p class="price">R1500</p>
+    <button class="add-to-cart" data-name="French Avenue Paris" data-price="1500">Add to Cart</button>
+  </div>
+</div>
 
-    <div class="item">
-        <p class="number">CLUB DE NUIT INTENSE MA</p>
-        <img src="images/club_de-removebg-preview.png" class="perfume-img">
-        <p class="price">R900,00</p>
-        <button class="add-to-cart" data-name="CLUB DE NUIT INTENSE MA" data-price="900">Add to Cart</button>
-    </div>
+<!-- Brand: Fragrance World -->
+<div class="brand-title-container">
+  <h2>Fragrance World</h2>
+</div>
+<div class="grid">
+  <div class="item">
+    <p class="number">Fragrance World Velvet | EDP 100ML | Men</p>
+    <img src="images/fragranceworld_velvet.jpg" class="perfume-img">
+    <p class="price">R950</p>
+    <button class="add-to-cart" data-name="Fragrance World Velvet" data-price="950">Add to Cart</button>
+  </div>
+</div>
 
-    <div class="item">
-        <p class="number">CLUB DE NUIT INTENSE MAN LIMITED EDITION</p>
-        <img src="images/club_unit-removebg-preview.png" class="perfume-img">
-        <p class="price">R1800,00</p>
-        <button class="add-to-cart" data-name="CLUB DE NUIT INTENSE MAN LIMITED EDITION" data-price="1800">Add to Cart</button>
-    </div>
+<!-- Brand: Janan -->
+<div class="brand-title-container">
+  <h2>Janan</h2>
+</div>
+<div class="grid">
+  <div class="item">
+    <p class="number">Janan Oud | EDP 100ML | Unisex</p>
+    <img src="images/janan_oud.jpg" class="perfume-img">
+    <p class="price">R1200</p>
+    <button class="add-to-cart" data-name="Janan Oud" data-price="1200">Add to Cart</button>
+  </div>
+</div>
 
-    <div class="item">
-        <p class="number">CLUB DE NUIT OUD 3.6 Oz - Fall Deals</p>
-        <img src="images/Untitleddesign-removebg-preview.png" class="perfume-img">
-        <p class="price">R1800,00</p>
-        <button class="add-to-cart" data-name="CLUB DE NUIT OUD 3.6 Oz" data-price="1800">Add to Cart</button>
-    </div>
-
-    <!-- Add remaining items from CATEGORY 4, 5, 6 similarly with buttons -->
-
+<!-- Brand: Maison Asrar -->
+<div class="brand-title-container">
+  <h2>Maison Asrar</h2>
+</div>
+<div class="grid">
+  <div class="item">
+    <p class="number">Maison Asrar Rose | EDP 100ML | Women</p>
+    <img src="images/maisonasrar_rose.jpg" class="perfume-img">
+    <p class="price">R1300</p>
+    <button class="add-to-cart" data-name="Maison Asrar Rose" data-price="1300">Add to Cart</button>
+  </div>
 </div>
 
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <h3>AnnointedSCENTS</h3>
-        <p>Making People Smell Expensive.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="shop-by-brand.html">Shop by Brand</a></li>
-          <li><a href="new-launch.html">New Launch</a></li>
-          
-          <li><a href="social-hub.html">Social Hub</a></li>
-        
-          <li><a href="contact-us.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p>Email: frag@annointedscents.com</p>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>AnnointedSCENTS</h3>
+      <p>Making People Smell Expensive.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="shop-by-brand.html">Shop by Brand</a></li>
+        <li><a href="new-launch.html">New Launch</a></li>
+        <li><a href="social-hub.html">Social Hub</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: frag@annointedscents.com</p>
       <p>Phone: +27 78 255 9811</p>
-        <div class="social-icons">
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-twitter"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
-        </div>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 AnnointedSCENTS. All Rights Reserved.</p>
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AnnointedSCENTS. All Rights Reserved.</p>
+  </div>
+</footer>
 
-<!-- JAVASCRIPT -->
 <script>
-    let cart = [];
-    const cartCount = document.getElementById("cart-count");
-    const buttons = document.querySelectorAll('.add-to-cart');
+document.addEventListener('DOMContentLoaded', () => {
+  // Retrieve cart from localStorage
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartCount = document.getElementById('cart-count');
+  const cartCountMobile = document.getElementById('cart-count-mobile');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const name = button.getAttribute('data-name');
-            const price = parseFloat(button.getAttribute('data-price'));
+  function updateCartCount() {
+    cartCount.textContent = cart.length;
+    if (cartCountMobile) cartCountMobile.textContent = cart.length;
+  }
 
-            cart.push({name, price});
-            cartCount.textContent = cart.length;
-            alert(`${name} added to cart!`);
-        });
+  updateCartCount();
+
+  const buttons = document.querySelectorAll('.add-to-cart');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const name = button.dataset.name;
+      const price = parseFloat(button.dataset.price);
+
+      cart.push({ name, price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(`${name} added to cart!`);
     });
+  });
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenu = document.getElementById('closeMenu');
+
+  menuToggle.addEventListener('click', () => mobileMenu.style.left = '0');
+  closeMenu.addEventListener('click', () => mobileMenu.style.left = '-100%');
+});
 </script>
 
 </body>
