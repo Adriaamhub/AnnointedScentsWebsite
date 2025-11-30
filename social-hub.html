@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Social Hub - AnnointedSCENTS</title>
+
+  <!-- MAIN CSS -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
@@ -12,11 +14,11 @@
 <!-- Top Bar -->
 <div class="top-bar-bold">
   <div class="top-bar-left">
-    <span class="announcement">🔥 20% OFF! Tap to Shop →</span>
+    <span class="announcement">20% OFF! Tap to Shop →</span>
   </div>
   <div class="top-bar-right">
     <a href="cart.html" class="shop-now-btn">Track Order</a>
-    <select class="currency-select">
+    <select class="currency-select" aria-label="Select currency">
       <option value="ZAR">ZAR</option>
       <option value="USD">USD</option>
       <option value="EUR">EUR</option>
@@ -24,75 +26,120 @@
   </div>
 </div>
 
-<!-- Mobile Badge -->
-<div class="mobile-top-badge" id="mobileBadge" onclick="window.location.href='shop-by-brand.html'">
-  🔥 20% OFF! Tap to Shop →
-</div>
-<!-- ==============================
-     NAVBAR (Fully Functional)
-============================== -->
+<!-- Navbar -->
 <header class="navbar">
-  <div class="logo">ANNOINTEDSCENTS</div>
+  <a href="index.html" class="logo">
+    <img src="Images/logo/1759151239466.png" alt="Logo">
+  </a>
 
   <!-- Desktop Menu -->
   <ul class="desktop-menu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
+
+    <!-- Shop By Brand Dropdown -->
+    <li class="dropdown">
+      <a href="shop-by-brand.html">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
+      <ul class="dropdown-menu-brands">
+        <li><a href="shop-by-brand.html#">RASASI</a></li>
+        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
+        <li><a href="shop-by-brand.html">AFNAN</a></li>
+        <li><a href="shop-by-brand.html">ARMAF</a></li>
+        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
+        <li><a href="shop-by-brand.html">LATTAFA</a></li>
+        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
+        <li><a href="shop-by-brand.html">JANAN</a></li>
+        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
+        <li><a href="shop-by-brand.html">MILESTONE</a></li>
+        <li><a href="shop-by-brand.html">EMPER</a></li>
+        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
+        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
+      </ul>
+    </li>
+
     <li><a href="new-launch.html">New Launch</a></li>
     <li><a href="social-hub.html">Social Hub</a></li>
-   
     <li><a href="contact-us.html">Contact Us</a></li>
     <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
   </ul>
 
-  <!-- Mobile Hamburger -->
+  <!-- Hamburger -->
   <div class="menu-icon" id="menuToggle">☰</div>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" id="closeMenu">✕</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+
+      <!-- Mobile Shop By Brand Dropdown -->
+     <li class="dropdown brand-mobile">
+  <a href="#">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
+  <ul class="dropdown-menu-brands">
+           <li><a href="shop-by-brand.html">RASASI</a></li>
+        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
+        <li><a href="shop-by-brand.html">AFNAN</a></li>
+        <li><a href="shop-by-brand.html">ARMAF</a></li>
+        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
+        <li><a href="shop-by-brand.html">LATTAFA</a></li>
+        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
+        <li><a href="shop-by-brand.html">JANAN</a></li>
+        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
+        <li><a href="shop-by-brand.html">MILESTONE</a></li>
+        <li><a href="shop-by-brand.html">EMPER</a></li>
+        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
+        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
+        </ul>
+      </li>
+
+      <li><a href="new-launch.html">New Launch</a></li>
+      <li><a href="social-hub.html">Social Hub</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- Account Dropdown -->
+  <div class="login-dropdown">
+    <button class="btn navbar-login">
+      <i class="bi bi-person-circle"></i> Account <i class="bi bi-caret-down-fill"></i>
+    </button>
+    <div class="dropdown-menu">
+      <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+      <a href="orders.html"><i class="bi bi-bag-check"></i> Orders</a>
+      <a href="logout.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    </div>
+  </div>
 </header>
 
-<!-- Mobile Menu -->
-<nav class="mobile-menu" id="mobileMenu">
-  <div class="close-btn" id="closeMenu">✕</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
-    <li><a href="new-launch.html">New Launch</a></li>
-    <li><a href="social-hub.html">Social Hub</a></li>
-    
-    <li><a href="contact-us.html">Contact Us</a></li>
-    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
-  </ul>
-</nav>
-  <section class="hero">
+<!-- =========================
+      HERO
+========================= -->
+<section class="hero hero-small">
+  <div class="slide active" style="background-image:url('thesocialhub_vienna_welcome_area_002.600x0.1725377348.jpg')">
     <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>SOCIAL HUB</h1>
-      <h2>Connect with Us on Social Media</h2>
-      <a href="#" class="btn">FOLLOW US</a>
-      <a href="index.html" class="btn">Back to Home</a>
+    <div class="content fade">
+      <h1 class="hero-title">Welcome to Our Social Hub</h1>
+      <p class="hero-sub">Where Luxury Fragrance Meets Community</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="new-launch">
-    <h2 class="section-title">Social Media Feed</h2>
-    <p style="text-align:center; margin-top:20px;">This section will display Instagram, Facebook, and Twitter feeds.</p>
-  </section>
-<!-- ==============================
-   SOCIAL MEDIA FEED SECTION
-============================== -->
+<!-- =========================
+   SOCIAL MEDIA FEED
+========================= -->
 <section class="social-section">
 
-  <!-- INSTAGRAM FEED -->
+  <!-- Instagram -->
   <h2 class="section-title">Instagram Highlights</h2>
   <p class="section-sub">Your daily dose of luxury fragrance moments.</p>
 
   <div class="instagram-grid">
-    <div class="insta-box"><img src="social hub/instagram/3.jpg" alt=""></div>
-    <div class="insta-box"><img src="social hub/instagram/2.png" alt=""></div>
-    <div class="insta-box"><img src="social hub/instagram/1.jpg" alt=""></div>
-
+    <div class="insta-box"><img src="social hub/instagram/3.jpg"></div>
+    <div class="insta-box"><img src="social hub/instagram/2.png"></div>
+    <div class="insta-box"><img src="social hub/instagram/1.jpg"></div>
   </div>
 
-  <!-- FACEBOOK REVIEWS -->
+  <!-- Facebook Reviews -->
   <h2 class="section-title">Customer Facebook Reviews</h2>
 
   <div class="reviews-container">
@@ -104,27 +151,26 @@
 
     <div class="review-card">
       <h3>Hi</h3>
-      <p>My order was prompt and the perfume is great! I was scared of fakes online but this was amazing. Delivery address correction was handled without fuss. Excellent service!</p>
+      <p>My order was prompt and the perfume is great! I was scared of fakes online but this was amazing.</p>
     </div>
 
     <div class="review-card">
       <h3>Emmanuel John</h3>
-      <p>Good quality perfumes and the BEST service. Delivery time was quick & quality on point. They are the best!</p>
+      <p>Good quality perfumes and the BEST service. Delivery time was quick & quality on point.</p>
     </div>
 
     <div class="review-card">
       <h3>Tshegofatso Mahura</h3>
-      <p>Really exquisite perfumes at discounted prices. Excellent products and value for money!</p>
+      <p>Really exquisite perfumes at discounted prices.</p>
     </div>
 
     <div class="review-card">
       <h3>Yusuf Kada</h3>
-      <p>From purchase to delivery, excellent communication and service. I will surely order again!</p>
+      <p>Excellent communication and service. Will order again!</p>
     </div>
-
   </div>
 
-  <!-- TIKTOK STYLE VIDEO PREVIEWS -->
+  <!-- TikTok -->
   <h2 class="section-title">TikTok / Reels</h2>
   <p class="section-sub">Behind the scenes • Packaging • New drops</p>
 
@@ -135,45 +181,109 @@
   </div>
 
 </section>
+<!-- =========================
+      PERFUME VIDEOS
+========================= -->
+<section class="videos-section">
+  <h2 class="section-title">Perfume Videos</h2>
+  <p class="section-sub">Watch our latest releases from your favorite brands.</p>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <h3>AnnointedSCENTS</h3>
-        <p>Making People Smell Expensive.</p>
+  <div class="videos-grid">
+    <!-- Video 1 -->
+    <div class="video-box">
+      <iframe id="video1" width="300" height="170" src="https://www.youtube.com/embed/Eg5o4lnbeIU?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="video-controls">
+        <button onclick="playYouTube('video1')">Play</button>
+        <button onclick="stopYouTube('video1')">Stop</button>
       </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="shop-by-brand.html">Shop by Brand</a></li>
-          <li><a href="new-launch.html">New Launch</a></li>
-          
-          <li><a href="social-hub.html">Social Hub</a></li>
-        
-          <li><a href="contact-us.html">Contact Us</a></li>
-        </ul>
+      <p>RASASI — Explore the essence</p>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-box">
+      <iframe id="video2" width="300" height="170" src="https://www.youtube.com/embed/jj6fKsBSCRs?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="video-controls">
+        <button onclick="playYouTube('video2')">Play</button>
+        <button onclick="stopYouTube('video2')">Stop</button>
       </div>
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p>Email: frag@annointedscents.com</p>
+      <p>ARABIYAT — Prestige Collection</p>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video-box">
+      <iframe id="video3" width="300" height="170" src="https://www.youtube.com/embed/Qx8WX-rd6Tc?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="video-controls">
+        <button onclick="playYouTube('video3')">Play</button>
+        <button onclick="stopYouTube('video3')">Stop</button>
+      </div>
+      <p>AFNAN — Signature Scents</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+      FOOTER
+========================= -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>AnnointedSCENTS</h3>
+      <p>Making People Smell Expensive.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="shop-by-brand.html">Shop by Brand</a></li>
+        <li><a href="new-launch.html">New Launch</a></li>
+        <li><a href="social-hub.html">Social Hub</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: frag@annointedscents.com</p>
       <p>Phone: +27 78 255 9811</p>
-        <div class="social-icons">
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-twitter"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
-        </div>
+      <div class="social-icons">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 AnnointedSCENTS. All Rights Reserved.</p>
-    </div>
-  </footer>
+  </div>
 
-  <a href="https://wa.me/971123456789" class="whatsapp-float" target="_blank">
-    <i class="bi bi-whatsapp"></i>
-  </a>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AnnointedSCENTS. All Rights Reserved.</p>
+  </div>
+</footer>
 
-  <script src="script.js"></script>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/0782559811" class="whatsapp-float" target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  let players = {};
+
+  function onYouTubeIframeAPIReady() {
+    ['video1','video2','video3'].forEach(id => {
+      players[id] = new YT.Player(id);
+    });
+  }
+
+  function playYouTube(id) {
+    if (players[id]) players[id].playVideo();
+  }
+
+  function stopYouTube(id) {
+    if (players[id]) players[id].stopVideo();
+  }
+</script>
+
 </body>
 </html>

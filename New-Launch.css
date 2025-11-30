@@ -1,0 +1,523 @@
+/* ==============================
+   Variables (Luxury Gold Theme)
+============================== */
+:root {
+  --accent: #c2730d; /* Gold accent */
+  --accent-hover: #a35f08;
+  --bg-light: #fdfaf7;
+  --bg-dark: #111;
+  --text-dark: #111;
+  --text-muted: #555;
+  --card-shadow: rgba(0,0,0,0.12);
+  --btn-radius: 25px;
+}
+
+/* ==============================
+   Global Reset
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+/* Back to Home Button Container */
+.home-button-container.nl-home {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 80px; /* space above and below */
+}
+
+/* Back to Home Button */
+.btn.back-home {
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #c2730d, #f4c542);
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(194, 115, 13, 0.5), 0 0 20px rgba(255, 196, 66, 0.3);
+  border: 2px double #fff; /* double border for luxury feel */
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow effect on hover */
+.btn.back-home::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.btn.back-home:hover::before {
+  top: -20%;
+  left: -20%;
+  transform: rotate(0deg);
+}
+
+.btn.back-home:hover {
+  background: linear-gradient(45deg, #f4c542, #c2730d);
+  box-shadow: 0 12px 30px rgba(194,115,13,0.7), 0 0 30px rgba(255,196,66,0.5);
+  transform: scale(1.08);
+}
+
+
+/* ==============================
+   Products Grid
+============================== */
+.products.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+  margin: 50px 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px var(--card-shadow);
+  overflow: hidden;
+  transform: translateY(0);
+  opacity: 0;
+  animation: fadeSlideIn 0.6s forwards;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.img-wrap:hover img {
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* Card Body */
+.card-body {
+  padding: 20px;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.product-title .size {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.inspired {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.fragrance-notes {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 18px;
+  border-radius: var(--btn-radius);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn.gold {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn.gold:hover { background: var(--accent-hover); }
+
+.btn.outline {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.btn.outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ==============================
+   Fade Slide Animation
+============================== */
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ==============================
+   Footer
+============================== */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h3, .footer h4 { margin-bottom: 15px; }
+
+.footer-links ul, .footer-about ul { list-style: none; }
+
+.footer-links ul li, .footer-about ul li { margin-bottom: 10px; }
+
+.footer-links ul li a { color: #fff; text-decoration: none; transition: color 0.3s; }
+.footer-links ul li a:hover { color: var(--accent); }
+
+.footer-contact .social-icons a { margin-right: 12px; color: #fff; font-size: 18px; transition: color 0.3s; }
+.footer-contact .social-icons a:hover { color: var(--accent); }
+
+.footer-bottom { text-align: center; margin-top: 25px; font-size: 14px; color: #aaa; }
+
+/* ==============================
+   Responsive
+============================== */
+@media(max-width:992px) {
+  .nl-hero-inner { flex-direction: column; gap: 30px; }
+  .nl-hero-right img { width: 100%; height: auto; }
+  .desktop-menu { display: none; }
+  .menu-icon { display: block; }
+}
+
+@media(max-width:576px) {
+  .nl-hero-left h1 { font-size: 36px; }
+  .nl-hero-left .subtitle { font-size: 16px; }
+  .product-card { font-size: 14px; }
+}
+/* TOP BAR */
+.top-bar-bold {
+  width: 100%;
+  background: #fff;        /* changed from black to white */
+  color: #000;             /* text color black */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-bottom: 2px solid #D4AF37;
+  position: fixed;
+  top: 0;
+  z-index: 2000; /* Ensure it’s above everything */
+  animation: slideDown 0.5s ease forwards;
+}
+
+/* Slide-in Animation */
+@keyframes slideDown {
+  0% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Left Announcement */
+.top-bar-left .announcement {
+  font-weight: bold;
+  animation: flash 2s linear infinite;
+}
+
+/* Flashing animation */
+@keyframes flash {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0.2; }
+}
+
+/* Right Section */
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Optional: make links black and hover effect */
+.top-bar-right a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.top-bar-right a:hover {
+  color: #c69a2c; /* golden hover */
+}
+
+
+/* Shop Now Button */
+.shop-now-btn {
+  background: #D4AF37;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+/* Currency Selector */
+.currency-select {
+  background: #000;
+  color: #fff;
+  border: 1px solid #D4AF37;
+  padding: 4px 6px;
+  border-radius: 4px;
+  outline: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.currency-select:hover {
+  border-color: #fff;
+}
+
+/* Toggle Button */
+.topbar-toggle {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #D4AF37;
+  padding: 3px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.topbar-toggle:hover {
+  background: #D4AF37;
+  color: #000;
+  transform: translateY(-1px);
+}
+
+/* Mobile Badge */
+.mobile-top-badge {
+  display: none;
+  background: #D4AF37;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3000;
+  cursor: pointer;
+  animation: flash 2s linear infinite;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .top-bar-bold { display: none; }
+  .mobile-top-badge { display: block; }
+}
+
+
+
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  padding: 15px 20px;
+  background: #000;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 40px; /* Push navbar below top bar (adjust to top-bar height) */
+  z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffb400;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff; /* WHITE ICON */
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100vh;
+  background: #000; /* BLACK MENU */
+  padding: 25px 20px;
+  box-shadow: 3px 0 8px rgba(0,0,0,0.2);
+  transition: 0.4s ease;
+  z-index: 9999;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  margin-top: 40px;
+}
+
+.mobile-menu ul li {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff; /* WHITE TEXT */
+}
+
+.close-btn {
+  font-size: 28px;
+  cursor: pointer;
+  text-align: right;
+  color: #fff; /* WHITE CLOSE ICON */
+}
+
+/* DESKTOP MENU */
+@media (min-width: 768px) {
+
+  .menu-icon {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar ul {
+    display: flex;
+    gap: 25px;
+  }
+
+  .navbar ul li {
+    list-style: none;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: #fff; /* WHITE TEXT ON DESKTOP */
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .navbar ul li a:hover {
+    color: #ccc; /* OPTIONAL LIGHT GREY HOVER */
+  }
+}
+/* DESKTOP MENU DEFAULT HIDDEN (mobile first) */
+.desktop-menu {
+  display: none;
+}
+
+/* Desktop version */
+@media (min-width: 768px) {
+
+  .desktop-menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+  }
+
+  .desktop-menu li a {
+    color: #fff; /* white text for black navbar */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .desktop-menu li a:hover {
+    color: #ccc; /* optional hover */
+  }
+
+  /* Hide hamburger on desktop */
+  .menu-icon {
+    display: none;
+  }
+}

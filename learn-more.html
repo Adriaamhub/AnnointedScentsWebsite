@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn More - Flexible Payment | AnnointedSCENTS</title>
+  <link rel="stylesheet" href="learn-more.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+<!-- ================================
+      HERO SECTION
+================================ -->
+<section class="learn-hero">
+  <div class="overlay"></div>
+  <h1 class="hero-title fade-in">Flexible Payment Options</h1>
+  <p class="hero-sub fade-in">Shop luxury fragrances now. Pay later. Stress-free.</p>
+</section>
+
+<!-- ================================
+      WHY FLEXIBLE PAYMENT
+================================ -->
+<section class="why-section fade-in">
+  <h2>Why Choose Flexible Payment?</h2>
+  <p class="subtitle">Designed to give you convenience, freedom and luxury.</p>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <i class="bi bi-clock-history"></i>
+      <h3>Instant Approval</h3>
+      <p>Fast approval with zero paperwork. Just select PayFlex at checkout.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="bi bi-credit-card"></i>
+      <h3>Split Your Payments</h3>
+      <p>Pay weekly or monthly with zero interest (for qualifying orders).</p>
+    </div>
+
+    <div class="why-card">
+      <i class="bi bi-shield-check"></i>
+      <h3>Secure & Protected</h3>
+      <p>Your payment is processed with full encryption and fraud protection.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================
+      HOW IT WORKS
+================================ -->
+<section class="steps-section fade-in">
+  <h2>How It Works</h2>
+
+  <div class="steps-container">
+
+    <div class="step-box">
+      <span class="step-number">1</span>
+      <h3>Choose Your Fragrance</h3>
+      <p>Add your favourite perfumes to your cart.</p>
+    </div>
+
+    <div class="step-box">
+      <span class="step-number">2</span>
+      <h3>Select Flexible Payment</h3>
+      <p>At checkout, choose “Flexible Payment / Pay Later”.</p>
+    </div>
+
+    <div class="step-box">
+      <span class="step-number">3</span>
+      <h3>Get Approved Instantly</h3>
+      <p>No delays, no paperwork — quick automatic approval.</p>
+    </div>
+
+    <div class="step-box">
+      <span class="step-number">4</span>
+      <h3>Pay in Installments</h3>
+      <p>Make small payments weekly or monthly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================
+      CTA
+================================ -->
+<section class="cta-section fade-in">
+  <h2>Experience Luxury, Pay Your Way</h2>
+  <p>Enjoy your perfumes now and pay comfortably later.</p>
+  <a href="index.html" class="btn shop-btn">Start Shopping</a>
+</section>
+
+
+<script>
+  /* Fade-in on scroll */
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.2 });
+
+  fadeElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

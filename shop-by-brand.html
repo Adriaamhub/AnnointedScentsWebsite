@@ -20,10 +20,12 @@
 
 <!-- Top Bar -->
 <div class="top-bar-bold">
-  <div class="top-bar-left"><span class="announcement">🔥 20% OFF! Tap to Shop →</span></div>
+  <div class="top-bar-left">
+    <span class="announcement">20% OFF! Tap to Shop →</span>
+  </div>
   <div class="top-bar-right">
     <a href="cart.html" class="shop-now-btn">Track Order</a>
-    <select class="currency-select">
+    <select class="currency-select" aria-label="Select currency">
       <option value="ZAR">ZAR</option>
       <option value="USD">USD</option>
       <option value="EUR">EUR</option>
@@ -31,155 +33,320 @@
   </div>
 </div>
 
-<!-- Mobile Badge -->
-<div class="mobile-top-badge" id="mobileBadge" onclick="window.location.href='shop-by-brand.html'">
-  🔥 20% OFF! Tap to Shop →
-</div>
-
 <!-- Navbar -->
 <header class="navbar">
-  <div class="logo">ANNOINTEDSCENTS</div>
+  <a href="index.html" class="logo">
+    <img src="Images/logo/1759151239466.png" alt="Logo">
+  </a>
 
+  <!-- Desktop Menu -->
   <ul class="desktop-menu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
+
+    <!-- Shop By Brand Dropdown -->
+    <li class="dropdown">
+      <a href="shop-by-brand.html">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
+      <ul class="dropdown-menu-brands">
+        <li><a href="shop-by-brand.html#">RASASI</a></li>
+        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
+        <li><a href="shop-by-brand.html">AFNAN</a></li>
+        <li><a href="shop-by-brand.html">ARMAF</a></li>
+        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
+        <li><a href="shop-by-brand.html">LATTAFA</a></li>
+        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
+        <li><a href="shop-by-brand.html">JANAN</a></li>
+        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
+        <li><a href="shop-by-brand.html">MILESTONE</a></li>
+        <li><a href="shop-by-brand.html">EMPER</a></li>
+        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
+        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
+      </ul>
+    </li>
+
     <li><a href="new-launch.html">New Launch</a></li>
     <li><a href="social-hub.html">Social Hub</a></li>
     <li><a href="contact-us.html">Contact Us</a></li>
-    <li><a href="cart.html"><i class="bi bi-cart3"></i> Cart <span id="cart-count">0</span></a></li>
+    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
   </ul>
 
+  <!-- Hamburger -->
   <div class="menu-icon" id="menuToggle">☰</div>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" id="closeMenu">✕</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+
+      <!-- Mobile Shop By Brand Dropdown -->
+     <li class="dropdown brand-mobile">
+  <a href="#">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
+  <ul class="dropdown-menu-brands">
+           <li><a href="shop-by-brand.html">RASASI</a></li>
+        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
+        <li><a href="shop-by-brand.html">AFNAN</a></li>
+        <li><a href="shop-by-brand.html">ARMAF</a></li>
+        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
+        <li><a href="shop-by-brand.html">LATTAFA</a></li>
+        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
+        <li><a href="shop-by-brand.html">JANAN</a></li>
+        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
+        <li><a href="shop-by-brand.html">MILESTONE</a></li>
+        <li><a href="shop-by-brand.html">EMPER</a></li>
+        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
+        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
+        </ul>
+      </li>
+
+      <li><a href="new-launch.html">New Launch</a></li>
+      <li><a href="social-hub.html">Social Hub</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- Account Dropdown -->
+  <div class="login-dropdown">
+    <button class="btn navbar-login">
+      <i class="bi bi-person-circle"></i> Account <i class="bi bi-caret-down-fill"></i>
+    </button>
+    <div class="dropdown-menu">
+      <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+      <a href="orders.html"><i class="bi bi-bag-check"></i> Orders</a>
+      <a href="logout.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    </div>
+  </div>
 </header>
 
-<!-- Mobile Menu -->
-<nav class="mobile-menu" id="mobileMenu">
-  <div class="close-btn" id="closeMenu">✕</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
-    <li><a href="new-launch.html">New Launch</a></li>
-    <li><a href="social-hub.html">Social Hub</a></li>
-    <li><a href="contact-us.html">Contact Us</a></li>
-    <li><a href="cart.html"><i class="bi bi-cart3"></i> Cart <span id="cart-count-mobile">0</span></a></li>
-  </ul>
-</nav>
-
+<!-- ======================= PAGE TITLE ======================= -->
 <div class="page-title-container">
   <h1>Shop By Brand</h1>
 </div>
 
-<!-- Brand: Afnan -->
-<div class="brand-title-container">
-  <h2>Afnan</h2>
-</div>
+<section class="brands-section">
 
-<div class="grid">
-  <div class="item">
-    <p class="number">Afnan Supremacy | EDP 100ML | Unisex</p>
-    <img src="didi/images/SupremacyCollectionsEditionFront_Gray-removebg-preview.png" class="perfume-img">
-    <p class="price">R800</p>
-    <button class="add-to-cart" data-name="Afnan Supremacy" data-price="800">Add to Cart</button>
-  </div>
-  <div class="item">
-    <p class="number">Afnan Rare | EDP 80ML | Men</p>
-    <img src="didi/Afnan Rare.jpeg" class="perfume-img">
-    <p class="price">R700</p>
-    <button class="add-to-cart" data-name="Afnan Rare" data-price="700">Add to Cart</button>
-  </div>
-</div>
+  <!-- RASASI -->
+  <section class="brand-section" id="rasasi">
+    <div class="brand-header">
+      <img src="brand icons/rasasi.webp" alt="Rasasi Logo" class="brand-logo">
+      <h3>RASASI</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/rasasi-product1.webp" alt="Rasasi Product 1" class="perfume-img">
+        <h4>Rasasi Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Rasasi Product 1" data-price="350">Add to Cart</button>
+      </div>
+    </div>
+  </section>
 
-<!-- Brand: Armaf -->
-<div class="brand-title-container">
-  <h2>Armaf</h2>
-</div>
-<div class="grid">
-  <div class="item">
-    <p class="number">Armaf Club De Nuit Intense | EDP 105ML | Men</p>
-    <img src="didi/images/Q-10.png" class="perfume-img">
-    <p class="price">R1800</p>
-    <button class="add-to-cart" data-name="Armaf Club De Nuit Intense" data-price="1800">Add to Cart</button>
-  </div>
-  <div class="item">
-    <p class="number">Armaf Tres Nuit | EDP 100ML | Men</p>
-    <img src="didi/armaf-tres-nuit-lyric-100-ml-110-og.jpg" class="perfume-img">
-    <p class="price">R1200</p>
-    <button class="add-to-cart" data-name="Armaf Tres Nuit" data-price="1200">Add to Cart</button>
-  </div>
-</div>
+  <!-- ARABIYAT -->
+  <section class="brand-section" id="arabiyat">
+    <div class="brand-header">
+      <img src="brand icons/Arabiyat_LOGO_1080_BY_1080_480x480.webp" alt="Arabiyat Logo" class="brand-logo">
+      <h3>ARABIYAT</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/arabiyat-product1.webp" alt="Arabiyat Product 1" class="perfume-img">
+        <h4>Arabiyat Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Arabiyat Product 1" data-price="450">Add to Cart</button>
+      </div>
+    </div>
+  </section>
 
-<!-- Brand: Lattafa -->
-<div class="brand-title-container">
-  <h2>Lattafa</h2>
-</div>
-<div class="grid">
-  <div class="item">
-    <p class="number">Lattafa Ana Abiyedh | EDP 100ML | Unisex</p>
-    <img src="images/lattafa_anaabiyedh.jpg" class="perfume-img">
-    <p class="price">R900</p>
-    <button class="add-to-cart" data-name="Lattafa Ana Abiyedh" data-price="900">Add to Cart</button>
-  </div>
-</div>
+  <!-- AFNAN -->
+  <section class="brand-section" id="afnan">
+    <div class="brand-header">
+      <img src="brand icons/afnan.jpg" alt="Afnan Logo" class="brand-logo">
+      <h3>AFNAN</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/afnan-product1.webp" alt="Afnan Product 1" class="perfume-img">
+        <h4>Afnan Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Afnan Product 1" data-price="400">Add to Cart</button>
+      </div>
+    </div>
+  </section>
 
-<!-- Brand: French Avenue -->
-<div class="brand-title-container">
-  <h2>French Avenue</h2>
-</div>
-<div class="grid">
-  <div class="item">
-    <p class="number">French Avenue Paris | EDP 100ML | Women</p>
-    <img src="images/frenchavenue_paris.jpg" class="perfume-img">
-    <p class="price">R1500</p>
-    <button class="add-to-cart" data-name="French Avenue Paris" data-price="1500">Add to Cart</button>
-  </div>
-</div>
+  <!-- ARMAF -->
+  <section class="brand-section" id="armaf">
+    <div class="brand-header">
+      <img src="brand icons/armaf_logo.webp" alt="Armaf Logo" class="brand-logo">
+      <h3>ARMAF</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/armaf-product1.webp" alt="Armaf Product 1" class="perfume-img">
+        <h4>Armaf Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Armaf Product 1" data-price="420">Add to Cart</button>
+      </div>
+    </div>
+  </section>
 
-<!-- Brand: Fragrance World -->
-<div class="brand-title-container">
-  <h2>Fragrance World</h2>
-</div>
-<div class="grid">
-  <div class="item">
-    <p class="number">Fragrance World Velvet | EDP 100ML | Men</p>
-    <img src="images/fragranceworld_velvet.jpg" class="perfume-img">
-    <p class="price">R950</p>
-    <button class="add-to-cart" data-name="Fragrance World Velvet" data-price="950">Add to Cart</button>
-  </div>
-</div>
+  <!-- FRENCH AVENUE -->
+  <section class="brand-section" id="french-avenue">
+    <div class="brand-header">
+      <img src="brand icons/french-avenue-logo-modified.png" alt="French Avenue Logo" class="brand-logo">
+      <h3>FRENCH AVENUE</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/french-avenue-product1.webp" alt="French Avenue Product 1" class="perfume-img">
+        <h4>French Avenue Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="French Avenue Product 1" data-price="480">Add to Cart</button>
+      </div>
+    </div>
+  </section>
 
-<!-- Brand: Janan -->
-<div class="brand-title-container">
-  <h2>Janan</h2>
-</div>
-<div class="grid">
-  <div class="item">
-    <p class="number">Janan Oud | EDP 100ML | Unisex</p>
-    <img src="images/janan_oud.jpg" class="perfume-img">
-    <p class="price">R1200</p>
-    <button class="add-to-cart" data-name="Janan Oud" data-price="1200">Add to Cart</button>
-  </div>
-</div>
+  <!-- LATTAFA -->
+  <section class="brand-section" id="lattafa">
+    <div class="brand-header">
+      <img src="brand icons/LATTAFA.png" alt="Lattafa Logo" class="brand-logo">
+      <h3>LATTAFA</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/lattafa-product1.webp" alt="Lattafa Product 1" class="perfume-img">
+        <h4>Lattafa Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Lattafa Product 1" data-price="300">Add to Cart</button>
+      </div>
+    </div>
+  </section>
 
-<!-- Brand: Maison Asrar -->
-<div class="brand-title-container">
-  <h2>Maison Asrar</h2>
-</div>
-<div class="grid">
-  <div class="item">
-    <p class="number">Maison Asrar Rose | EDP 100ML | Women</p>
-    <img src="images/maisonasrar_rose.jpg" class="perfume-img">
-    <p class="price">R1300</p>
-    <button class="add-to-cart" data-name="Maison Asrar Rose" data-price="1300">Add to Cart</button>
-  </div>
-</div>
+  <!-- FRAGRANCE WORLD -->
+  <section class="brand-section" id="fragrance-world">
+    <div class="brand-header">
+      <img src="brand icons/fragrance-world.webp" alt="Fragrance World Logo" class="brand-logo">
+      <h3>FRAGRANCE WORLD</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/fragrance-world-product1.webp" alt="Fragrance World Product 1" class="perfume-img">
+        <h4>Fragrance World Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Fragrance World Product 1" data-price="450">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- JANAN -->
+  <section class="brand-section" id="janan">
+    <div class="brand-header">
+      <img src="brand icons/JANAN.png" alt="Janan Logo" class="brand-logo">
+      <h3>JANAN</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/janan-product1.webp" alt="Janan Product 1" class="perfume-img">
+        <h4>Janan Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Janan Product 1" data-price="400">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAISON ASRAR -->
+  <section class="brand-section" id="maison-asrar">
+    <div class="brand-header">
+      <img src="brand icons/maison-asrar-logo-9.png" alt="Maison Asrar Logo" class="brand-logo">
+      <h3>MAISON ASRAR</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/maison-asrar-product1.webp" alt="Maison Asrar Product 1" class="perfume-img">
+        <h4>Maison Asrar Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Maison Asrar Product 1" data-price="500">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MILESTONE -->
+  <section class="brand-section" id="milestone">
+    <div class="brand-header">
+      <img src="brand icons/MILESTONE.webp" alt="Milestone Logo" class="brand-logo">
+      <h3>MILESTONE</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/milestone-product1.webp" alt="Milestone Product 1" class="perfume-img">
+        <h4>Milestone Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Milestone Product 1" data-price="470">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMPER -->
+  <section class="brand-section" id="emper">
+    <div class="brand-header">
+      <img src="brand icons/emper-300x300.png" alt="Emper Logo" class="brand-logo">
+      <h3>EMPER</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/emper-product1.webp" alt="Emper Product 1" class="perfume-img">
+        <h4>Emper Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Emper Product 1" data-price="390">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- KHADLAJ -->
+  <section class="brand-section" id="khadlaj">
+    <div class="brand-header">
+      <img src="brand icons/KHADLAJ.webp" alt="Khadlaj Logo" class="brand-logo">
+      <h3>KHADLAJ</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/khadlaj-product1.webp" alt="Khadlaj Product 1" class="perfume-img">
+        <h4>Khadlaj Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Khadlaj Product 1" data-price="420">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARIS CORNER -->
+  <section class="brand-section" id="paris-corner">
+    <div class="brand-header">
+      <img src="brand icons/PARIS CORNER.avif" alt="Paris Corner Logo" class="brand-logo">
+      <h3>PARIS CORNER</h3>
+    </div>
+    <div class="brand-products grid">
+      <div class="product-card">
+        <img src="products/paris-corner-product1.webp" alt="Paris Corner Product 1" class="perfume-img">
+        <h4>Paris Corner Product 1</h4>
+        <p>EDP 100ML</p>
+        <button class="add-to-cart" data-name="Paris Corner Product 1" data-price="450">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+</section>
 
 
+
+<!-- Continue all brands exactly like this… -->
+
+<!-- ============== FOOTER ============== -->
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-about">
       <h3>AnnointedSCENTS</h3>
       <p>Making People Smell Expensive.</p>
     </div>
+
     <div class="footer-links">
       <h4>Quick Links</h4>
       <ul>
@@ -189,6 +356,7 @@
         <li><a href="contact-us.html">Contact Us</a></li>
       </ul>
     </div>
+
     <div class="footer-contact">
       <h4>Contact Us</h4>
       <p>Email: frag@annointedscents.com</p>
@@ -206,9 +374,13 @@
   </div>
 </footer>
 
+
+<!-- ======================= JAVASCRIPT ======================= -->
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  // Retrieve cart from localStorage
+
+  // Load Cart
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   const cartCount = document.getElementById('cart-count');
   const cartCountMobile = document.getElementById('cart-count-mobile');
@@ -217,23 +389,23 @@ document.addEventListener('DOMContentLoaded', () => {
     cartCount.textContent = cart.length;
     if (cartCountMobile) cartCountMobile.textContent = cart.length;
   }
-
   updateCartCount();
 
-  const buttons = document.querySelectorAll('.add-to-cart');
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const name = button.dataset.name;
-      const price = parseFloat(button.dataset.price);
+  // Add to Cart
+  document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', () => {
+      let name = btn.dataset.name;
+      let price = parseFloat(btn.dataset.price);
 
       cart.push({ name, price });
       localStorage.setItem('cart', JSON.stringify(cart));
       updateCartCount();
-      alert(`${name} added to cart!`);
+
+      alert(name + " added to cart!");
     });
   });
 
-  // Mobile menu toggle
+  // Mobile Menu
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
   const closeMenu = document.getElementById('closeMenu');

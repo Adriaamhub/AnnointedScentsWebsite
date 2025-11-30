@@ -10,19 +10,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
-
 
 
 <!-- Top Bar -->
 <div class="top-bar-bold">
   <div class="top-bar-left">
-    <span class="announcement">🔥 20% OFF! Tap to Shop →</span>
+    <span class="announcement">20% OFF! Tap to Shop →</span>
   </div>
   <div class="top-bar-right">
     <a href="cart.html" class="shop-now-btn">Track Order</a>
-    <select class="currency-select">
+    <select class="currency-select" aria-label="Select currency">
       <option value="ZAR">ZAR</option>
       <option value="USD">USD</option>
       <option value="EUR">EUR</option>
@@ -30,59 +30,145 @@
   </div>
 </div>
 
-<!-- Mobile Badge -->
-<div class="mobile-top-badge" id="mobileBadge" onclick="window.location.href='shop-by-brand.html'">
-  🔥 20% OFF! Tap to Shop →
-</div>
-
 <!-- Navbar -->
 <header class="navbar">
-  <div class="logo">ANNOINTEDSCENTS</div>
+  <a href="index.html" class="logo">
+    <img src="Images/logo/1759151239466.png" alt="Logo">
+  </a>
 
   <!-- Desktop Menu -->
   <ul class="desktop-menu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
+
+    <!-- Shop By Brand Dropdown -->
+    <li class="dropdown">
+      <a href="shop-by-brand.html">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
+      <ul class="dropdown-menu-brands">
+        <li><a href="shop-by-brand.html#">RASASI</a></li>
+        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
+        <li><a href="shop-by-brand.html">AFNAN</a></li>
+        <li><a href="shop-by-brand.html">ARMAF</a></li>
+        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
+        <li><a href="shop-by-brand.html">LATTAFA</a></li>
+        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
+        <li><a href="shop-by-brand.html">JANAN</a></li>
+        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
+        <li><a href="shop-by-brand.html">MILESTONE</a></li>
+        <li><a href="shop-by-brand.html">EMPER</a></li>
+        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
+        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
+      </ul>
+    </li>
+
     <li><a href="new-launch.html">New Launch</a></li>
     <li><a href="social-hub.html">Social Hub</a></li>
-
     <li><a href="contact-us.html">Contact Us</a></li>
     <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
   </ul>
 
   <!-- Hamburger -->
   <div class="menu-icon" id="menuToggle">☰</div>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" id="closeMenu">✕</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+
+      <!-- Mobile Shop By Brand Dropdown -->
+     <li class="dropdown brand-mobile">
+  <a href="#">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
+  <ul class="dropdown-menu-brands">
+           <li><a href="shop-by-brand.html">RASASI</a></li>
+        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
+        <li><a href="shop-by-brand.html">AFNAN</a></li>
+        <li><a href="shop-by-brand.html">ARMAF</a></li>
+        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
+        <li><a href="shop-by-brand.html">LATTAFA</a></li>
+        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
+        <li><a href="shop-by-brand.html">JANAN</a></li>
+        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
+        <li><a href="shop-by-brand.html">MILESTONE</a></li>
+        <li><a href="shop-by-brand.html">EMPER</a></li>
+        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
+        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
+        </ul>
+      </li>
+
+      <li><a href="new-launch.html">New Launch</a></li>
+      <li><a href="social-hub.html">Social Hub</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- Account Dropdown -->
+  <div class="login-dropdown">
+    <button class="btn navbar-login">
+      <i class="bi bi-person-circle"></i> Account <i class="bi bi-caret-down-fill"></i>
+    </button>
+    <div class="dropdown-menu">
+      <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+      <a href="orders.html"><i class="bi bi-bag-check"></i> Orders</a>
+      <a href="logout.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    </div>
+  </div>
 </header>
 
-<!-- Mobile Menu -->
-<nav class="mobile-menu" id="mobileMenu">
-  <div class="close-btn" id="closeMenu">✕</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
-    <li><a href="new-launch.html">New Launch</a></li>
-    <li><a href="social-hub.html">Social Hub</a></li>
-   
-    <li><a href="contact-us.html">Contact Us</a></li>
-    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
-  </ul>
-</nav>
 
 
-  <!-- ==============================
-       HERO SECTION
-  ============================== -->
-  <section class="hero">
-  
+<!-- Hero Section -->
+<section class="hero">
+  <div class="slide active" style="background-image:url('hero section images/MOMENTO.jpeg')">
     <div class="overlay"></div>
-    <div class="hero-content">
-      <img src="Images/logo/1759151239466.png" alt="Perfume Bottle" class="perfume-img">
-      <p class="slogan">Making People Smell Expensive.</p>
-      <h4>OUD SLY ABSOLUTE</h4>
-      <h1>BUY 1 GET 2</h1>
+    <div class="content fade">
+      <h1>Annointed Scents</h1>
+      <h2>Momento – Riiffs</h2>
+      <p>A luxurious masterpiece for refined elegance. Deep, classy, and unforgettable.</p>
+     <div class="buttons">
+  
+  <a href="shop-by-brand.html" class="btn outline">Explore Scents</a>
+    <a href="new-launch.html" class="btn gold">New Launch</a>
+</div>
 
-    <a href="shop-by-brand.html" class="btn">Shop Now</a>
     </div>
+  </div>
+
+  <div class="slide" style="background-image:url('hero section images/UHUD ARABIYAT.jpeg')">
+    <div class="overlay"></div>
+    <div class="content fade">
+      <h1>Annointed Scents</h1>
+      <h2>Uhud – Arabiyat Prestige</h2>
+      <p>A fruity, honey-drenched blend bursting with berries. Sweet, fresh and powerful.</p>
+     <div class="buttons">
+
+  <a href="shop-by-brand.html" class="btn outline">Explore Scents</a>
+    <a href="new-launch.html" class="btn gold">New Launch</a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="slide" style="background-image:url('hero section images/Al_Noor_by_Arabiyat_Prestige_Unisex_Scent.webp')">
+    <div class="overlay"></div>
+    <div class="content fade">
+      <h1>Annointed Scents</h1>
+      <h2>Al Noor – Arabiyat Prestige</h2>
+      <p>A warm, oriental fragrance with figs, spices, and deep woody notes.</p>
+     <div class="buttons">
+  
+  <a href="shop-by-brand.html" class="btn outline">Explore Scents</a>
+    <a href="new-launch.html" class="btn gold">New Launch</a>
+</div>
+
+    </div>
+  </div>
+
+  <!-- Arrows -->
+  <div class="arrow prev" onclick="prevSlide()">&#10094;</div>
+  <div class="arrow next" onclick="nextSlide()">&#10095;</div>
+
+</section>
  
 
 
@@ -131,197 +217,287 @@
 
 </section>
 
-<!-- Add the CSS below into your stylesheet -->
 
+<section class="about-section">
+  <h2 class="about-title">ABOUT US</h2>
+  <p class="about-sub">
+    Discover the magic behind AnnointedSCENTS — where luxury meets identity.
+  </p>
 
-  <!-- ==============================
-       NEW LAUNCH SECTION
-  ============================== -->
-  <section class="new-launch">
-    <h2 class="section-title">NEW LAUNCH</h2>
-  
+  <div class="about-grid">
 
-    <div class="products">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <span class="badge preorder">RASASI</span>
-        <img src="didi/pictures/Hawas_Fire4-removebg-preview.png" alt="Perfume 1" class="product-img">
-       
-        <button class="add-btn">+</button>
-      </div>
-
-      <!-- Product 2 -->
-      <div class="product-card">
-        <span class="badge new">ARABIYAT</span>
-        <img src="BG HOME NEW LAUNCH/arabiyat.jpg" alt="Perfume 2" class="product-img">
-    
-        <button class="add-btn">+</button>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="product-card">
-        <span class="badge new">AFNAN</span>
-        <img src="didi/images/SupremacyCollectionsEditionFront_Gray-removebg-preview.png" alt="Perfume 3" class="product-img">
-        
-        <button class="add-btn">+</button>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="product-card">
-        <span class="badge new">ARMAF</span>
-        <img src="didi/images/Q-10.png" alt="Perfume 4" class="product-img">
-        
-        <button class="add-btn">+</button>
+    <!-- CARD 1 -->
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="Images/best-perfume-for-men_1100x.webp" alt="Our Story">
+          <h3>Our Story</h3>
+        </div>
+        <div class="flip-back">
+          <p>
+            Founded with passion and purpose, AnnointedSCENTS brings premium fragrances
+            to South Africa with unmatched quality, authenticity, and elegance.
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="view-all">
-      <a href="shop-by-brand.html">VIEW ALL</a>
+    <!-- CARD 2 -->
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="ABOUT/MISSIONt.webp" alt="Our Mission">
+          <h3>Our Mission</h3>
+        </div>
+        <div class="flip-back">
+          <p>
+            To provide unforgettable scents that tell your story — crafted for confidence,
+            identity, and luxury without compromise.
+          </p>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <!-- ==============================
-       IMAGE GRID SECTION
-  ============================== -->
-    <h2 class="section-title">SHOPPING VOUCHERS</h2>
-  <section class="grid-container">
-    <div class="grid-item tall red">
-  <i class="bi bi-cart-fill"></i> <!-- Shopping cart -->
-   <span>✨ Shop For R5000 & Win R500 Shopping Voucher ✨</span>
+    <!-- CARD 3 -->
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="Images/black13.jpg" alt="Why Choose Us">
+          <h3>Why Choose Us</h3>
+        </div>
+        <div class="flip-back">
+          <p>
+            100% authentic perfumes, premium packaging, fast delivery, and a brand experience
+            crafted to make you feel extraordinary.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MY BRANDS SECTION (UPGRADED FULL VERSION) -->
+<section class="brands-section">
+  <h2 class="brands-title">MY BRANDS</h2>
+
  
-  <i class="bi bi-gift-fill"></i> <!-- Gift icon -->
-  <i class="bi bi-stars"></i> <!-- Sparkles -->
-</div>
-    <div class="grid-item"><img src="shopping vouchers/1.webp" alt="Perfume 1"></div>
-    <div class="grid-item"><img src="shopping vouchers/arabiyat.jpeg" alt="Background 1"></div>
-    <div class="grid-item"><img src="Images/category/goods/new2.webp" alt="Perfume 2"></div>
-    <div class="grid-item"><img src="shopping vouchers/2 nayla.webp" alt="Apple"></div>
-    <div class="grid-item"><img src="Images/category/goods/Lattafa Teriaq Intense2.jpg" alt="Perfume 3"></div>
-    <div class="grid-item"><img src="Images/category/goods/khamrahqahwa2.jpg" alt="Perfume 4"></div>
-    <div class="grid-item"><img src="Images/category/goods/for woman.webp" alt="Perfume 5"></div>
-    <div class="grid-item"><img src="Images/category/hero/hero3.webp" alt="Model"></div>
-    <div class="grid-item"><img src="shopping vouchers/3.jpg" alt="Perfume 6"></div>
-  </section>
+  <div class="brands-carousel" id="brandsCarousel">
 
-  
+    <a href="#" class="brand-card">
+      <img src="brand icons/rasasi.webp" alt="Brand 1 Logo">
+      <p>RASASI</p>
+    </a>
+
+    <a href="#" class="brand-card">
+      <img src="brand icons/Arabiyat_LOGO_1080_BY_1080_480x480.webp" alt="Brand 2 Logo">
+      <p>ARABIYAT</p>
+    </a>
+
+    <a href="#" class="brand-card">
+      <img src="afnan_logo.webp" alt="Brand 3 Logo">
+      <p>AFNAN</p>
+    </a>
+
+    <a href="#" class="brand-card">
+      <img src="brand icons/armaf_logo.webp" alt="Brand 4 Logo">
+      <p>ARMAF</p>
+    </a>
+
+    <a href="#" class="brand-card">
+      <img src="brand icons/french-avenue-logo-modified.png" alt="Brand 5 Logo">
+      <p>FRENCH AVENUE</p>
+    </a>
+
+    <a href="#" class="brand-card">
+      <img src="brand icons/LATTAFA.png" alt="Brand 6 Logo">
+      <p>LATTAFA</p>
+    </a>
+
+     <a href="#" class="brand-card">
+      <img src="brand icons/fragrance-world.webp" alt="Brand 6 Logo">
+      <p>FRAGRANCE WORLD</p>
+    </a>
+
+    <a href="#" class="brand-card">
+      <img src="brand icons/JANAN.png" alt="Brand 6 Logo">
+      <p>JANAN</p>
+    </a>
+
+     <a href="#" class="brand-card">
+      <img src="brand icons/maison-asrar-logo-9.png" alt="Brand 6 Logo">
+      <p>MAISON ASRAR</p>
+    </a>
+
+     <a href="#" class="brand-card">
+      <img src="brand icons/MILESTONE.webp" alt="Brand 6 Logo">
+      <p>MILESTONE</p>
+    </a>
+
+     <a href="#" class="brand-card">
+      <img src="brand icons/emper-300x300.png" alt="Brand 6 Logo">
+      <p>EMPER</p>
+    </a>
+
+    <a href="#" class="brand-card">
+      <img src="brand icons/KHADLAJ.webp" alt="Brand 6 Logo">
+      <p>KHADLAJ</p>
+    </a>
+
+    <a href="#" class="brand-card">
+      <img src="brand icons/PARIS CORNER.avif" alt="Brand 6 Logo">
+      <p>PARIS CORNER</p>
+    </a>
+
+  </div>
+</section>
+
+
+
 <section class="top-selling-fragrances">
-  <h2 class="section-title">TOP SELLING LADIES FRAGRANCES</h2>
-  <div class="fragrance-grid">
-    <div class="fragrance-card">
-      <img src="top selling woman/Lancome-La-Vie-Est-Belle-Parfum-Julia-Roberts-2-768x432.jpg" alt="La Vie Est Belle" class="fragrance-img">
-      <p class="fragrance-type">LADIES FRAGRANCES</p>
-      <p class="fragrance-number">#150</p>
-      <p class="fragrance-inspired">INSPIRED BY <span>LA VIE EST BELLE BY LANCOME</span></p>
-    </div>
-    <div class="fragrance-card">
-      <img src="top selling woman/lady-million-empire-edp-80-ml-edp-5-ml-lotion-100-ml.jpg" alt="Lady Million" class="fragrance-img">
-      <p class="fragrance-type">LADIES FRAGRANCES</p>
-      <p class="fragrance-number">#376</p>
-      <p class="fragrance-inspired">INSPIRED BY <span>LADY MILLION BY PACO RABANNE</span></p>
-    </div>
-    <div class="fragrance-card">
-      <img src="top selling woman/Si by Giorgio Armani.jpg" alt="Si by Giorgio Armani" class="fragrance-img">
-      <p class="fragrance-type">LADIES FRAGRANCES</p>
-      <p class="fragrance-number">#326</p>
-      <p class="fragrance-inspired">INSPIRED BY <span>SI BY GIORGIO ARMANI</span></p>
-    </div>
-    <div class="fragrance-card">
-      <img src="top selling woman/Omnia Coral.webp" alt="Omnia Coral" class="fragrance-img">
-      <p class="fragrance-type">LADIES FRAGRANCES</p>
-      <p class="fragrance-number">#398</p>
-      <p class="fragrance-inspired">INSPIRED BY <span>OMNIA CORAL BY BVLGARI</span></p>
-    </div>
-   
+  <h2 class="section-title">TOP SELLING & TRENDING FRAGRANCES</h2>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <input type="radio" name="category" id="tab-women" checked>
+    <label for="tab-women" class="tab-btn">Women</label>
+
+    <input type="radio" name="category" id="tab-men">
+    <label for="tab-men" class="tab-btn">Men</label>
+
+    <input type="radio" name="category" id="tab-unisex">
+    <label for="tab-unisex" class="tab-btn">Unisex</label>
   </div>
-  <div class="see-all-container">
-    <a href="#" class="see-all-btn">SEE ALL</a>
+
+  <!-- Grids -->
+  <div class="fragrance-grid-wrapper">
+    <!-- Women -->
+    <div class="fragrance-grid category-women">
+      <div class="fragrance-card">
+        <div class="ribbon">R649</div>
+        <img src="top selling/Badee Al Oud Noble Blush.jpg" alt="Badee Al Oud Noble Blush" class="fragrance-img">
+        <p class="fragrance-type">WOMEN FRAGRANCES</p>
+        <p class="fragrance-inspired"><span>Badee Al Oud Noble Blush</span></p>
+        <a href="cart.html?product=Badee Al Oud Noble Blush" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+      <div class="fragrance-card">
+        <div class="ribbon">R599</div>
+        <img src="top selling/lattafa-petra-100ml-ltaf-btra-7854482.webp" alt="Lattafa Petra" class="fragrance-img">
+        <p class="fragrance-type">WOMEN FRAGRANCES</p>
+        <p class="fragrance-inspired"><span>Lattafa Petra</span></p>
+        <a href="cart.html?product=Lattafa Petra" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+      <div class="fragrance-card">
+        <div class="ribbon">R699</div>
+        <img src="top selling/arabiyat prestige 2.jpg" alt="Arabiyat Prestige Bahiya" class="fragrance-img">
+        <p class="fragrance-type">WOMEN FRAGRANCES</p>
+        <p class="fragrance-inspired"><span>Arabiyat Prestige Bahiya</span></p>
+        <a href="cart.html?product=Arabiyat Prestige Bahiya" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+    </div>
+
+    <!-- Men -->
+    <div class="fragrance-grid category-men">
+      <div class="fragrance-card">
+        <div class="ribbon">R1499</div>
+        <img src="top selling/janan platinium.jpg" alt="Janan Platinum" class="fragrance-img">
+        <p class="fragrance-type">MEN FRAGRANCES</p>
+        <p class="fragrance-inspired"><span>Janan Platinum</span></p>
+        <a href="cart.html?product=Janan Platinum" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+      <div class="fragrance-card">
+        <div class="ribbon">R1199</div>
+        <img src="top selling/afnan supremacy collectors edition.jpg" alt="Afnan Supremacy Collector's Edition" class="fragrance-img">
+        <p class="fragrance-type">MEN FRAGRANCES</p>
+        <p class="fragrance-inspired"><span>Afnan Supremacy Collector's Edition</span></p>
+        <a href="cart.html?product=Afnan Supremacy Collector's Edition" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+      <div class="fragrance-card">
+        <div class="ribbon">R799</div>
+        <img src="top selling/khdlaj island dreams.jpg" alt="Khadlaj Island Dreams" class="fragrance-img">
+        <p class="fragrance-type">MEN FRAGRANCES</p>
+        <p class="fragrance-inspired"><span>Khadlaj Island Dreams</span></p>
+        <a href="cart.html?product=Khadlaj Island Dreams" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+    </div>
+
+    <!-- Unisex -->
+    <div class="fragrance-grid category-unisex">
+      <div class="fragrance-card">
+        <div class="ribbon">R799</div>
+        <img src="top selling/champ de rose.jpg" alt="Champ De Rose" class="fragrance-img">
+        <p class="fragrance-type">UNISEX FRAGRANCES</p>
+        <p class="fragrance-inspired"><span>Champ De Rose</span></p>
+        <a href="cart.html?product=Champ De Rose" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+      <div class="fragrance-card">
+        <div class="ribbon">R899</div>
+        <img src="top selling/jacques yves imaginari.jpg" alt="Jacques Yves Imaginari" class="fragrance-img">
+        <p class="fragrance-type">UNISEX FRAGRANCES</p>
+        <p class="fragrance-inspired"><span>Jacques Yves Imaginari</span></p>
+        <a href="cart.html?product=Jacques Yves Imaginari" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+    </div>
+    
   </div>
+
 </section>
 
-<!-- Creative Divider Line -->
-<div class="creative-divider">
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <div class="divider-line"></div>
+<section class="coming-soon">
+  <div class="coming-soon-inner">
+    <div class="coming-soon-text">
+
+      <div class="glam-circles">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <h2 class="glam-title">Glamour Collection</h2>
+      <div class="glam-line"></div>
+
+      <p>Coming Soon — Stay tuned for exclusive luxury drops!</p>
+      <a href="shop-by-brand.html" class="btn gold">Learn More</a>
+    </div>
+ <div class="glam-circles">
+  <span class="spark"></span>
+  <span class="spark"></span>
+  <span class="spark star"></span>
+  <span class="spark flicker"></span>
+  <span class="spark star rotate"></span>
+</div>
+    <div class="coming-soon-image">
+      <img src="GLAMOUR 3.webp" alt="Glamazon Collection" />
+      <img src="GLAMOUR5.webp" alt="Glamazon Collection" />
+    </div>
+  </div>
+  <div class="glam-circles">
+  <span class="spark"></span>
+  <span class="spark"></span>
+  <span class="spark star"></span>
+  <span class="spark flicker"></span>
+  <span class="spark star rotate"></span>
 </div>
 
-<section class="top-selling-fragrances men">
-  <h2 class="section-title">TOP SELLING MEN’S FRAGRANCES</h2>
-  <div class="fragrance-grid">
-    <div class="fragrance-card">
-      <img src="top selling men/the-expert-review-of-bleu-de-chanel-2022-315389.webp" alt="Bleu de Chanel" class="fragrance-img">
-      <p class="fragrance-type">MEN FRAGRANCES</p>
-      <p class="fragrance-number">#101</p>
-      <p class="fragrance-inspired">INSPIRED BY <span>BLEU DE CHANEL</span></p>
-    </div>
-    <div class="fragrance-card">
-      <img src="top selling men/Acqua-di-Gio-Parfum-comparison.webp" alt="Acqua di Gio" class="fragrance-img">
-      <p class="fragrance-type">MEN FRAGRANCES</p>
-      <p class="fragrance-number">#202</p>
-      <p class="fragrance-inspired">INSPIRED BY <span>ACQUA DI GIO BY GIORGIO ARMANI</span></p>
-    </div>
-    <div class="fragrance-card">
-      <img src="top selling men/Best-Paco-Rabanne-1-Million-For-Men-Main-Image.jpg" alt="1 Million" class="fragrance-img">
-      <p class="fragrance-type">MEN FRAGRANCES</p>
-      <p class="fragrance-number">#303</p>
-      <p class="fragrance-inspired">INSPIRED BY <span>1 MILLION BY PACO RABANNE</span></p>
-    </div>
-    <div class="fragrance-card">
-      <img src="top selling men/sauvage.webp" alt="Sauvage" class="fragrance-img">
-      <p class="fragrance-type">MEN FRAGRANCES</p>
-      <p class="fragrance-number">#404</p>
-      <p class="fragrance-inspired">INSPIRED BY <span>SAUVAGE BY DIOR</span></p>
-    </div>
-   
-  </div>
-  <div class="see-all-container">
-    <a href="#" class="see-all-btn">SEE ALL</a>
-  </div>
 </section>
 
-<section class="fragrance-notes">
-  <h2 class="fn-title">FRAGRANCE NOTES</h2>
 
-  <div class="fn-grid">
-
-    <div class="fn-card bg1">Amber Woody</div>
-    <div class="fn-card bg2">Chypre Floral</div>
-    <div class="fn-card bg3">Chypre Fruity</div>
-    <div class="fn-card bg4">Floral Aquatic</div>
-    <div class="fn-card bg5">Floral Fruity Gourmand</div>
-    <div class="fn-card bg6">Floral Woody Musk</div>
-    <div class="fn-card bg7">Fresh Floral</div>
-  </div>
-</section>
 
 <section class="testimonials">
-  <h2 class="testi-title">Real People<br>Real Reviews!</h2>
+  <h2 class="testi-title">
+    <span>Real</span>
+    <span>People</span><br>
+    <span>Real</span>
+    <span>Reviews!</span>
+  </h2>
 
   <div class="testi-grid">
-
-    <!-- Review 1 -->
     <div class="testi-card">
       <h3 class="testi-name">Siya Mabena</h3>
       <p class="testi-text">Very happy with the service & prompt delivery.</p>
     </div>
 
-    <!-- Review 2 -->
-    <div class="testi-card">
-      <h3 class="testi-name">hi</h3>
-      <p class="testi-text">
-        Order was prompt and my perfume is great. I was apprehensive to order perfume 
-        online as there is so much fake product but I was very happy with everything. 
-        I was able to correct my delivery address without a fuss. Great service all round.
-      </p>
-    </div>
-
-    <!-- Review 3 -->
+    
     <div class="testi-card">
       <h3 class="testi-name">Adriaan Mahlangu</h3>
       <p class="testi-text">
@@ -332,7 +508,6 @@
       </p>
     </div>
 
-    <!-- Review 4 -->
     <div class="testi-card">
       <h3 class="testi-name">Tshegofatso Mahura</h3>
       <p class="testi-text">
@@ -341,31 +516,9 @@
         Excellent quality, value for money — totally worth it.
       </p>
     </div>
-    <!-- Arrows -->
-    <div class="slider-arrows">
-      <span class="arrow prev">&#10094;</span>
-      <span class="arrow next">&#10095;</span>
-    </div>
-
-    <!-- Dots -->
-    <div class="slider-dots"></div>
-
-  </div>
-
   </div>
 </section>
-<!-- Creative Divider Line -->
-<div class="creative-divider">
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <span class="divider-icon">🌸</span>
-  <div class="divider-line"></div>
-</div>
+
 
 <section class="benefits-section">
   <div class="benefits-container">
@@ -397,7 +550,40 @@
   </div>
 </section>
 
+<section class="milestone-section">
+  <div class="milestone-overlay"></div>
 
+  <div class="milestone-content">
+    <h2 class="milestone-title">Our Milestones</h2>
+    <p class="milestone-subtitle">A Journey of Passion, Luxury & Excellence</p>
+
+    <div class="milestone-grid">
+
+      <div class="milestone-box">
+        <h3 class="counter" data-target="10">2</h3>
+
+        <p>Years of Experience</p>
+      </div>
+
+      <div class="milestone-box">
+        <h3 class="counter" data-target="5000">1165</h3>
+
+        <p>Happy Customers</p>
+      </div>
+
+      <div class="milestone-box">
+        <h3 class="counter" data-target="200">187</h3>
+        <p>Luxury Scents</p>
+      </div>
+
+      <div class="milestone-box">
+        <h3 class="counter" data-target="50">20</h3>
+        <p>Exclusive Brands</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!-- ==============================
@@ -418,13 +604,28 @@
   <p>
     Discover the true essence of elegance with our premium collection of luxurious fragrances. 
     Each scent is carefully crafted to embody sophistication, confidence, and timeless beauty. 
-    Explore perfumes designed to elevate your presence and leave a lasting impression wherever you go.
+    
   </p>
 </div>
 
 </section>
 
+<section class="payment-section">
+  <div class="payment-container">
 
+    <div class="payment-text">
+      <h2>FLEXIBLE PAYMENT</h2>
+      <p>Shop your favourite luxury fragrances now and pay later with our flexible installment options.</p>
+
+      <a href="learn-more.html" class="btn learn-more">Learn More</a>
+    </div>
+
+    <div class="payment-image">
+      <img src="flexpay-cards.png" alt="Flexible Payment">
+    </div>
+
+  </div>
+</section>
 
  <!-- Footer -->
 <footer class="footer">
@@ -486,29 +687,23 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slide");
-  const dotsContainer = document.querySelector(".slider-dots");
+
   const prevBtn = document.querySelector(".prev");
   const nextBtn = document.querySelector(".next");
 
   let index = 0;
   let autoSlide;
 
-  /* ===== CREATE DOTS ===== */
-  slides.forEach((_, i) => {
-    const dot = document.createElement("div");
-    dot.dataset.index = i;
-    dotsContainer.appendChild(dot);
-  });
 
-  const dots = dotsContainer.querySelectorAll("div");
+  
 
   /* ===== SHOW SLIDE FUNCTION ===== */
   function showSlide(i) {
     slides.forEach(s => s.classList.remove("active"));
-    dots.forEach(d => d.classList.remove("active-dot"));
+  
 
     slides[i].classList.add("active");
-    dots[i].classList.add("active-dot");
+  
 
     document.querySelector(".slider-wrapper").style.transform =
       `translateX(-${i * 100}%)`;
@@ -528,14 +723,6 @@ document.addEventListener("DOMContentLoaded", () => {
   nextBtn.addEventListener("click", () => { nextSlide(); resetAutoSlide(); });
   prevBtn.addEventListener("click", () => { prevSlideFunc(); resetAutoSlide(); });
 
-  /* ===== DOT CLICK ===== */
-  dots.forEach(dot => {
-    dot.addEventListener("click", () => {
-      index = parseInt(dot.dataset.index);
-      showSlide(index);
-      resetAutoSlide();
-    });
-  });
 
   /* ===== AUTO SLIDE ===== */
   function startAutoSlide() {
@@ -605,6 +792,64 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 </script>
+<script>
+// Mobile menu toggle
+document.getElementById("menuToggle").onclick = () => {
+  document.getElementById("mobileMenu").classList.add("active");
+};
 
+document.getElementById("closeMenu").onclick = () => {
+  document.getElementById("mobileMenu").classList.remove("active");
+};
+
+// Mobile dropdown logic
+document.querySelectorAll(".mobile-menu .dropdown > a").forEach(item => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let parent = item.parentElement;
+
+    // Close all others first
+    document.querySelectorAll(".mobile-menu .dropdown").forEach(drop => {
+      if (drop !== parent) drop.classList.remove("open");
+    });
+
+    // Toggle current
+    parent.classList.toggle("open");
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // MOBILE MENU TOGGLE
+  const menuToggle = document.getElementById("menuToggle");
+  const closeMenu = document.getElementById("closeMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuToggle.onclick = () => mobileMenu.classList.add("active");
+  closeMenu.onclick = () => mobileMenu.classList.remove("active");
+
+  // MOBILE BRAND DROPDOWN
+  const mobileDropdown = document.querySelector(".mobile-menu .dropdown > a");
+  const mobileBrandMenu = document.querySelector(".mobile-menu .dropdown-menu-brands");
+  const mobileDropdownItem = document.querySelector(".mobile-menu .dropdown");
+
+  mobileDropdown.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    mobileDropdownItem.classList.toggle("open");
+
+    if (mobileBrandMenu.style.display === "block") {
+      mobileBrandMenu.style.display = "none";
+    } else {
+      mobileBrandMenu.style.display = "block";
+    }
+  });
+
+});
+</script>
+
+<script src="counter.js" defer></script>
 </body>
 </html>

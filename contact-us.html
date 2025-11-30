@@ -12,11 +12,11 @@
 <!-- Top Bar -->
 <div class="top-bar-bold">
   <div class="top-bar-left">
-    <span class="announcement">🔥 20% OFF! Tap to Shop →</span>
+    <span class="announcement">20% OFF! Tap to Shop →</span>
   </div>
   <div class="top-bar-right">
     <a href="cart.html" class="shop-now-btn">Track Order</a>
-    <select class="currency-select">
+    <select class="currency-select" aria-label="Select currency">
       <option value="ZAR">ZAR</option>
       <option value="USD">USD</option>
       <option value="EUR">EUR</option>
@@ -24,54 +24,106 @@
   </div>
 </div>
 
-<!-- Mobile Badge -->
-<div class="mobile-top-badge" id="mobileBadge" onclick="window.location.href='shop-by-brand.html'">
-  🔥 20% OFF! Tap to Shop →
-</div>
-<!-- ==============================
-     NAVBAR (Fully Functional)
-============================== -->
+<!-- Navbar -->
 <header class="navbar">
-  <div class="logo">ANNOINTEDSCENTS</div>
+  <a href="index.html" class="logo">
+    <img src="Images/logo/1759151239466.png" alt="Logo">
+  </a>
 
   <!-- Desktop Menu -->
   <ul class="desktop-menu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
+
+    <!-- Shop By Brand Dropdown -->
+    <li class="dropdown">
+      <a href="shop-by-brand.html">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
+      <ul class="dropdown-menu-brands">
+        <li><a href="shop-by-brand.html#">RASASI</a></li>
+        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
+        <li><a href="shop-by-brand.html">AFNAN</a></li>
+        <li><a href="shop-by-brand.html">ARMAF</a></li>
+        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
+        <li><a href="shop-by-brand.html">LATTAFA</a></li>
+        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
+        <li><a href="shop-by-brand.html">JANAN</a></li>
+        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
+        <li><a href="shop-by-brand.html">MILESTONE</a></li>
+        <li><a href="shop-by-brand.html">EMPER</a></li>
+        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
+        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
+      </ul>
+    </li>
+
     <li><a href="new-launch.html">New Launch</a></li>
     <li><a href="social-hub.html">Social Hub</a></li>
-   
     <li><a href="contact-us.html">Contact Us</a></li>
     <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
   </ul>
 
-  <!-- Mobile Hamburger -->
+  <!-- Hamburger -->
   <div class="menu-icon" id="menuToggle">☰</div>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" id="closeMenu">✕</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+
+      <!-- Mobile Shop By Brand Dropdown -->
+     <li class="dropdown brand-mobile">
+  <a href="#">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
+  <ul class="dropdown-menu-brands">
+           <li><a href="shop-by-brand.html">RASASI</a></li>
+        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
+        <li><a href="shop-by-brand.html">AFNAN</a></li>
+        <li><a href="shop-by-brand.html">ARMAF</a></li>
+        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
+        <li><a href="shop-by-brand.html">LATTAFA</a></li>
+        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
+        <li><a href="shop-by-brand.html">JANAN</a></li>
+        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
+        <li><a href="shop-by-brand.html">MILESTONE</a></li>
+        <li><a href="shop-by-brand.html">EMPER</a></li>
+        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
+        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
+        </ul>
+      </li>
+
+      <li><a href="new-launch.html">New Launch</a></li>
+      <li><a href="social-hub.html">Social Hub</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- Account Dropdown -->
+  <div class="login-dropdown">
+    <button class="btn navbar-login">
+      <i class="bi bi-person-circle"></i> Account <i class="bi bi-caret-down-fill"></i>
+    </button>
+    <div class="dropdown-menu">
+      <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+      <a href="orders.html"><i class="bi bi-bag-check"></i> Orders</a>
+      <a href="logout.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    </div>
+  </div>
 </header>
 
-<!-- Mobile Menu -->
-<nav class="mobile-menu" id="mobileMenu">
-  <div class="close-btn" id="closeMenu">✕</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shop-by-brand.html">Shop By Brand</a></li>
-    <li><a href="new-launch.html">New Launch</a></li>
-    <li><a href="social-hub.html">Social Hub</a></li>
-   
-    <li><a href="contact-us.html">Contact Us</a></li>
-    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
-  </ul>
-</nav>
 
-  <section class="hero">
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="slide active" style="background-image:url('contactus.jpg')">
     <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>CONTACT US</h1>
-      <h2>We’d love to hear from you!</h2>
-      <a href="#" class="btn">SEND MESSAGE</a>
-      <a href="index.html" class="btn">Back to Home</a>
+    <div class="content fade">
+    
+   
     </div>
-  </section>
+  </div>
+
+
+
+</section>
 
   <section class="new-launch">
     <h2 class="section-title">Get in Touch</h2>
