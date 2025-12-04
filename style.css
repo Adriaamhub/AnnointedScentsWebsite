@@ -1,6 +1,4 @@
-/* ==============================
-   RESET & BASE STYLES
-============================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -27,58 +25,6 @@ ul {
   list-style: none;
 }
 
-/* TOP BAR */
-.top-bar-bold {
-  width: 100%;
-  background: #fff;        /* changed from black to white */
-  color: #000;             /* text color black */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 20px;
-  font-size: 14px;
-  border-bottom: 2px solid #c2730d;
-  position: fixed;
-  top: 0;
-  z-index: 2000; /* Ensure it’s above everything */
-  animation: slideDown 0.5s ease forwards;
-}
-
-/* Slide-in Animation */
-@keyframes slideDown {
-  0% { transform: translateY(-100%); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-/* Left Announcement */
-.top-bar-left .announcement {
-  font-weight: bold;
-  animation: flash 2s linear infinite;
-}
-
-/* Flashing animation */
-@keyframes flash {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0.2; }
-}
-
-/* Right Section */
-.top-bar-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-/* Optional: make links black and hover effect */
-.top-bar-right a {
-  color: #000;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.top-bar-right a:hover {
-  color: #c2730d; /* golden hover */
-}
 
 
 /* Shop Now Button */
@@ -114,177 +60,6 @@ ul {
   border-color: #fff;
 }
 
-/* Toggle Button */
-.topbar-toggle {
-  background: transparent;
-  color: #fff;
-  border: 1px solid #c2730d;
-  padding: 3px 7px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.topbar-toggle:hover {
-  background: #c2730d;
-  color: #000;
-  transform: translateY(-1px);
-}
-
-/* Mobile Badge */
-.mobile-top-badge {
-  display: none;
-  background: #c2730d;
-  color: #000;
-  font-weight: bold;
-  text-align: center;
-  padding: 6px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 3000;
-  cursor: pointer;
-  animation: flash 2s linear infinite;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .top-bar-bold { display: none; }
-  .mobile-top-badge { display: block; }
-}
-
-
-
-
-/* NAVBAR */
-.navbar {
-  width: 100%;
-  padding: 15px 20px;
-  background: #000;
-  border-bottom: 1px solid #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 40px; /* Push navbar below top bar (adjust to top-bar height) */
-  z-index: 1000;
-}
-
-.navbar .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #c2730d;
-}
-
-.menu-icon {
-  font-size: 28px;
-  cursor: pointer;
-  color: #fff; /* WHITE ICON */
-}
-
-/* MOBILE MENU */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  height: 100vh;
-  background: #000; /* BLACK MENU */
-  padding: 25px 20px;
-  box-shadow: 3px 0 8px rgba(0,0,0,0.2);
-  transition: 0.4s ease;
-  z-index: 9999;
-}
-
-.mobile-menu ul {
-  list-style: none;
-  margin-top: 40px;
-}
-
-.mobile-menu ul li {
-  margin-bottom: 20px;
-  padding: 10px 0;
-  border-bottom: 1px solid #333;
-}
-
-.mobile-menu ul li a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #fff; /* WHITE TEXT */
-}
-
-.close-btn {
-  font-size: 28px;
-  cursor: pointer;
-  text-align: right;
-  color: #fff; /* WHITE CLOSE ICON */
-}
-
-/* DESKTOP MENU */
-@media (min-width: 768px) {
-
-  .menu-icon {
-    display: none;
-  }
-
-  .mobile-menu {
-    display: none;
-  }
-
-  .navbar {
-    justify-content: space-between;
-  }
-
-  .navbar ul {
-    display: flex;
-    gap: 25px;
-  }
-
-  .navbar ul li {
-    list-style: none;
-  }
-
-  .navbar ul li a {
-    text-decoration: none;
-    color: #fff; /* WHITE TEXT ON DESKTOP */
-    font-size: 16px;
-    font-weight: 500;
-  }
-
-  .navbar ul li a:hover {
-    color: #ccc; /* OPTIONAL LIGHT GREY HOVER */
-  }
-}
-/* DESKTOP MENU DEFAULT HIDDEN (mobile first) */
-.desktop-menu {
-  display: none;
-}
-
-/* Desktop version */
-@media (min-width: 768px) {
-
-  .desktop-menu {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-  }
-
-  .desktop-menu li a {
-    color: #fff; /* white text for black navbar */
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-  }
-
-  .desktop-menu li a:hover {
-    color: #ccc; /* optional hover */
-  }
-
-  /* Hide hamburger on desktop */
-  .menu-icon {
-    display: none;
-  }
-}
 
 
 /* ========== BRAND SECTION (PREMIUM) ========== */
@@ -3018,43 +2793,137 @@ label {
 }
 
 
-/* ==============================
-   TOP BAR
-============================== */
+/* =========================
+      TOP BAR
+========================= */
 .top-bar-bold {
-  background: #000;
-  color: #fff;
-  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #111;
+  color: white;
+  padding: 8px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.top-bar-left .announcement {
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.top-bar-right {
+/* =========================
+      NAVBAR
+========================= */
+.navbar {
   display: flex;
   align-items: center;
-  gap: 15px;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #000;
+  position: fixed;
+  top: 45px; /* height of top bar */
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-.shop-now-btn {
-  background: #c2730d;
-  color: #000;
-  padding: 8px 15px;
-  border-radius: 4px;
+/* LOGO */
+.navbar .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 55px;
+  filter: brightness(0) invert(1);
+  object-fit: contain;
+  margin-top: 8px;
+}
+
+/* =========================
+      DESKTOP MENU
+========================= */
+.desktop-menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.desktop-menu a {
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.currency-select {
-  padding: 6px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+/* =========================
+      MOBILE MENU ICON
+========================= */
+.menu-icon {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  display: none;
 }
+
+/* =========================
+      MOBILE MENU SLIDE-IN
+========================= */
+.mobile-menu {
+  position: fixed;
+  top: 95px; /* top bar + navbar */
+  right: -100%;
+  width: 70%;
+  height: calc(100% - 95px);
+  background: #111;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 2000;
+  overflow-y: auto;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  margin-top: 40px;
+  padding-left: 0;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 12px 0;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.close-btn {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* =========================
+      RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .desktop-menu {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .navbar .logo img {
+    height: 40px; /* smaller logo on mobile */
+    margin-top: 0;
+  }
+}
+
 
 /* ==============================
    SECTION TITLE
@@ -3238,93 +3107,7 @@ label {
   25%, 75% { opacity: 0.2; }
 }
 
-/* Right Section */
-.top-bar-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
 
-/* Optional: make links black and hover effect */
-.top-bar-right a {
-  color: #000;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.top-bar-right a:hover {
-  color: #c2730d; /* golden hover */
-}
-/* Log In Dropdown */
-.login-dropdown {
-  position: relative;
-}
-
-.navbar-login {
-  padding: 6px 14px;
-  border-radius: 25px;
-  background: #c2730d;
-  color: #000;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  transition: background 0.3s;
-}
-
-.navbar-login:hover {
-  background: #c2730d;
-}
-
-/* Dropdown menu */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 110%;
-  right: 0;
-  background: #fff;
-  border: 1px solid #eaeaea;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  z-index: 1000;
-  min-width: 140px;
-  flex-direction: column;
-}
-
-.dropdown-menu a {
-  padding: 10px 14px;
-  display: block;
-  color: #000;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.dropdown-menu a:hover {
-  background: #f5f5f5;
-}
-
-/* Show dropdown on desktop hover */
-@media (min-width: 701px) {
-  .login-dropdown:hover .dropdown-menu {
-    display: flex;
-  }
-}
-
-/* Mobile: show dropdown on click */
-@media (max-width: 700px) {
-  .navbar-right {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .login-dropdown .dropdown-menu {
-    position: static;
-    width: 100%;
-    display: none; /* hidden initially */
-  }
-}
 
 /* Navbar Account Icons */
 .login-dropdown .dropdown-menu a i {
@@ -3854,39 +3637,9 @@ label {
     transform: translateX(30px);
   }
 }
-/* =============== NAVBAR ANIMATIONS =============== */
 
-/* Fade + slide for logo */
-.logo img {
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: logoSlide 0.8s ease forwards;
-}
 
-@keyframes logoSlide {
-  0% { opacity: 0; transform: translateY(-20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
 
-/* Menu items appear one by one */
-.desktop-menu li {
-  opacity: 0;
-  transform: translateY(15px);
-  animation: menuFade 0.6s ease forwards;
-}
-
-/* Delay each item for staggered animation */
-.desktop-menu li:nth-child(1) { animation-delay: 0.2s; }
-.desktop-menu li:nth-child(2) { animation-delay: 0.35s; }
-.desktop-menu li:nth-child(3) { animation-delay: 0.5s; }
-.desktop-menu li:nth-child(4) { animation-delay: 0.65s; }
-.desktop-menu li:nth-child(5) { animation-delay: 0.8s; }
-.desktop-menu li:nth-child(6) { animation-delay: 0.95s; }
-
-@keyframes menuFade {
-  0% { opacity: 0; transform: translateY(15px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
 
 /* Smooth float-in for Account button */
 .login-dropdown {
@@ -4077,13 +3830,21 @@ label {
       0 0 30px rgba(212, 175, 55, 0.3);
   }
 }
-/* Desktop Dropdown */
+/* -----------------------------------
+   DESKTOP DROPDOWN (FIXED)
+----------------------------------- */
 .dropdown {
   position: relative;
 }
 
+.dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Dropdown container */
 .dropdown-menu-brands {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -4091,16 +3852,25 @@ label {
   border-radius: 8px;
   min-width: 220px;
   padding: 10px 0;
+  display: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  z-index: 100;
+  z-index: 999;
 }
 
+/* Show on hover */
+.dropdown:hover .dropdown-menu-brands {
+  display: block;
+  animation: dropFade 0.3s ease forwards;
+}
+
+/* Dropdown links */
 .dropdown-menu-brands li a {
   display: block;
   padding: 10px 20px;
   color: #fff;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  white-space: nowrap;
 }
 
 .dropdown-menu-brands li a:hover {
@@ -4108,77 +3878,51 @@ label {
   color: #000;
 }
 
-.dropdown:hover .dropdown-menu-brands {
-  display: block;
+/* Smooth dropdown animation */
+@keyframes dropFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Mobile Menu */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 250px;
-  height: 100%;
-  background: #111;
-  transition: 0.3s;
-  z-index: 200;
-  padding-top: 60px;
+/* Disable desktop dropdown on mobile screens */
+@media (max-width: 900px) {
+  .dropdown-menu-brands {
+    display: none !important;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .dropdown:hover .dropdown-menu-brands {
+    display: none !important;
+  }
 }
 
-.mobile-menu.active {
-  right: 0;
-}
 
-.mobile-menu ul {
-  list-style: none;
-  padding: 0;
-}
 
-.mobile-menu li a {
-  display: block;
-  padding: 15px 20px;
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
 
-.mobile-menu li a:hover {
-  background: #c2730d;
-  color: #000;
-}
 
-/* Mobile Dropdown Toggle */
-.mobile-menu .dropdown > a::after {
-  content: "▼";
-  float: right;
-}
 
-.mobile-menu .dropdown .dropdown-menu-brands {
-  display: none;
-  padding-left: 15px;
-}
 
-.mobile-menu .dropdown.active .dropdown-menu-brands {
-  display: block;
-}
-.top-selling-fragrances {
-    background: #ffffff !important;
-    padding: 40px 0;     /* optional */
-    position: relative;  /* optional */
-    z-index: 1;          /* optional */
-}
-.section-title {
-    color: #c2730d !important;
-}
-.add-to-cart-btn {
-    background-color: #c2730d !important;
-    border-color: #c2730d !important;
-    color: #fff; /* text stays readable */
-}
-nav ul li a:hover,
-.navbar ul li a:hover {
-    color: #c2730d !important;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* MAIN SECTION */
 .milestone-section {
   position: relative;
@@ -4350,299 +4094,15 @@ nav ul li a:hover,
 .counter.active-glow {
   animation: counterGlow 2.2s ease-in-out infinite;
 }
-/* Position the dropdown correctly */
-.navbar .dropdown {
-  position: relative;
-}
-
-/* Dropdown menu (hidden by default) */
-.dropdown-menu-brands {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 220px;
-
-  background: rgba(0,0,0,0.9);
-  backdrop-filter: blur(6px);
-  border: 1px solid #c2730d50;
-  border-radius: 6px;
-
-  padding: 10px 0;
-  list-style: none;
-  display: none;
-
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.25s ease;
-  z-index: 9999;
-}
-
-/* Show on hover */
-.navbar .dropdown:hover .dropdown-menu-brands {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Dropdown items */
-.dropdown-menu-brands li a {
-  display: block;
-  padding: 10px 15px;
-  color: #e2e2e2;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.dropdown-menu-brands li a:hover {
-  background: #c2730d;
-  color: #fff;
-}
-
-/* MOBILE menu dropdown base */
-.mobile-menu .dropdown-menu-brands {
-  display: none; 
-  flex-direction: column;
-  background: #111;
-  padding-left: 15px;
-  border-left: 2px solid #c2730d;
-  margin-top: 5px;
-  animation: dropdownSlide 0.3s ease;
-}
-
-@keyframes dropdownSlide {
-  0% { opacity: 0; transform: translateY(-5px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-.mobile-menu .dropdown > a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.mobile-menu .dropdown i {
-  transition: 0.3s ease;
-}
-
-/* Rotate arrow when open */
-.mobile-menu .dropdown.open i {
-  transform: rotate(180deg);
-}
-
-/* Brand links */
-.mobile-menu .dropdown-menu-brands li a {
-  padding: 8px 0;
-  display: block;
-  color: #ddd;
-  font-size: 14px;
-}
-.mobile-menu .dropdown-menu-brands li a:hover {
-  color: #c2730d;
-}
 
 
-/* -----------------------------------
-   GLOBAL LUXURY VARIABLES
------------------------------------ */
-:root {
-  --gold: #c38a18;
-  --gold-light: #d8a84c;
-  --dark-bg: #0a0a0a;
-  --soft-black: #111;
-  --text-light: #f5f5f5;
-  --shadow-gold: 0 0 15px rgba(195, 138, 24, 0.45);
-}
 
-/* Smooth transitions everywhere */
-* {
-  transition: 0.3s ease;
-  scroll-behavior: smooth;
-}
 
-/* -----------------------------------
-   PAGE BACKGROUND
------------------------------------ */
-body {
-  background: linear-gradient(to bottom, #000, #181818, #000);
-  color: var(--text-light);
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-  position: relative;
-}
 
-/* Floating Gold Dust */
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: url("https://i.imgur.com/NCZ5T5W.png");
-  opacity: 0.12;
-  mix-blend-mode: screen;
-  animation: dustMove 22s linear infinite;
-}
 
-@keyframes dustMove {
-  from { transform: translateY(0); }
-  to { transform: translateY(-300px); }
-}
 
-/* -----------------------------------
-   TOP BAR
------------------------------------ */
-.top-bar-bold {
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(4px);
-  color: var(--gold-light);
-  font-weight: 600;
-}
 
-/* -----------------------------------
-   NAVBAR (DESKTOP)
------------------------------------ */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 4%;
-  background: rgba(10,10,10,0.8);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  position: sticky;
-  top: 0;
-  z-index: 99999;
-}
 
-/* Logo */
-.navbar img {
-  width: 65px;
-  filter: drop-shadow(0 0 6px var(--gold));
-}
-
-/* Desktop menu */
-.desktop-menu {
-  display: flex;
-  gap: 30px;
-}
-
-.desktop-menu li a {
-  color: var(--text-light);
-  font-weight: 500;
-  position: relative;
-}
-
-/* Hover gold underline */
-.desktop-menu li a::after {
-  content: "";
-  position: absolute;
-  left: 0; bottom: -5px;
-  width: 0%;
-  height: 2px;
-  background: var(--gold-light);
-  transition: 0.3s;
-}
-
-.desktop-menu li a:hover::after {
-  width: 100%;
-}
-
-/* -----------------------------------
-   DESKTOP DROPDOWN
------------------------------------ */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu-brands {
-  position: absolute;
-  background: #0d0d0d;
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 12px 0;
-  width: 220px;
-  display: none;
-  border-radius: 8px;
-  box-shadow: var(--shadow-gold);
-}
-
-.dropdown:hover .dropdown-menu-brands {
-  display: block;
-  animation: dropFade 0.35s ease forwards;
-}
-
-@keyframes dropFade {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.dropdown-menu-brands li a {
-  display: block;
-  padding: 10px 18px;
-  color: #eee;
-}
-
-.dropdown-menu-brands li a:hover {
-  background: rgba(195,138,24,0.12);
-  color: var(--gold-light);
-}
-
-/* -----------------------------------
-   MOBILE MENU
------------------------------------ */
-.menu-icon {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: var(--gold-light);
-}
-
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 70%;
-  height: 100%;
-  background: #0d0d0d;
-  padding: 30px 20px;
-  z-index: 99999;
-  transition: 0.35s ease;
-  box-shadow: 0 0 25px rgba(0,0,0,0.6);
-}
-
-.close-btn {
-  font-size: 22px;
-  text-align: right;
-  cursor: pointer;
-  margin-bottom: 20px;
-color:#fff;
-}
-
-/* MOBILE DROPDOWN LIKE DESKTOP */
-.brand-mobile ul {
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.4s ease;
-}
-
-.brand-mobile.active ul {
-  height: 420px; /* fits all brands */
-  opacity: 1;
-}
-
-.brand-mobile > a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.brand-mobile > a i {
-  transition: 0.3s;
-}
-
-.brand-mobile.active > a i {
-  transform: rotate(180deg);
-}
 
 /* -----------------------------------
    SECTION TITLE
@@ -4778,23 +4238,7 @@ color:#fff;
   margin-top: 12px;
 }
 
-/* -----------------------------------
-   RESPONSIVE
------------------------------------ */
-@media(max-width: 900px) {
-  .desktop-menu {
-    display: none;
-  }
-  .menu-icon {
-    display: block;
-  }
-}
 
-@media(max-width: 600px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
-}
 .nl-hero-bg {
   display: flex;
   justify-content: center;
@@ -4840,11 +4284,7 @@ color:#fff;
 
 
 
-/* Navbar */
-.navbar {
-  margin-top: 0;      /* remove any top margin */
- 
-}
+
 
 .brands-section {
   padding: 60px 20px;
@@ -5018,7 +4458,7 @@ color:#fff;
   padding: 15px;
   text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
-  backdrop-filter: blur(10px);
+ 
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   position: relative;
   overflow: hidden;
@@ -5092,40 +4532,7 @@ color:#fff;
   box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
 }
 
-/* ================== FLOATING SPARKLES ================== */
-.brands-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://i.ibb.co/2d6H8mf/sparkles.png'); /* subtle sparkle png */
-  background-repeat: repeat;
-  background-size: 50px 50px;
-  opacity: 0.2;
-  pointer-events: none;
-  animation: sparkleMove 30s linear infinite;
-}
 
-@keyframes sparkleMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 500px 500px; }
-}
-
-/* ================== RESPONSIVE ================== */
-@media (max-width: 1024px) {
-  .brand-products { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
-}
-
-@media (max-width: 768px) {
-  .brand-header { flex-direction: column; align-items: flex-start; }
-  .brand-logo { width: 50px; height: 50px; }
-}
-
-@media (max-width: 480px) {
-  .brand-products { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
-}
 /* =================== PAGE TITLE HERO =================== */
 .page-title-container {
   width: 100%;
@@ -5250,5 +4657,837 @@ color:#fff;
 .video-box p {
   margin-top: 10px;
   font-weight: 500;
-  color: #333;
+  color: black;
+}
+.tab-btn {
+  color: black;
+}
+h3 {
+  color: black;
+}
+.inspired {
+  color: #000;
+  font-weight: 600;
+}
+.product-title {
+  color: black;
+}
+p {
+  color: black;
+}
+.flex-pay-text {
+  color: white;
+}
+.about-section .about-sub {
+  color: black;
+}
+#paris-corner h4,
+#paris-corner p,
+#paris-corner .price {
+  color: #000 !important;
+}
+/* Make all product cards same size */
+.brand-products .product-card {
+  width: 250px;             /* fixed width for all cards */
+  min-height: 430px;        /* consistent height */
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Make all images same size */
+.brand-products .product-card .perfume-img {
+  width: 160px;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* Align text inside the cards */
+.brand-products .product-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.brand-products .product-card p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.brand-products .product-card .price {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Make view link look consistent */
+.brand-products .product-card .view-link {
+  margin-top: auto;   /* pushes the button to the bottom */
+  font-size: 14px;
+  color: #c2730d;
+  text-decoration: underline;
+}
+
+/* Add to Cart button */
+.brand-products .product-card button {
+  width: 100%;
+  padding: 10px;
+  background: #c2730d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.brands-section h4,
+.brands-section p,
+.brands-section .price {
+  color: #e69500 !important;
+}
+
+
+.dropdown-menu-brands { display: none; }
+.dropdown-menu-brands.show { display: block; }
+.brand-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+  .item { flex: 1 1 calc(33.33% - 20px); }
+}
+@media (max-width: 768px) {
+  .item { flex: 1 1 calc(50% - 20px); }
+}
+@media (max-width: 480px) {
+  .item { flex: 1 1 100%; }
+}
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+/* ============================================
+   BASE RESET & ANIMATION
+============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: #c2730d;
+  --nav-bg: #000;
+  --white: #fff;
+}
+
+/* Fade animations */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   NAVBAR BASE
+============================================ */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: var(--nav-bg);
+  border-bottom: 1px solid #333;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  transition: 0.3s ease;
+}
+
+/* Shadow on scroll */
+.navbar.scrolled {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  background: #000000e8;
+}
+
+.navbar .logo img {
+  width: 70px;
+}
+
+/* ============================================
+   DESKTOP MENU
+============================================ */
+.desktop-menu {
+  list-style: none;
+  display: none; /* mobile-first */
+  align-items: center;
+  gap: 25px;
+}
+
+.desktop-menu li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 500;
+  position: relative;
+}
+
+/* Gold underline hover */
+.desktop-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 0%;
+  background: var(--gold);
+  transition: 0.3s;
+}
+
+.desktop-menu li a:hover::after {
+  width: 100%;
+}
+
+/* Desktop dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu-brands {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #111;
+  min-width: 220px;
+  border-radius: 8px;
+  padding: 12px 0;
+  list-style: none;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  animation: fadeDown 0.3s ease forwards;
+  z-index: 3000;
+}
+
+.dropdown:hover .dropdown-menu-brands {
+  display: block;
+}
+
+.dropdown-menu-brands li a {
+  display: block;
+  padding: 10px 20px;
+  color: #eee;
+}
+
+.dropdown-menu-brands li a:hover {
+  background: rgba(194,115,13,0.15);
+  color: var(--gold);
+}
+
+/* ============================================
+   MOBILE NAVBAR
+============================================ */
+.menu-icon {
+  font-size: 30px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* Slide-out menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: #000;
+  padding: 25px 20px;
+  transition: 0.4s ease;
+  z-index: 4000;
+  overflow-y: auto;
+}
+
+/* Fade overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 3500;
+}
+
+.mobile-menu.active { left: 0; }
+.menu-overlay.active { display: block; }
+
+.mobile-menu ul {
+  list-style: none;
+  margin-top: 40px;
+}
+
+.mobile-menu li {
+  border-bottom: 1px solid #333;
+}
+
+.mobile-menu li a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+.close-btn {
+  font-size: 28px;
+  color: var(--white);
+  text-align: right;
+  cursor: pointer;
+}
+
+/* ============================================
+   MOBILE DROPDOWN (Accordion)
+============================================ */
+.brand-mobile > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-mobile > a i {
+  transition: 0.3s;
+}
+
+.brand-mobile.active > a i {
+  transform: rotate(180deg);
+}
+
+.brand-mobile .dropdown-menu-brands {
+  display: none;
+  padding-left: 15px;
+  border-left: 2px solid var(--gold);
+}
+
+.brand-mobile.active .dropdown-menu-brands {
+  display: block;
+}
+
+/* ============================================
+   DESKTOP BREAKPOINT
+============================================ */
+@media (min-width: 768px) {
+  .desktop-menu { display: flex; }
+  .menu-icon { display: none; }
+  .mobile-menu, .menu-overlay { display: none !important; }
+}
+/* ============================================================
+   BUTTON STYLING (GLOBAL)
+============================================================ */
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+/* OUTLINE BUTTON (Explore Scents) */
+.btn.outline {
+  color: #c2730d;
+  border-color: #c2730d;
+  background: black;
+}
+
+.btn.outline:hover {
+  background: #c2730d;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* GOLD BUTTON (New Launch) */
+.btn.gold {
+  background: linear-gradient(135deg, #c2730d, #d38a1f, #c2730d);
+  color: #000;
+  border-color: #c2730d;
+  box-shadow: 0 0 12px rgba(194, 115, 13, 0.5);
+}
+
+.btn.gold:hover {
+  background: linear-gradient(135deg, #d38a1f, #e7a63d, #d38a1f);
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(194, 115, 13, 0.7);
+}
+
+/* On Phones */
+@media (max-width: 450px) {
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 14px 0;
+    font-size: 15px;
+  }
+}
+
+/* ============================================
+   ACCOUNT DROPDOWN (DESKTOP & MOBILE)
+============================================ */
+
+/* Account Button */
+.navbar-login {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #c2730d;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.navbar-login:hover {
+  background: #c2730d;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Dropdown Wrapper */
+.login-dropdown {
+  position: relative;
+}
+
+/* Dropdown Menu */
+.login-dropdown .dropdown-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  width: 180px;
+  background: #000;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+  display: none;
+  border: 1px solid rgba(194,115,13,0.25);
+  animation: dropFade 0.3s ease forwards;
+  z-index: 2000;
+}
+
+/* Dropdown Animation */
+@keyframes dropFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dropdown Items */
+.login-dropdown .dropdown-menu a {
+  display: block;
+  padding: 12px 18px;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.login-dropdown .dropdown-menu a i {
+  margin-right: 8px;
+  color: #c2730d;
+}
+
+/* Hover Effect */
+.login-dropdown .dropdown-menu a:hover {
+  background: rgba(194,115,13,0.15);
+  color: #c2730d;
+}
+
+/* Show on Hover (Desktop) */
+.login-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .navbar-login {
+    padding: 10px 16px;
+    border-width: 1.5px;
+  }
+
+  .login-dropdown .dropdown-menu {
+    position: static;
+    width: 100%;
+    border-radius: 0;
+    display: block;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding-left: 10px;
+  }
+
+  .login-dropdown .dropdown-menu a {
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+  }
+
+  .login-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+/* ================================
+   TOPBAR (Pink Background)
+================================ */
+.topbar {
+  width: 100%;
+  background: black; /* Pink */
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000; /* Above navbar */
+}
+
+.topbar p {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: .5px;
+}
+
+.topbar-right a {
+  color: #fff;
+  margin-left: 18px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: .3s ease;
+}
+
+.topbar-right a:hover {
+  color: #ffe6f2; /* soft light pink hover */
+}
+
+/* Prevent Navbar from sliding under Topbar */
+.navbar {
+  margin-top: 42px !important; /* exact height of topbar */
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 12px;
+  }
+
+  .topbar-right {
+    margin-top: 4px;
+  }
+
+  .topbar-right a {
+    margin: 0 10px;
+    font-size: 13px;
+  }
+
+  .navbar {
+    margin-top: 60px !important; /* topbar grows taller on mobile */
+  }
+}
+.cart-section {
+  padding: 100px 20px 50px; /* padding top for fixed navbar */
+  background: #f9f9f9;
+}
+
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+#cart-items {
+  flex: 1 1 60%;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cart-item p {
+  margin: 5px 0;
+}
+
+.remove-item {
+  cursor: pointer;
+  color: red;
+  font-size: 18px;
+}
+
+.cart-summary {
+  flex: 1 1 35%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cart-summary h3 {
+  margin-top: 0;
+}
+
+#checkout-btn {
+  width: 100%;
+  padding: 10px;
+  background: #c2730d;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#checkout-btn:hover {
+  background: #a35e09;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+  }
+
+  .cart-summary {
+    flex: 1 1 100%;
+  }
+}
+.mobile-menu {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+.fragrance-grid {
+  display: none;
+}
+
+#tab-women:checked ~ .fragrance-grid-wrapper .category-women,
+#tab-men:checked ~ .fragrance-grid-wrapper .category-men,
+#tab-unisex:checked ~ .fragrance-grid-wrapper .category-unisex {
+  display: grid;
+}
+.section-title {
+  font-size: 2rem;           /* adjust as needed */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d4af37;            /* gold color matching your branding */
+  margin-bottom: 20px;
+  text-align: center;        /* optional: center it */
+}
+.milestone-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.milestone-box:hover {
+  transform: translateY(-5px);
+}
+
+.counter {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #d4a017; /* golden accent */
+}
+.milestone-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.milestone-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-style: italic;
+  color: #fff;
+}
+.milestone-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+body {
+  padding-top: 0 !important;
+}
+.logo-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: #c2730d; 
+  font-weight: 700;
+  text-align: center;
+  margin-top: px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Animated Line */
+.logo-title .underline {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c2730d, transparent);
+  bottom: -6px;
+  animation: slideLine 2.2s infinite linear;
+  border-radius: 5px;
+}
+
+/* Animation */
+@keyframes slideLine {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+/* Hamburger Icon */
+.menu-icon {
+  font-size: 28px;
+  color: var(--white); /* white color */
+  cursor: pointer;
+  display: block;       /* show on mobile */
+  z-index: 5000;
+  transition: 0.3s ease;
+}
+
+.menu-icon:hover {
+  color: var(--gold);
+  transform: scale(1.1);
+}
+
+/* Hide hamburger on desktop */
+@media(min-width: 768px){
+  .menu-icon {
+    display: none;
+  }
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: #000; /* dark background */
+  padding: 30px 20px;
+  transition: 0.4s ease;
+  z-index: 4000;
+}
+
+.mobile-menu.active {
+  left: 0; /* slide-in when active */
+}
+.mobile-menu .dropdown-menu-brands {
+  display: none;
+}
+.mobile-menu .dropdown.active .dropdown-menu-brands {
+  display: block;
+}
+.top-bar-bold {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.top-account-btn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.top-account-btn:hover {
+  color: #fbb034;
+}
+
+.currency-select {
+  background: #111;
+  color: #fff;
+  padding: 4px 8px;
+  border: 1px solid #333;
+  border-radius: 4px;
 }

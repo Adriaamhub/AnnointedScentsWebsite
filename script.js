@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2500);
 
     document.addEventListener("mousemove", e => {
-      let moveX = (e.clientX / window.innerWidth) * 10;
-      let moveY = (e.clientY / window.innerHeight) * 10;
+      const moveX = (e.clientX / window.innerWidth) * 10;
+      const moveY = (e.clientY / window.innerHeight) * 10;
       hero.style.backgroundPosition = `${50 - moveX}% ${50 - moveY}%`;
     });
   }
@@ -141,7 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Mobile dropdown toggle
   document.querySelectorAll(".mobile-menu .dropdown > a").forEach(drop => {
     drop.addEventListener("click", function (e) {
       if (window.innerWidth <= 992) {
@@ -166,94 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ===============================
-     HERO FADE-IN ON SCROLL
-  ================================ */
-  const fadeElements = document.querySelectorAll('.fade-in');
-  function fadeInOnScroll() {
-    fadeElements.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) el.classList.add('visible');
-    });
-  }
-  window.addEventListener('scroll', fadeInOnScroll);
-  fadeInOnScroll();
-
-  /* ===============================
-     COUNTERS
-  ================================ */
-  const counters = document.querySelectorAll('.counter');
-  let countersStarted = false;
-  function startCounters() {
-    counters.forEach(counter => {
-      let target = +counter.getAttribute("data-target");
-      let count = 0;
-      let speed = target / 120;
-
-      function updateCount() {
-        if (count < target) {
-          count += speed;
-          counter.innerText = Math.floor(count);
-          requestAnimationFrame(updateCount);
-        } else {
-          counter.innerText = target;
-        }
-      }
-      updateCount();
-    });
-  }
-
-  window.addEventListener("scroll", () => {
-    const stats = document.querySelector(".stats");
-    if (!countersStarted && stats && stats.getBoundingClientRect().top < window.innerHeight - 100) {
-      countersStarted = true;
-      startCounters();
-    }
-  });
-
-  /* ===============================
-     CAROUSEL / SLIDER
-  ================================ */
-  const track = document.querySelector('.carousel-track');
-  if (track) {
-    const cards = Array.from(track.children);
-    const nextBtn = document.querySelector('.carousel-arrow.right');
-    const prevBtn = document.querySelector('.carousel-arrow.left');
-    let carouselIndex = 0;
-    const cardWidth = cards[0].getBoundingClientRect().width + 20;
-
-    function moveCarousel() {
-      track.style.transform = `translateX(-${carouselIndex * cardWidth}px)`;
-    }
-
-    let autoSlide = setInterval(() => {
-      carouselIndex++;
-      if (carouselIndex > cards.length - Math.floor(track.parentElement.offsetWidth / cardWidth)) carouselIndex = 0;
-      moveCarousel();
-    }, 4000);
-
-    function resetInterval() {
-      clearInterval(autoSlide);
-      autoSlide = setInterval(() => {
-        carouselIndex++;
-        if (carouselIndex > cards.length - Math.floor(track.parentElement.offsetWidth / cardWidth)) carouselIndex = 0;
-        moveCarousel();
-      }, 4000);
-    }
-
-    if (nextBtn) nextBtn.addEventListener('click', () => { carouselIndex++; moveCarousel(); resetInterval(); });
-    if (prevBtn) prevBtn.addEventListener('click', () => { carouselIndex--; moveCarousel(); resetInterval(); });
-
-    // Swipe support
-    let startX = 0;
-    track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-    track.addEventListener('touchend', e => {
-      let endX = e.changedTouches[0].clientX;
-      if (startX - endX > 50) nextBtn.click();
-      else if (endX - startX > 50) prevBtn.click();
-    });
-  }
-
-  /* ===============================
      HERO SLIDER
   ================================ */
   const slides = document.querySelectorAll(".slide");
@@ -273,18 +184,15 @@ document.addEventListener("DOMContentLoaded", () => {
     dots[i].classList.add("active");
 
     contents.forEach(c => c.classList.remove("fade"));
-    if (contents[i]) {
-      contents[i].classList.add("fade");
-    }
+    if (contents[i]) contents[i].classList.add("fade");
 
     setTimeout(() => isMoving = false, 1500);
   }
 
   function nextHeroSlide() { slideIndex = (slideIndex + 1) % slides.length; showSlide(slideIndex); }
   function prevHeroSlide() { slideIndex = (slideIndex - 1 + slides.length) % slides.length; showSlide(slideIndex); }
-  function goToHeroSlide(i) { slideIndex = i; showSlide(i); }
 
-  dots.forEach((dot, i) => dot.addEventListener('click', () => { goToHeroSlide(i); restartHeroAuto(); }));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { slideIndex = i; showSlide(i); restartHeroAuto(); }));
   const next = document.querySelector('.next');
   const prev = document.querySelector('.prev');
   if (next) next.addEventListener('click', () => { nextHeroSlide(); restartHeroAuto(); });
@@ -293,234 +201,217 @@ document.addEventListener("DOMContentLoaded", () => {
   function startHeroAuto() { slideAuto = setInterval(nextHeroSlide, 5000); }
   function restartHeroAuto() { clearInterval(slideAuto); startHeroAuto(); }
 
-  showSlide(slideIndex);
-  startHeroAuto();
-
-}); // DOMContentLoaded
-document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll(".counter");
-
-  const startCounter = (entry) => {
-    if (entry[0].isIntersecting) {
-      counters.forEach(counter => {
-        const updateCounter = () => {
-          const target = +counter.getAttribute("data-target");
-          const current = +counter.innerText;
-          const increment = target / 120;
-
-          if (current < target) {
-            counter.innerText = Math.ceil(current + increment);
-            setTimeout(updateCounter, 20);
-          } else {
-            counter.innerText = target;
-          }
-        };
-        updateCounter();
-      });
-    }
-  };
-
-  const observer = new IntersectionObserver(startCounter, {
-    threshold: 0.5
-  });
-
-  observer.observe(document.querySelector(".milestone-grid"));
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll(".counter");
-  let started = false;
-
-  const animateCounters = () => {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute("data-target");
-      let start = +counter.innerText;
-
-      const increment = (target - start) / 120;
-
-      const update = () => {
-        start += increment;
-
-        if (start < target) {
-          counter.innerText = Math.ceil(start);
-          requestAnimationFrame(update);
-        } else {
-          counter.innerText = target;
-        }
-      };
-
-      update();
-    });
-  };
-
-  const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !started) {
-      animateCounters();
-      started = true;
-    }
-  }, { threshold: 0.4 });
-
-  observer.observe(document.querySelector(".milestone-section"));
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll(".counter");
-  let started = false;
-
-  const animateCounters = () => {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute("data-target");
-      let start = +counter.innerText;
-      const increment = (target - start) / 120;
-
-      const update = () => {
-        start += increment;
-
-        if (start < target) {
-          counter.innerText = Math.ceil(start);
-
-          // POP / BOUNCE EFFECT
-          counter.style.animation = "none";
-          counter.offsetHeight; // reflow trick
-          counter.style.animation = "counterPop 0.25s ease-out";
-
-          requestAnimationFrame(update);
-        } else {
-          counter.innerText = target;
-
-          // FINAL POP
-          counter.style.animation = "counterPop 0.35s ease-out";
-        }
-      };
-
-      update();
-    });
-  };
-
-  const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !started) {
-      animateCounters();
-      started = true;
-    }
-  }, { threshold: 0.4 });
-
-  observer.observe(document.querySelector(".milestone-section"));
-});
-
-(function(){
-  // helper: parse any number-like string safely (removes commas, spaces, currency)
-  const parseNumber = str => {
-    if (str === null || str === undefined) return 0;
-    const cleaned = String(str).replace(/[^0-9\.\-]/g, '');
-    const n = Number(cleaned);
-    return Number.isFinite(n) ? n : 0;
-  };
-
-  // find elements
-  const section = document.querySelector(".milestone-section");
-  const counters = section ? Array.from(section.querySelectorAll(".counter")) : [];
-
-  if (!section) {
-    console.warn("Milestone script: .milestone-section not found in DOM.");
-    return;
-  }
-  if (!counters.length) {
-    console.warn("Milestone script: no elements with class .counter found inside .milestone-section.");
-    return;
+  if (slides.length) {
+    showSlide(slideIndex);
+    startHeroAuto();
   }
 
-  // core animation for one counter (closure per-counter)
-  const animateOne = (el) => {
-    // read values
-    const target = parseNumber(el.getAttribute("data-target"));
-    const startVal = parseNumber(el.innerText);
-    if (target === startVal) {
-      // nothing to animate, but still trigger final pop/glow
-      el.innerText = target;
-      el.style.animation = "counterPop 0.35s ease-out";
-      el.classList.add("active-glow");
-      return;
-    }
+  /* ===============================
+     MILESTONE COUNTERS
+  ================================ */
+  document.addEventListener("DOMContentLoaded", () => {
+  const milestoneSection = document.querySelector(".milestone-section");
+  if (!milestoneSection) return;
 
-    // config: frames and easing
-    const totalFrames = 120; // smoothness
-    let frame = 0;
+  const counters = milestoneSection.querySelectorAll(".counter");
+  let started = false;
 
-    // If target < start, we count down (rare) — handle accordingly.
-    const direction = target >= startVal ? 1 : -1;
+  const animateCounter = (el) => {
+    const target = Number(el.getAttribute("data-target")) || 0;
+    let startVal = Number(el.innerText) || 0;
+    const duration = 2000; // duration in ms
+    const startTime = performance.now();
 
-    const run = () => {
-      frame++;
-      const progress = Math.min(1, frame / totalFrames);
-      // easing (cubic out-ish)
-      const ease = 1 - Math.pow(1 - progress, 3);
-
-      // compute interpolated value
-      const current = Math.round(startVal + (target - startVal) * ease);
-
-      // write formatted number (no commas here — keep simple)
+    const run = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      const current = Math.floor(startVal + (target - startVal) * ease);
       el.innerText = current;
-
-      // POP / BOUNCE visual on update
-      el.style.animation = "none";
-      // force reflow to restart animation
-      void el.offsetHeight;
-      el.style.animation = "counterPop 0.28s ease-out";
-
-      // add soft glow while counting
-      el.classList.add("active-glow");
 
       if (progress < 1) {
         requestAnimationFrame(run);
       } else {
-        // ensure final exact value
-        el.innerText = target;
-        // final pop
-        el.style.animation = "counterPop 0.35s ease-out";
-        el.classList.add("active-glow");
+        el.innerText = target; // ensure final number is exact
       }
     };
 
     requestAnimationFrame(run);
   };
 
-  // run animation for all counters
-  const runAll = () => {
-    counters.forEach(c => {
-      // safety: ensure data-target is numeric, otherwise skip
-      const t = parseNumber(c.getAttribute("data-target"));
-      if (!Number.isFinite(t)) {
-        console.warn("Milestone script: invalid data-target on", c, "- skipping.");
-        return;
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      if (entries[0].isIntersecting && !started) {
+        counters.forEach((counter) => animateCounter(counter));
+        started = true;
+        obs.disconnect();
       }
-      animateOne(c);
+    },
+    { threshold: 0.5 } // triggers when 50% visible
+  );
+
+  observer.observe(milestoneSection);
+});
+
+
+  /* ===============================
+     CATEGORY TABS
+  ================================ */
+  const tabs = document.querySelectorAll('input[name="category"]');
+  const categories = document.querySelectorAll(".fragrance-grid");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("change", () => {
+      categories.forEach(cat => cat.style.display = "none");
+      const activeCat = document.querySelector(".category-" + tab.id.split("tab-")[1]);
+      if (activeCat) activeCat.style.display = "grid";
     });
-  };
+  });
 
-  // observer callback
-  const startWhenVisible = (entries, obs) => {
-    if (entries[0].isIntersecting) {
-      runAll();
-      obs.disconnect && obs.disconnect();
-    }
-  };
+  // initialize first tab
+  const firstTab = document.querySelector(".category-women");
+  if (firstTab) firstTab.style.display = "grid";
 
-  // Use IntersectionObserver if available
-  if ('IntersectionObserver' in window) {
-    const obs = new IntersectionObserver(startWhenVisible, { threshold: 0.35 });
-    obs.observe(section);
-  } else {
-    // fallback if unsupported: run after small delay
-    console.warn("Milestone script: IntersectionObserver not supported — running counters immediately.");
-    setTimeout(runAll, 400);
+  /* ===============================
+     BRANDS CAROUSEL AUTO SCROLL
+  ================================ */
+  const carousel = document.getElementById('brandsCarousel');
+  if (carousel) {
+    setInterval(() => carousel.scrollBy({ left: 200, behavior: 'smooth' }), 2500);
   }
 
-  // DEBUG: if you want console messages uncomment next line
-  // console.log("Milestone script initialized. Counters found:", counters.length);
-})();
+  /* ===============================
+     CART COUNT DISPLAY
+  ================================ */
+ document.addEventListener("DOMContentLoaded", () => {
+  const cartPanel = document.getElementById("cart-panel");
+  const closeCartBtn = document.getElementById("close-cart");
+  const checkoutBtn = document.getElementById("checkout-btn");
+  const cartItemsContainer = document.getElementById("cart-items");
+  const cartTotalEl = document.getElementById("cart-total");
+
+  // Open cart function (attach to cart icon)
+  window.openCart = () => cartPanel.classList.add("active");
+  closeCartBtn.addEventListener("click", () => cartPanel.classList.remove("active"));
+
+  // Load cart from localStorage
+  function loadCart() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cartItemsContainer.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      total += item.price * item.quantity;
+
+      const cartItem = document.createElement("div");
+      cartItem.className = "cart-item";
+
+      cartItem.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <div class="cart-item-details">
+          <h4>${item.name}</h4>
+          <p>R${item.price} x ${item.quantity}</p>
+        </div>
+        <span class="remove-item" data-index="${index}">&times;</span>
+      `;
+
+      cartItemsContainer.appendChild(cartItem);
+    });
+
+    cartTotalEl.textContent = `R${total}`;
+
+    // Remove item
+    cartItemsContainer.querySelectorAll(".remove-item").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const idx = btn.getAttribute("data-index");
+        cart.splice(idx, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart();
+      });
+    });
+  }
+
+  loadCart();
+
+  // Checkout (link to payment)
+  checkoutBtn.addEventListener("click", () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (!cart.length) return alert("Cart is empty!");
+
+    // Example: Redirect to payment gateway
+    // For Stripe, PayPal, etc., integrate API here
+    alert("Proceeding to checkout...");
+  });
+
+  // Add product to cart globally
+  document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+      const id = button.dataset.id;
+      const name = button.dataset.name;
+      const price = parseFloat(button.dataset.price);
+      const image = button.dataset.image;
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const existing = cart.find(item => item.id === id);
+
+      if (existing) existing.quantity += 1;
+      else cart.push({ id, name, price, quantity: 1, image });
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+      openCart();
+    });
+  });
+});
+
+// ===============================
+// ADD TO CART – GLOBAL FUNCTION
+// ===============================
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  const counters = document.querySelectorAll("#cart-count, #cart-count-desktop, #cart-count-mobile");
+  counters.forEach(c => {
+    if (c) c.textContent = total;
+  });
+}
+
+// Run on page load
+document.addEventListener("DOMContentLoaded", updateCartCount);
+
+// ===============================
+// ADD TO CART BUTTONS
+// ===============================
+document.addEventListener("click", function(e) {
+  if (e.target.classList.contains("add-to-cart")) {
+    const name = e.target.getAttribute("data-name");
+    const price = Number(e.target.getAttribute("data-price"));
+    const img = e.target.closest(".product-card").querySelector("img").src;
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Check if product already in cart
+    const existing = cart.find(item => item.name === name);
+
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({
+        name: name,
+        price: price,
+        image: img,
+        quantity: 1
+      });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+
+    // Popup message
+    alert(`${name} added to your cart!`);
+  }
+});
 
 
-
-
-let carousel = document.getElementById('brandsCarousel');
-setInterval(() => {
-  carousel.scrollBy({ left: 200, behavior: 'smooth' });
-}, 2500);

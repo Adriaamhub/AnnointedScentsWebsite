@@ -39,83 +39,66 @@
     <img src="Images/logo/1759151239466.png" alt="Logo">
   </a>
 
-  <!-- Desktop Menu -->
+ <!-- Desktop Menu -->
   <ul class="desktop-menu">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
 
-    <!-- Shop By Brand Dropdown -->
-    <li class="dropdown">
-      <a href="shop-by-brand.html">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
-      <ul class="dropdown-menu-brands">
-        <li><a href="shop-by-brand.html#">RASASI</a></li>
-        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
-        <li><a href="shop-by-brand.html">AFNAN</a></li>
-        <li><a href="shop-by-brand.html">ARMAF</a></li>
-        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
-        <li><a href="shop-by-brand.html">LATTAFA</a></li>
-        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
-        <li><a href="shop-by-brand.html">JANAN</a></li>
-        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
-        <li><a href="shop-by-brand.html">MILESTONE</a></li>
-        <li><a href="shop-by-brand.html">EMPER</a></li>
-        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
-        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
-      </ul>
-    </li>
+<li class="dropdown">
+  <a href="#">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
+  <ul class="dropdown-menu-brands">
+    <li><a href="shop-by-brand.html#rasasi">RASASI</a></li>
+    <li><a href="shop-by-brand.html#arabiyat">ARABIYAT</a></li>
+    <li><a href="shop-by-brand.html#afnan">AFNAN</a></li>
+    <li><a href="shop-by-brand.html#armaf">ARMAF</a></li>
+    <li><a href="shop-by-brand.html#french-avenue">FRENCH AVENUE</a></li>
+    <li><a href="shop-by-brand.html#lattafa">LATTAFA</a></li>
+    <li><a href="shop-by-brand.html#fragrance-world">FRAGRANCE WORLD</a></li>
+    <li><a href="shop-by-brand.html#janan">JANAN</a></li>
+    <li><a href="shop-by-brand.html#maison-asrar">MAISON ASRAR</a></li>
+    <li><a href="shop-by-brand.html#milestone">MILESTONE</a></li>
+    <li><a href="shop-by-brand.html#emper">EMPER</a></li>
+    <li><a href="shop-by-brand.html#khadlaj">KHADLAJ</a></li>
+    <li><a href="shop-by-brand.html#paris-corner">PARIS CORNER</a></li>
+    <li><a href="shop-by-brand.html#ahmad-maghribi">AHMAD AL MAGHRIBI</a></li>
+  </ul>
+</li>
+
 
     <li><a href="new-launch.html">New Launch</a></li>
     <li><a href="social-hub.html">Social Hub</a></li>
     <li><a href="contact-us.html">Contact Us</a></li>
-    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+  <a href="cart.html" id="cartLink">
+    <i class="fa-solid fa-cart-shopping"></i> Cart 
+    <span id="cart-count" class="cart-count">0</span>
+  </a>
+</li>
+
+  </ul>
   </ul>
 
   <!-- Hamburger -->
   <div class="menu-icon" id="menuToggle">☰</div>
 
-  <!-- Mobile Menu -->
-  <nav class="mobile-menu" id="mobileMenu">
-    <div class="close-btn" id="closeMenu">✕</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
+<!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobileMenu">
+  <div class="close-btn" id="closeMenu">✕</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+<li><a href="shop-by-brand.html">shop by brand</a></li>
+ 
 
-      <!-- Mobile Shop By Brand Dropdown -->
-     <li class="dropdown brand-mobile">
-  <a href="#">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
-  <ul class="dropdown-menu-brands">
-           <li><a href="shop-by-brand.html">RASASI</a></li>
-        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
-        <li><a href="shop-by-brand.html">AFNAN</a></li>
-        <li><a href="shop-by-brand.html">ARMAF</a></li>
-        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
-        <li><a href="shop-by-brand.html">LATTAFA</a></li>
-        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
-        <li><a href="shop-by-brand.html">JANAN</a></li>
-        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
-        <li><a href="shop-by-brand.html">MILESTONE</a></li>
-        <li><a href="shop-by-brand.html">EMPER</a></li>
-        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
-        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
-        </ul>
-      </li>
 
-      <li><a href="new-launch.html">New Launch</a></li>
-      <li><a href="social-hub.html">Social Hub</a></li>
-      <li><a href="contact-us.html">Contact Us</a></li>
-      <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
-    </ul>
-  </nav>
+    <li><a href="new-launch.html">New Launch</a></li>
+    <li><a href="social-hub.html">Social Hub</a></li>
+    <li><a href="contact-us.html">Contact Us</a></li>
+    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
 
-  <!-- Account Dropdown -->
-  <div class="login-dropdown">
-    <button class="btn navbar-login">
-      <i class="bi bi-person-circle"></i> Account <i class="bi bi-caret-down-fill"></i>
-    </button>
-    <div class="dropdown-menu">
-      <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
-      <a href="orders.html"><i class="bi bi-bag-check"></i> Orders</a>
-      <a href="logout.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
-    </div>
-  </div>
+   
+
+  </ul>
+</nav>
+
+ 
 </header>
 
 <!-- ======================= PAGE TITLE ======================= -->
@@ -125,215 +108,1210 @@
 
 <section class="brands-section">
 
-  <!-- RASASI -->
-  <section class="brand-section" id="rasasi">
-    <div class="brand-header">
-      <img src="brand icons/rasasi.webp" alt="Rasasi Logo" class="brand-logo">
-      <h3>RASASI</h3>
-    </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/rasasi-product1.webp" alt="Rasasi Product 1" class="perfume-img">
-        <h4>Rasasi Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Rasasi Product 1" data-price="350">Add to Cart</button>
-      </div>
-    </div>
-  </section>
+<!-- RASASI -->
+<section class="brand-section" id="rasasi">
+  <div class="brand-header">
+    <img src="brand icons/rasasi_logo.webp" alt="Rasasi Logo" class="brand-logo">
+    <h3>RASASI</h3>
+  </div>
 
-  <!-- ARABIYAT -->
-  <section class="brand-section" id="arabiyat">
-    <div class="brand-header">
-      <img src="brand icons/Arabiyat_LOGO_1080_BY_1080_480x480.webp" alt="Arabiyat Logo" class="brand-logo">
-      <h3>ARABIYAT</h3>
+  <div class="brand-products grid">
+
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="shopbybrandsections/rasasi/Hawas Ice – Unisex.jpg" alt="Hawas Ice Unisex" class="perfume-img">
+      <h4>Hawas Ice – Unisex</h4>
+      <p>EDP</p>
+      <p class="price">R1200</p>
+      <a href="https://share.google/lrEhK117iWLi6abd0" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Hawas Ice – Unisex" data-price="1200">Add to Cart</button>
     </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/arabiyat-product1.webp" alt="Arabiyat Product 1" class="perfume-img">
-        <h4>Arabiyat Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Arabiyat Product 1" data-price="450">Add to Cart</button>
-      </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="shopbybrandsections/rasasi/Hawas Fire.jpg" alt="Hawas Fire" class="perfume-img">
+      <h4>Hawas Fire</h4>
+      <p>EDP</p>
+      <p class="price">R1500</p>
+      <a href="https://share.google/OaISBzXqC8bsMBoO3" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Hawas Fire" data-price="1500">Add to Cart</button>
     </div>
-  </section>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="shopbybrandsections/rasasi/Hawas Black.jpg" alt="Hawas Black" class="perfume-img">
+      <h4>Hawas Black</h4>
+      <p>EDP</p>
+      <p class="price">R1200</p>
+      <a href="https://share.google/HvjSiHo5FhB1zYKe3" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Hawas Black" data-price="1200">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+
+ <!-- ARABIYAT -->
+<section class="brand-section" id="arabiyat">
+  <div class="brand-header">
+    <img src="brand icons/ARABIYAT.png" alt="Arabiyat Logo" class="brand-logo">
+    <h3>ARABIYAT</h3>
+  </div>
+
+  <div class="brand-products grid">
+
+    <!-- Lutfah Light In The Heart EDP Men -->
+    <div class="product-card">
+      <img src="shopbybrandsections/arabiyat/Lutfah Light In The Heart – Arabiyat Prestige.png" alt="Lutfah Light In The Heart" class="perfume-img">
+      <h4>Lutfah Light In The Heart – Arabiyat Prestige</h4>
+      <p class="price">R700</p>
+      <a href="https://myperfumes.ae/products/arabiyat-prestige-lutfah-light-in-the-heart-edp-men" 
+         target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Lutfah Light In The Heart" data-price="700">Add to Cart</button>
+    </div>
+
+    <!-- Nyla EDP 80ml -->
+    <div class="product-card">
+      <img src="shopbybrandsections/arabiyat/Nyla – Arabiyat Perfumes.webp" alt="Nyla EDP" class="perfume-img">
+      <h4>Nyla – Arabiyat Perfumes</h4>
+      <p class="price">R700</p>
+      <a href="https://myperfumes.ae/products/nyla-edp-80ml" 
+         target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Nyla" data-price="700">Add to Cart</button>
+    </div>
+
+    <!-- Bahiya Garnet EDP 100ml Women -->
+    <div class="product-card">
+      <img src="shopbybrandsections/arabiyat/Bahiya Garnet – Arabiyat Prestige (Women).png" alt="Bahiya Garnet" class="perfume-img">
+      <h4>Bahiya Garnet – Arabiyat Prestige (Women)</h4>
+      <p class="price">R900</p>
+      <a href="https://myperfumes.ae/products/arabiyat-prestige-bahiya-garnet-edp-100ml-women" 
+         target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Bahiya Garnet" data-price="900">Add to Cart</button>
+    </div>
+
+    <!-- Oud Al Layl -->
+    <div class="product-card">
+      <img src="shopbybrandsections/arabiyat/Oud Al Layl – Arabiyat Perfumes.jpg" alt="Oud Al Layl" class="perfume-img">
+      <h4>Oud Al Layl – Arabiyat Perfumes</h4>
+      <p class="price">R400 (Unisex)</p>
+      <a href="https://myperfumes.ae/products/arabiyat-oud-al-layl" 
+         target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Oud Al Layl" data-price="400">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- AFNAN -->
-  <section class="brand-section" id="afnan">
-    <div class="brand-header">
-      <img src="brand icons/afnan.jpg" alt="Afnan Logo" class="brand-logo">
-      <h3>AFNAN</h3>
-    </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/afnan-product1.webp" alt="Afnan Product 1" class="perfume-img">
-        <h4>Afnan Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Afnan Product 1" data-price="400">Add to Cart</button>
-      </div>
-    </div>
-  </section>
+<section class="brand-section" id="afnan">
+  <div class="brand-header">
+    <img src="brand icons/afnan.jpg" alt="Afnan Logo" class="brand-logo">
+    <h3>AFNAN PERFUMES</h3>
+  </div>
 
-  <!-- ARMAF -->
-  <section class="brand-section" id="armaf">
-    <div class="brand-header">
-      <img src="brand icons/armaf_logo.webp" alt="Armaf Logo" class="brand-logo">
-      <h3>ARMAF</h3>
-    </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/armaf-product1.webp" alt="Armaf Product 1" class="perfume-img">
-        <h4>Armaf Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Armaf Product 1" data-price="420">Add to Cart</button>
-      </div>
-    </div>
-  </section>
+  <div class="brand-products grid">
 
-  <!-- FRENCH AVENUE -->
-  <section class="brand-section" id="french-avenue">
-    <div class="brand-header">
-      <img src="brand icons/french-avenue-logo-modified.png" alt="French Avenue Logo" class="brand-logo">
-      <h3>FRENCH AVENUE</h3>
+    <!-- Turathi Blue -->
+    <div class="product-card">
+      <img src="shopbybrandsections/Afnan/Turathi Blue – Afnan Perfumes.webp" alt="Turathi Blue" class="perfume-img">
+      <h4>Turathi Blue – Afnan Perfumes</h4>
+      <p>For Men</p>
+      <p class="price">R900</p>
+      <a href="https://share.google/lCxRMsartIURh1FAf" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Turathi Blue" data-price="900">Add to Cart</button>
     </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/french-avenue-product1.webp" alt="French Avenue Product 1" class="perfume-img">
-        <h4>French Avenue Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="French Avenue Product 1" data-price="480">Add to Cart</button>
-      </div>
+
+    <!-- Supremacy Collector's Edition -->
+    <div class="product-card">
+      <img src="shopbybrandsections/Afnan/Supremacy Collector's Edition – Afnan.webp" alt="Supremacy Collector's Edition" class="perfume-img">
+      <h4>Supremacy Collector's Edition – Afnan</h4>
+      <p class="price">R1200</p>
+      <a href="https://share.google/CAcwJl8DzoQc0UzFt" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Supremacy Collector's Edition" data-price="1200">Add to Cart</button>
     </div>
-  </section>
+
+    <!-- Supremacy Not Only Intense -->
+    <div class="product-card">
+      <img src="shopbybrandsections/Afnan/Supremacy Not Only Intense – Afnan.webp" alt="Supremacy Not Only Intense" class="perfume-img">
+      <h4>Supremacy Not Only Intense – Afnan</h4>
+      <p class="price">R1500</p>
+      <a href="https://share.google/8lsRzHnZUX00qxZ4D" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Supremacy Not Only Intense" data-price="1500">Add to Cart</button>
+    </div>
+
+    <!-- 9 AM Dive -->
+    <div class="product-card">
+      <img src="shopbybrandsections/Afnan/9 AM Dive – Afnan Perfumes.webp" alt="9 AM Dive" class="perfume-img">
+      <h4>9 AM Dive – Afnan Perfumes</h4>
+      <p>Unisex</p>
+      <p class="price">R900</p>
+      <a href="https://share.google/C9kNpK5oHoAU9APqu" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="9 AM Dive" data-price="900">Add to Cart</button>
+    </div>
+
+    <!-- 9PM Elixir -->
+    <div class="product-card">
+      <img src="shopbybrandsections/Afnan/9PM Elixir – Afnan Perfumes.webp" alt="9PM Elixir" class="perfume-img">
+      <h4>9PM Elixir – Afnan Perfumes</h4>
+      <p class="price">R900</p>
+      <a href="https://share.google/Izu029qVbejZlPZDU" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="9PM Elixir" data-price="900">Add to Cart</button>
+    </div>
+
+    <!-- 9 PM Rebel -->
+    <div class="product-card">
+      <img src="shopbybrandsections/Afnan/9PM Rebel – Afnan Perfumes.webp" alt="9PM Rebel" class="perfume-img">
+      <h4>9PM Rebel – Afnan Perfumes</h4>
+      <p>Unisex</p>
+      <p class="price">R1000</p>
+      <a href="https://share.google/HPPPuYESYzVNHSVD7" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="9PM Rebel" data-price="1000">Add to Cart</button>
+    </div>
+
+    <!-- 9 PM Men's -->
+    <div class="product-card">
+      <img src="shopbybrandsections/Afnan/9 PM – Afnan Perfumes.file" alt="9 PM" class="perfume-img">
+      <h4>9 PM – Afnan Perfumes</h4>
+      <p>Men</p>
+      <p class="price">R800</p>
+      <a href="https://share.google/nT6vkQrxr4tPa2T8g" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="9 PM" data-price="800">Add to Cart</button>
+    </div>
+
+    <!-- 9 AM Pour Femme -->
+    <div class="product-card">
+      <img src="shopbybrandsections/Afnan/9 AM Pour Femme – Afnan Perfumes.webp" alt="9 AM Pour Femme" class="perfume-img">
+      <h4>9 AM Pour Femme – Afnan Perfumes</h4>
+      <p>Women</p>
+      <p class="price">R900</p>
+      <a href="https://share.google/28tQgaQ6Jbzx4yqgO" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="9 AM Pour Femme" data-price="900">Add to Cart</button>
+    </div>
+
+    <!-- Supremacy in Oud -->
+    <div class="product-card">
+      <img src="shopbybrandsections/Afnan/Supremacy in Oud – Afnan Perfumes.webp" alt="Supremacy in Oud" class="perfume-img">
+      <h4>Supremacy in Oud – Afnan Perfumes</h4>
+      <p>Unisex</p>
+      <p class="price">R1500</p>
+      <a href="https://share.google/k84HGMw0jNb5qYQAJ" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Supremacy in Oud" data-price="1500">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ARMAF -->
+<section class="brand-section" id="armaf">
+  <div class="brand-header">
+    <img src="brand icons/armaf_logo.webp" alt="Armaf Logo" class="brand-logo">
+    <h3>ARMAF</h3>
+  </div>
+
+  <div class="brand-products grid">
+
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="shopbybrandsections/armaf/Club De Nuit Intense Man.webp" alt="Club De Nuit Intense Man" class="perfume-img">
+      <h4>Club De Nuit Intense Man</h4>
+      <p>EDT 105ML</p>
+      <p class="price">R900</p>
+      <a href="https://share.google/bnQGMJgBvhh4KtXUn" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Club De Nuit Intense Man" data-price="900">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="shopbybrandsections/armaf/Club De Nuit Intense Man – Limited Edition.png" alt="Club De Nuit Intense Man Limited Edition" class="perfume-img">
+      <h4>Club De Nuit Intense Man – Limited Edition</h4>
+      <p>EDP 105ML</p>
+      <p class="price">R1800</p>
+      <a href="https://share.google/7nSanSEPEstHfCqrc" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="CDNIM Limited Edition" data-price="1800">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="shopbybrandsections/armaf/Club De Nuit Oud.webp" alt="Club De Nuit Oud" class="perfume-img">
+      <h4>Club De Nuit Oud</h4>
+      <p>EDP 105ML • Unisex</p>
+      <p class="price">R1800</p>
+      <a href="https://share.google/S0Z6BSPLLg1b8PQfX" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Club De Nuit Oud" data-price="1800">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="shopbybrandsections/armaf/Club De Nuit Untold.jpg" alt="Club De Nuit Untold" class="perfume-img">
+      <h4>Club De Nuit Untold</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R1000</p>
+      <a href="https://share.google/Rg4snx7iDcA60QK32" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Club De Nuit Untold" data-price="1000">Add to Cart</button>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-card">
+      <img src="shopbybrandsections/armaf/Club De Nuit Sillage.webp" alt="Club De Nuit Sillage" class="perfume-img">
+      <h4>Club De Nuit Sillage</h4>
+      <p>EDP 105ML</p>
+      <p class="price">R1000</p>
+      <a href="https://share.google/OLj15WNOTKlQBtTFb" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Club De Nuit Sillage" data-price="1000">Add to Cart</button>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="shopbybrandsections/armaf/Club De Nuit Woman.webp" alt="Club De Nuit Woman" class="perfume-img">
+      <h4>Club De Nuit Woman</h4>
+      <p>EDP 105ML</p>
+      <p class="price">R1200</p>
+      <a href="https://share.google/I0JnbX3nKvNtW7mb9" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Club De Nuit Woman" data-price="1200">Add to Cart</button>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-card">
+      <img src="shopbybrandsections/armaf/Club De Nuit Intense Man 2.png" alt="Club De Nuit Intense Man EDT" class="perfume-img">
+      <h4>Club De Nuit Intense Man</h4>
+      <p>EDT 100ML</p>
+      <p class="price">R1000</p>
+      <a href="https://share.google/xmGwckfeJkb8yGV3p" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="CDNIM EDT" data-price="1000">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FRENCH AVENUE / FRAGRANCE WORLD -->
+<section class="brand-section" id="french-avenue">
+  <div class="brand-header">
+    <img src="brand icons/fragranceworld_logo.webp" alt="Fragrance World Logo" class="brand-logo">
+    <h3>FRENCH AVENUE / FRAGRANCE WORLD</h3>
+  </div>
+
+  <div class="brand-products grid">
+
+    <!-- Urban Man Elixir -->
+    <div class="product-card">
+      <img src="shopbybrandsections/french avenue/Urban Man Elixir.webp" class="perfume-img">
+      <h4>Urban Man Elixir</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R400</p>
+      <a href="https://share.google/uajpweQZ38UA8kC2H" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Urban Man Elixir" data-price="400">Add to Cart</button>
+    </div>
+
+    <!-- Just Wardi -->
+    <div class="product-card">
+      <img src="shopbybrandsections/french avenue/Just Wardi.jpg" class="perfume-img">
+      <h4>Just Wardi</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R400</p>
+      <a href="https://share.google/jhosb0Xy837wP7BvV" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Just Wardi" data-price="400">Add to Cart</button>
+    </div>
+
+    <!-- Aqua Pura -->
+    <div class="product-card">
+      <img src="shopbybrandsections/french avenue/Aqua Pura.jpg" class="perfume-img">
+      <h4>Aqua Pura</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R400</p>
+      <a href="https://share.google/AsfZgqsEHj3tPzBFE" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Aqua Pura" data-price="400">Add to Cart</button>
+    </div>
+
+    <!-- Invicto Legend -->
+    <div class="product-card">
+      <img src="shopbybrandsections/french avenue/Invicto Legend.png" class="perfume-img">
+      <h4>Invicto Legend</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R400</p>
+      <a href="https://share.google/nO3AbxeE6VeUStCGC" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Invicto Legend" data-price="400">Add to Cart</button>
+    </div>
+
+    <!-- Canale di Blue Parfum Intense -->
+    <div class="product-card">
+      <img src="shopbybrandsections/french avenue/Canale di Blue Parfum Intense.jpg" class="perfume-img">
+      <h4>Canale di Blue Parfum Intense</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R400</p>
+      <a href="https://share.google/IMhQlvKNaTzEzgzxG" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Canale di Blue Parfum Intense" data-price="400">Add to Cart</button>
+    </div>
+
+    <!-- Just Azraq 100ML -->
+    <div class="product-card">
+      <img src="shopbybrandsections/french avenue/Just Azraq.webp" class="perfume-img">
+      <h4>Just Azraq</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R400</p>
+      <a href="https://share.google/7hmVHAmKfiWFBtnpp" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Just Azraq" data-price="400">Add to Cart</button>
+    </div>
+
+    <!-- Luscious -->
+    <div class="product-card">
+      <img src="shopbybrandsections/french avenue/French Avenue – Luscious.webp" class="perfume-img">
+      <h4>French Avenue – Luscious</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R700</p>
+      <a href="https://share.google/VvPYMU1JAkzZCKjuX" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="French Avenue – Luscious" data-price="700">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- LATTAFA -->
-  <section class="brand-section" id="lattafa">
-    <div class="brand-header">
-      <img src="brand icons/LATTAFA.png" alt="Lattafa Logo" class="brand-logo">
-      <h3>LATTAFA</h3>
+<section class="brand-section" id="lattafa">
+  <div class="brand-header">
+    <img src="brand icons/LATTAFA.png" alt="Lattafa Logo" class="brand-logo">
+    <h3>LATTAFA</h3>
+  </div>
+
+  <div class="brand-products grid">
+
+    <!-- Badee Al Oud Noble Blush -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Badee Al Oud Noble Blush – Lattafa Perfumes.jpg" alt="Badee Al Oud Noble Blush" class="perfume-img">
+      <h4>Badee Al Oud Noble Blush – Lattafa Perfumes</h4>
+      <p class="price">R600</p>
+      <a href="https://share.google/oH62hsbnGA9JHWeK7" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Badee Al Oud Noble Blush" data-price="600">Add to Cart</button>
     </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/lattafa-product1.webp" alt="Lattafa Product 1" class="perfume-img">
-        <h4>Lattafa Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Lattafa Product 1" data-price="300">Add to Cart</button>
-      </div>
+
+    <!-- Yara Tous Concentrated Oil -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Yara Tous Concentrated Oil – Lattafa Perfumes.jpg" alt="Yara Tous" class="perfume-img">
+      <h4>Yara Tous Concentrated Oil – Lattafa Perfumes</h4>
+      <p class="price">R500</p>
+      <a href="https://share.google/Rtl2GWLoQ80uwiQP0" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Yara Tous" data-price="500">Add to Cart</button>
     </div>
-  </section>
+
+    <!-- Yara Candy -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Yara Candy – Lattafa Perfumes.jpg" alt="Yara Candy" class="perfume-img">
+      <h4>Yara Candy – Lattafa Perfumes</h4>
+      <p class="price">R500</p>
+      <a href="https://share.google/aIZB2jekLwPE9v2Iy" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Yara Candy" data-price="500">Add to Cart</button>
+    </div>
+
+    <!-- Yara -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Yara – Lattafa Perfumes.jpg" alt="Yara" class="perfume-img">
+      <h4>Yara – Lattafa Perfumes</h4>
+      <p class="price">R500</p>
+      <a href="https://share.google/81mLBwCQkc8uRj8R2" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Yara" data-price="500">Add to Cart</button>
+    </div>
+
+    <!-- Nebras -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Nebras – Lattafa Perfumes.webp" alt="Nebras" class="perfume-img">
+      <h4>Nebras – Lattafa Perfumes</h4>
+      <p class="price">R700 for women</p>
+      <a href="https://share.google/FereK0BpiCoayjNvY" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Nebras" data-price="700">Add to Cart</button>
+    </div>
+
+    <!-- Badee Al Oud Honor and Glory -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Badee Al Oud Honor and Glory – Lattafa Perfumes.jpg" alt="Badee Al Oud Honor and Glory" class="perfume-img">
+      <h4>Badee Al Oud Honor and Glory – Lattafa Perfumes</h4>
+      <p class="price">R600</p>
+      <a href="https://share.google/7ZPBtLNKuKhg1qhyL" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Badee Al Oud Honor and Glory" data-price="600">Add to Cart</button>
+    </div>
+
+    <!-- Badee Al Oud - Oud for Glory -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Badee Al Oud – Oud for Glory – Lattafa Perfumes.jpg" alt="Badee Al Oud - Oud for Glory" class="perfume-img">
+      <h4>Badee Al Oud – Oud for Glory – Lattafa Perfumes</h4>
+      <p class="price">R600</p>
+      <a href="https://share.google/dUWwfyqFIkAsKomSi" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Badee Al Oud Oud for Glory" data-price="600">Add to Cart</button>
+    </div>
+
+    <!-- Art of Universe -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Art of Universe – Lattafa Perfumes.jpg" alt="Art of Universe" class="perfume-img">
+      <h4>Art of Universe – Lattafa Perfumes</h4>
+      <p class="price">R800</p>
+      <a href="https://share.google/n5MvMgXbaBLf0VVlr" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Art of Universe" data-price="800">Add to Cart</button>
+    </div>
+
+    <!-- Eternal Oud -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Eternal Oud – Lattafa Perfumes.jpg" alt="Eternal Oud" class="perfume-img">
+      <h4>Eternal Oud – Lattafa Perfumes</h4>
+      <p class="price">R800</p>
+      <a href="https://share.google/dvkTewI1nFtewETjY" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Eternal Oud" data-price="800">Add to Cart</button>
+    </div>
+
+    <!-- Vintage Radio -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Vintage Radio – Lattafa Perfumes.webp" alt="Vintage Radio" class="perfume-img">
+      <h4>Vintage Radio – Lattafa Perfumes</h4>
+      <p class="price">R900</p>
+      <a href="https://share.google/nIPQDlV0gITHFnjnQ" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Vintage Radio" data-price="900">Add to Cart</button>
+    </div>
+
+    <!-- Khamrah Qahwa -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Khamrah Qahwa – Lattafa Perfumes.png" alt="Khamrah Qahwa" class="perfume-img">
+      <h4>Khamrah Qahwa – Lattafa Perfumes</h4>
+      <p class="price">R600</p>
+      <a href="https://share.google/nIDkek8Pzn0cpaH5X" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Khamrah Qahwa" data-price="600">Add to Cart</button>
+    </div>
+
+    <!-- Asad Bourbon -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Asad Bourbon – Lattafa Perfumes.png" alt="Asad Bourbon" class="perfume-img">
+      <h4>Asad Bourbon – Lattafa Perfumes</h4>
+      <p class="price">R600</p>
+      <a href="https://share.google/8TozRmRZ4KJgANNOM" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Asad Bourbon" data-price="600">Add to Cart</button>
+    </div>
+
+    <!-- Fakhar Lattafa Extrait -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Fakhar Lattafa Extrait – Lattafa Perfumes.webp" alt="Fakhar Lattafa Extrait" class="perfume-img">
+      <h4>Fakhar Lattafa Extrait – Lattafa Perfumes</h4>
+      <p class="price">R600</p>
+      <a href="https://share.google/sRDnyM4IwnDhNUgLj" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Fakhar Lattafa Extrait" data-price="600">Add to Cart</button>
+    </div>
+
+    <!-- Fakhar Lattafa Men -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Fakhar Lattafa Men – Lattafa Perfumes.webp" alt="Fakhar Lattafa Men" class="perfume-img">
+      <h4>Fakhar Lattafa Men – Lattafa Perfumes</h4>
+      <p class="price">R500</p>
+      <a href="https://share.google/9meKiFdpggWYXMcos" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Fakhar Lattafa Men" data-price="500">Add to Cart</button>
+    </div>
+
+    <!-- Ramz Lattafa Silver -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Ramz Lattafa Silver – Lattafa Perfumes.jpg" alt="Ramz Lattafa Silver" class="perfume-img">
+      <h4>Ramz Lattafa Silver – Lattafa Perfumes</h4>
+      <p class="price">R400</p>
+      <a href="https://share.google/FtDZAVGdThIHCYy7i" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Ramz Lattafa Silver" data-price="400">Add to Cart</button>
+    </div>
+
+    <!-- Ana Abiyedh Coral -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Ana Abiyedh Coral – Lattafa Perfumes.webp" alt="Ana Abiyedh Coral" class="perfume-img">
+      <h4>Ana Abiyedh Coral – Lattafa Perfumes</h4>
+      <p class="price">R400</p>
+      <a href="shopbybrandsections/lattafa/Ana Abiyedh Coral – Lattafa Perfumes.webp" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Ana Abiyedh Coral" data-price="400">Add to Cart</button>
+    </div>
+
+    <!-- Ana Abiyedh Scarlet -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Ana Abiyedh Scarlet – Lattafa Perfumes.jpg" alt="Ana Abiyedh Scarlet" class="perfume-img">
+      <h4>Ana Abiyedh Scarlet – Lattafa Perfumes</h4>
+      <p class="price">R400</p>
+      <a href="https://share.google/6ZVtTomMSd6knQX1w" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Ana Abiyedh Scarlet" data-price="400">Add to Cart</button>
+    </div>
+
+    <!-- Angham -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Angham – Lattafa Perfumes.webp" alt="Angham" class="perfume-img">
+      <h4>Angham – Lattafa Perfumes</h4>
+      <p class="price">R900 for women</p>
+      <a href="https://share.google/rbxy27JErqVtXgHrb" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Angham" data-price="900">Add to Cart</button>
+    </div>
+
+    <!-- Ameer Al Oudh - Intense -->
+    <div class="product-card">
+      <img src="shopbybrandsections/lattafa/Ameer Al Oudh – Intense – Lattafa Perfumes.jpg" alt="Ameer Al Oudh - Intense" class="perfume-img">
+      <h4>Ameer Al Oudh – Intense – Lattafa Perfumes</h4>
+      <p class="price">R500</p>
+      <a href="https://share.google/Hn6Capl9YCVYXeEXo" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Ameer Al Oudh Intense" data-price="500">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- FRAGRANCE WORLD -->
-  <section class="brand-section" id="fragrance-world">
-    <div class="brand-header">
-      <img src="brand icons/fragrance-world.webp" alt="Fragrance World Logo" class="brand-logo">
-      <h3>FRAGRANCE WORLD</h3>
-    </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/fragrance-world-product1.webp" alt="Fragrance World Product 1" class="perfume-img">
-        <h4>Fragrance World Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Fragrance World Product 1" data-price="450">Add to Cart</button>
-      </div>
-    </div>
-  </section>
+<section class="brand-section" id="fragrance-world">
+  <div class="brand-header">
+    <img src="brand icons/fragranceworld_logo.webp" alt="Fragrance World Logo" class="brand-logo">
+    <h3>FRAGRANCE WORLD</h3>
+  </div>
 
-  <!-- JANAN -->
-  <section class="brand-section" id="janan">
-    <div class="brand-header">
-      <img src="brand icons/JANAN.png" alt="Janan Logo" class="brand-logo">
-      <h3>JANAN</h3>
-    </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/janan-product1.webp" alt="Janan Product 1" class="perfume-img">
-        <h4>Janan Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Janan Product 1" data-price="400">Add to Cart</button>
-      </div>
-    </div>
-  </section>
+  <div class="brand-products grid">
 
-  <!-- MAISON ASRAR -->
-  <section class="brand-section" id="maison-asrar">
-    <div class="brand-header">
-      <img src="brand icons/maison-asrar-logo-9.png" alt="Maison Asrar Logo" class="brand-logo">
-      <h3>MAISON ASRAR</h3>
+    <!-- Liquid Brun -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Liquid Brun.png" class="perfume-img">
+      <h4>Liquid Brun</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R800</p>
+      <a href="https://share.google/LaTliKLseYWjHS1IN" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Liquid Brun" data-price="800">Add to Cart</button>
     </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/maison-asrar-product1.webp" alt="Maison Asrar Product 1" class="perfume-img">
-        <h4>Maison Asrar Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Maison Asrar Product 1" data-price="500">Add to Cart</button>
-      </div>
-    </div>
-  </section>
 
-  <!-- MILESTONE -->
-  <section class="brand-section" id="milestone">
-    <div class="brand-header">
-      <img src="brand icons/MILESTONE.webp" alt="Milestone Logo" class="brand-logo">
-      <h3>MILESTONE</h3>
+    <!-- Aether -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Aether.png" class="perfume-img">
+      <h4>Aether</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R800</p>
+      <a href="https://share.google/bKUt0pOtyZwqTz5kL" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Aether" data-price="800">Add to Cart</button>
     </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/milestone-product1.webp" alt="Milestone Product 1" class="perfume-img">
-        <h4>Milestone Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Milestone Product 1" data-price="470">Add to Cart</button>
-      </div>
-    </div>
-  </section>
 
-  <!-- EMPER -->
-  <section class="brand-section" id="emper">
-    <div class="brand-header">
-      <img src="brand icons/emper-300x300.png" alt="Emper Logo" class="brand-logo">
-      <h3>EMPER</h3>
+    <!-- Azzure Aoud -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Azzure Aoud.png" class="perfume-img">
+      <h4>Azzure Aoud</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R800</p>
+      <a href="https://share.google/AU4XThYc2niQx87hY" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Azzure Aoud" data-price="800">Add to Cart</button>
     </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/emper-product1.webp" alt="Emper Product 1" class="perfume-img">
-        <h4>Emper Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Emper Product 1" data-price="390">Add to Cart</button>
-      </div>
+
+    <!-- Tropical Kiss -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Tropical Kiss.webp" class="perfume-img">
+      <h4>Tropical Kiss</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R800</p>
+      <a href="httpsshare.google/KKmCsOCevLAtCRSqr" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Tropical Kiss" data-price="800">Add to Cart</button>
     </div>
-  </section>
+
+    <!-- Miraj Absolu -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Miraj Absolu.webp" class="perfume-img">
+      <h4>Miraj Absolu</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R800</p>
+      <a href="httpsshare.google/LIHs9cCv13r3BkPsf" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Miraj Absolu" data-price="800">Add to Cart</button>
+    </div>
+
+    <!-- Crème of Clouds -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Crème of Clouds.webp" class="perfume-img">
+      <h4>Crème of Clouds</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R400</p>
+      <a href="https://share.google/ygxa1UUBKttvVjiub" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Crème of Clouds" data-price="400">Add to Cart</button>
+    </div>
+
+    <!-- Carnal Desire -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Carnal Desire.webp" class="perfume-img">
+      <h4>Carnal Desire</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R1000</p>
+      <a href="https://share.google/MzDlO1Yi4sFRO9F2W" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Carnal Desire" data-price="1000">Add to Cart</button>
+    </div>
+
+    <!-- Eclair Affair -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Eclair Affair.avif" class="perfume-img">
+      <h4>Eclair Affair</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R900</p>
+      <a href="https://share.google/PW1Ajow4ekO6uHj8J" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Eclair Affair" data-price="900">Add to Cart</button>
+    </div>
+
+    <!-- Lumiere Elle -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Lumiere Elle.avif" class="perfume-img">
+      <h4>Lumiere Elle</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R500</p>
+      <a href="https://share.google/TdB65n7NcmSLN6nlA" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Lumiere Elle" data-price="500">Add to Cart</button>
+    </div>
+
+    <!-- Nectar Of Ecstasy -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Nectar of Ecstasy.webp" class="perfume-img">
+      <h4>Nectar Of Ecstasy</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R400</p>
+      <a href="https://share.google/3T0oHw7ZNgR6myBSJ" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Nectar Of Ecstasy" data-price="400">Add to Cart</button>
+    </div>
+
+    <!-- Royal Blend Nero -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Royal Blend Nero.webp" class="perfume-img">
+      <h4>Royal Blend Nero</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R800</p>
+      <a href="https://share.google/dPTZ1gN2JkqoDd4fB" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Royal Blend Nero" data-price="800">Add to Cart</button>
+    </div>
+
+    <!-- Berries Weekend Pink Edition -->
+    <div class="product-card">
+      <img src="shopbybrandsections/fragrance world/Berries Weekend Pink.webp" class="perfume-img">
+      <h4>Berries Weekend Pink Edition</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R400</p>
+      <a href="https://share.google/3uVH5LgSS4oGjqSKZ" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Berries Weekend Pink Edition" data-price="400">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+
+ <!-- JANAN -->
+<section class="brand-section" id="janan">
+  <div class="brand-header">
+    <img src="brand icons/JANAN.png" alt="JANAN Logo" class="brand-logo">
+    <h3>JANAN</h3>
+  </div>
+
+  <div class="brand-products grid">
+
+    <!-- JANAN SPORT -->
+    <div class="product-card">
+      <img src="shopbybrandsections/janan/JANAN SPORT.webp" alt="JANAN Sport" class="perfume-img">
+      <h4>JANAN SPORT – Inspired by Dior Sauvage EDT</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R549</p>
+      <a href="https://share.google/your-link-for-janan-sport" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="JANAN SPORT" data-price="549">Add to Cart</button>
+    </div>
+
+    <!-- JANAN OUD -->
+    <div class="product-card">
+      <img src="shopbybrandsections/janan/JANAN OUD.jpg" alt="JANAN Oud" class="perfume-img">
+      <h4>JANAN OUD – Inspired by LV Ombre Nomade</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R899</p>
+      <a href="https://share.google/your-link-for-janan-oud" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="JANAN OUD" data-price="899">Add to Cart</button>
+    </div>
+
+    <!-- JANAN PLATINUM -->
+    <div class="product-card">
+      <img src="shopbybrandsections/janan/JANAN PLATINUM.webp" alt="JANAN Platinum" class="perfume-img">
+      <h4>JANAN PLATINUM – Inspired by LV Imagination</h4>
+      <p>100ML / 200ML</p>
+      <p class="price">R999 (100ML) | R1499 (200ML)</p>
+      <a href="https://share.google/your-link-for-janan-platinum" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="JANAN PLATINUM" data-price="999">Add to Cart</button>
+    </div>
+
+    <!-- JANAN SPORT GIFT SET -->
+    <div class="product-card">
+      <img src="shopbybrandsections/janan/JANAN SPORT – Gift Set.jpg" alt="JANAN Gift Set" class="perfume-img">
+      <h4>JANAN SPORT – Gift Set</h4>
+      <p>Perfume + Body Spray + Lotion + Shower Gel</p>
+      <p class="price">R899</p>
+      <a href="https://share.google/your-link-for-janan-giftset" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="JANAN GIFT SET" data-price="899">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAISON ASRAR -->
+<section class="brand-section" id="maison-asrar">
+  <div class="brand-header">
+    <img src="brand icons/MAISON ASRAR.png" alt="Maison Asrar Logo" class="brand-logo">
+    <h3>MAISON ASRAR</h3>
+  </div>
+
+  <div class="brand-products grid">
+
+    <!-- VANILLA VOYAGE -->
+    <div class="product-card">
+      <img src="shopbybrandsections/maison asrar/VANILLA VOYAGE – MAISON ASRAR.jpg" alt="Vanilla Voyage" class="perfume-img">
+      <h4>VANILLA VOYAGE – MAISON ASRAR</h4>
+      <p>Inspired by Bianca Latte (Women) – EDP 100ML</p>
+      <p class="price">R899</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="VANILLA VOYAGE" data-price="899">Add to Cart</button>
+    </div>
+
+    <!-- VISION -->
+    <div class="product-card">
+      <img src="shopbybrandsections/maison asrar/VISION – MAISON ASRAR.webp" alt="Vision" class="perfume-img">
+      <h4>VISION – MAISON ASRAR</h4>
+      <p>Inspired by LV Pacific Chill (Men) – EDP 100ML</p>
+      <p class="price">R999</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="VISION" data-price="999">Add to Cart</button>
+    </div>
+
+    <!-- LILY -->
+    <div class="product-card">
+      <img src="shopbybrandsections/maison asrar/LILY – MAISON ASRAR.jpg" alt="Lily" class="perfume-img">
+      <h4>LILY – MAISON ASRAR</h4>
+      <p>Floral Fruity – EDP 100ML (Women)</p>
+      <p class="price">R899</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="LILY" data-price="899">Add to Cart</button>
+    </div>
+
+    <!-- BLOOM BLOOM -->
+    <div class="product-card">
+      <img src="shopbybrandsections/maison asrar/BLOOM BLOOM – MAISON.webp" alt="Bloom Bloom" class="perfume-img">
+      <h4>BLOOM BLOOM – MAISON ASRAR</h4>
+      <p>Floral Fruity – EDP 100ML (Women)</p>
+      <p class="price">R899</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="BLOOM BLOOM" data-price="899">Add to Cart</button>
+    </div>
+
+    <!-- MAJESTY -->
+    <div class="product-card">
+      <img src="shopbybrandsections/maison asrar/MAJESTY – MAISON ASRAR.jpg" alt="Majesty" class="perfume-img">
+      <h4>MAJESTY – MAISON ASRAR</h4>
+      <p>Inspired by Bvlgari Tygar (Men) – EDP 100ML</p>
+      <p class="price">R899</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="MAJESTY" data-price="899">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+
+ <!-- MILESTONE PERFUMES -->
+<section class="brand-section" id="milestone">
+  <div class="brand-header">
+    <img src="brand icons/MILESTONE.png" alt="Milestone Logo" class="brand-logo">
+    <h3>MILESTONE PERFUMES</h3>
+  </div>
+
+  <div class="brand-products grid">
+
+    <!-- Her Bravery Elixer -->
+    <div class="product-card">
+      <img src="shopbybrandsections/milestone/HER BRAVERY ELIXER – MILESTONE.png" alt="Her Bravery Elixer" class="perfume-img">
+      <h4>HER BRAVERY ELIXER – MILESTONE</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R300</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart"
+        data-name="HER BRAVERY ELIXER"
+        data-price="300">Add to Cart</button>
+    </div>
+
+    <!-- Narcisa For Her Amour -->
+    <div class="product-card">
+      <img src="shopbybrandsections/milestone/NARCISA FOR HER AMOUR – MILESTONE.jpg" alt="Narcisa For Her Amour" class="perfume-img">
+      <h4>NARCISA FOR HER AMOUR – MILESTONE</h4>
+      <p>Pour Femme – EDP 100ML</p>
+      <p class="price">R300</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart"
+        data-name="NARCISA FOR HER AMOUR"
+        data-price="300">Add to Cart</button>
+    </div>
+
+    <!-- Portrayal For Women -->
+    <div class="product-card">
+      <img src="shopbybrandsections/milestone/PORTRAYAL FOR WOMEN – MILESTONE.webp" alt="Portrayal For Women" class="perfume-img">
+      <h4>PORTRAYAL FOR WOMEN – MILESTONE</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R300</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart"
+        data-name="PORTRAYAL FOR WOMEN"
+        data-price="300">Add to Cart</button>
+    </div>
+
+    <!-- Shinning City -->
+    <div class="product-card">
+      <img src="shopbybrandsections/milestone/SHINNING CITY – MILESTONE.jpg" alt="Shinning City" class="perfume-img">
+      <h4>SHINNING CITY – MILESTONE</h4>
+      <p>EDP 100ML (Men)</p>
+      <p class="price">R449</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart"
+        data-name="SHINNING CITY"
+        data-price="449">Add to Cart</button>
+    </div>
+
+    <!-- Narcisa For Her Passion -->
+    <div class="product-card">
+      <img src="shopbybrandsections/milestone/NARCISA FOR HER PASSION – MILESTONE.jpg" alt="Narcisa For Her Passion" class="perfume-img">
+      <h4>NARCISA FOR HER PASSION – MILESTONE</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R300</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart"
+        data-name="NARCISA FOR HER PASSION"
+        data-price="300">Add to Cart</button>
+    </div>
+
+    <!-- Ocean Breeze -->
+    <div class="product-card">
+      <img src="shopbybrandsections/milestone/OCEAN BREEZE – MILESTONE.webp" alt="Ocean Breeze" class="perfume-img">
+      <h4>OCEAN BREEZE – MILESTONE</h4>
+      <p>EDP 100ML (Men)</p>
+      <p class="price">R449</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart"
+        data-name="OCEAN BREEZE"
+        data-price="449">Add to Cart</button>
+    </div>
+
+    <!-- Narcisa For Her Amber -->
+    <div class="product-card">
+      <img src="shopbybrandsections/milestone/NARCISA FOR HER AMBER – MILESTONE.jpg" alt="Narcisa For Her Amber" class="perfume-img">
+      <h4>NARCISA FOR HER AMBER – MILESTONE</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R300</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart"
+        data-name="NARCISA FOR HER AMBER"
+        data-price="300">Add to Cart</button>
+    </div>
+
+    <!-- TAXCO (Men) -->
+    <div class="product-card">
+      <img src="shopbybrandsections/milestone/TAXCO – MILESTONE.webp" alt="Taxco" class="perfume-img">
+      <h4>TAXCO – MILESTONE</h4>
+      <p>EDP 80ML (Men)</p>
+      <p class="price">R300</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart"
+        data-name="TAXCO"
+        data-price="300">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+
+ <!-- EMPER -->
+<section class="brand-section" id="emper">
+  <div class="brand-header">
+    <img src="brand icons/emper_logo.png" alt="Emper Logo" class="brand-logo">
+    <h3>EMPER</h3>
+  </div>
+
+  <div class="brand-products grid">
+
+    <!-- Arabia Explorer -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/Arabia Explorer.jpg" alt="Arabia Explorer" class="perfume-img">
+      <h4>Arabia Explorer</h4>
+      <p>100ML • Men</p>
+      <p class="price">R449</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Arabia Explorer" data-price="449">Add to Cart</button>
+    </div>
+
+    <!-- Unplugged Event -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/Unplugged Event.jpg" alt="Unplugged Event" class="perfume-img">
+      <h4>Unplugged Event</h4>
+      <p>80ML • Men</p>
+      <p class="price">R399</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Unplugged Event" data-price="399">Add to Cart</button>
+    </div>
+
+    <!-- Presidente -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/Presidente.jpg" alt="Presidente" class="perfume-img">
+      <h4>Presidente</h4>
+      <p>100ML • Men</p>
+      <p class="price">R449</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Presidente" data-price="449">Add to Cart</button>
+    </div>
+
+    <!-- Downtown Thunder -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/Downtown Thunder.jpg" alt="Downtown Thunder" class="perfume-img">
+      <h4>Downtown Thunder</h4>
+      <p>100ML • Men</p>
+      <p class="price">R399</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Downtown Thunder" data-price="399">Add to Cart</button>
+    </div>
+
+    <!-- Genius Event -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/Genius Event.jpg" alt="Genius Event" class="perfume-img">
+      <h4>Genius Event</h4>
+      <p>100ML • Men</p>
+      <p class="price">R399</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Genius Event" data-price="399">Add to Cart</button>
+    </div>
+
+    <!-- Tool Box -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/Tool Box.jpg" alt="Tool Box" class="perfume-img">
+      <h4>Tool Box</h4>
+      <p>100ML • Men</p>
+      <p class="price">R399</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Tool Box" data-price="399">Add to Cart</button>
+    </div>
+
+    <!-- Arabia Haya -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/Arabia Haya.jpg" alt="Arabia Haya" class="perfume-img">
+      <h4>Arabia Haya</h4>
+      <p>100ML • Women</p>
+      <p class="price">R449</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Arabia Haya" data-price="449">Add to Cart</button>
+    </div>
+
+    <!-- Arabia Emotion -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/Arabia Emotion.jpg" alt="Arabia Emotion" class="perfume-img">
+      <h4>Arabia Emotion</h4>
+      <p>100ML • Women</p>
+      <p class="price">R449</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Arabia Emotion" data-price="449">Add to Cart</button>
+    </div>
+
+    <!-- Arabia Haya Crush -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/Arabia Haya Crush.jpg" alt="Arabia Haya Crush" class="perfume-img">
+      <h4>Arabia Haya Crush</h4>
+      <p>100ML • Women</p>
+      <p class="price">R449</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Arabia Haya Crush" data-price="449">Add to Cart</button>
+    </div>
+
+    <!-- Arabia Madame -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/Arabia Madame.jpg" alt="Arabia Madame" class="perfume-img">
+      <h4>Arabia Madame</h4>
+      <p>100ML • Women</p>
+      <p class="price">R449</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Arabia Madame" data-price="449">Add to Cart</button>
+    </div>
+
+    <!-- So Genius -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/So Genius.jpg" alt="So Genius" class="perfume-img">
+      <h4>So Genius</h4>
+      <p>100ML • Women</p>
+      <p class="price">R399</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="So Genius" data-price="399">Add to Cart</button>
+    </div>
+
+    <!-- Lady Presidente -->
+    <div class="product-card">
+      <img src="shopbybrandsections/emper/Lady Presidente.jpg" alt="Lady Presidente" class="perfume-img">
+      <h4>Lady Presidente</h4>
+      <p>100ML • Women</p>
+      <p class="price">R349</p>
+      <a href="#" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Lady Presidente" data-price="349">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- KHADLAJ -->
   <section class="brand-section" id="khadlaj">
-    <div class="brand-header">
+   <!-- SHIYAAKA SHADOW - SPECIAL EDITION -->
+<section class="brand-section" id="shiyaaka-shadow">
+  <div class="brand-header">
       <img src="brand icons/KHADLAJ.webp" alt="Khadlaj Logo" class="brand-logo">
       <h3>KHADLAJ</h3>
     </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/khadlaj-product1.webp" alt="Khadlaj Product 1" class="perfume-img">
-        <h4>Khadlaj Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Khadlaj Product 1" data-price="420">Add to Cart</button>
-      </div>
+
+  <div class="brand-products grid">
+
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="shopbybrandsections/special/Shiyaaka-Shadow-Special-Edition.jpg" 
+           alt="Shiyaaka Shadow Special Edition" 
+           class="perfume-img">
+
+      <h4>Shiyaaka Shadow – Special Edition</h4>
+      <p>EDP • 100ML</p>
+
+      <p class="price">R799</p>
+
+      <a href="#" target="_blank" class="view-link">View Product</a>
+
+      <button class="add-to-cart" 
+              data-name="Shiyaaka Shadow – Special Edition" 
+              data-price="799">
+        Add to Cart
+      </button>
     </div>
-  </section>
+
+  </div>
+</section>
+
 
   <!-- PARIS CORNER -->
-  <section class="brand-section" id="paris-corner">
-    <div class="brand-header">
-      <img src="brand icons/PARIS CORNER.avif" alt="Paris Corner Logo" class="brand-logo">
-      <h3>PARIS CORNER</h3>
-    </div>
-    <div class="brand-products grid">
-      <div class="product-card">
-        <img src="products/paris-corner-product1.webp" alt="Paris Corner Product 1" class="perfume-img">
-        <h4>Paris Corner Product 1</h4>
-        <p>EDP 100ML</p>
-        <button class="add-to-cart" data-name="Paris Corner Product 1" data-price="450">Add to Cart</button>
-      </div>
-    </div>
-  </section>
+<section class="brand-section" id="paris-corner">
+  <div class="brand-header">
+    <img src="brand icons/PARIS CORNER.avif" alt="Paris Corner Logo" class="brand-logo">
+    <h3>PARIS CORNER</h3>
+  </div>
 
+  <div class="brand-products grid">
+    
+    <!-- MARSHMALLOW BLUSH -->
+    <div class="product-card">
+      <img src="didi/images/MARSHMALLOW_BLUSH-removebg-preview.png" alt="Marshmallow Blush" class="perfume-img">
+      <h4>MARSHMALLOW BLUSH – PARIS CORNER</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R500</p>
+      <a href="https://share.google/ACuHF2IsKzSJyZ3Gw" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="MARSHMALLOW BLUSH" data-price="500">Add to Cart</button>
+    </div>
+
+    <!-- TASKEEN -->
+    <div class="product-card">
+      <img src="didi/images/taskeen1.png" alt="Taskeen" class="perfume-img">
+      <h4>TASKEEN – PARIS CORNER</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R800</p>
+      <a href="https://share.google/EQiIfXbFveWJtrSwo" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="TASKEEN" data-price="800">Add to Cart</button>
+    </div>
+
+    <!-- TASKEEN CARAMEL CASCADE -->
+    <div class="product-card">
+      <img src="didi/images/TASKEENCARAMEL03-removebg-preview.png" alt="Taskeen Caramel Cascade" class="perfume-img">
+      <h4>TASKEEN CARAMEL CASCADE – PARIS CORNER</h4>
+      <p>EDP 100ML (Women)</p>
+      <p class="price">R500</p>
+      <a href="https://share.google/RfjywoxAS6vlX07v5" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="TASKEEN CARAMEL CASCADE" data-price="500">Add to Cart</button>
+    </div>
+
+    <!-- INTENSE WAYFARER -->
+    <div class="product-card">
+      <img src="didi/images/INTENSEWAYFARER02-removebg-preview (1).png" alt="Intense Wayfarer" class="perfume-img">
+      <h4>INTENSE WAYFARER – PARIS CORNER</h4>
+      <p>EDP 100ML</p>
+      <p class="price">R500</p>
+      <a href="https://share.google/hTAgFyzzqVP8WxpVR" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="INTENSE WAYFARER" data-price="500">Add to Cart</button>
+    </div>
+
+  </div>
 </section>
+
+<!-- AHMAD AL MAGHRIBI -->
+<section class="brand-section" id="ahmad-al-maghribi">
+  <div class="brand-header">
+    <img src="brand icons/ahmad_logo.webp" alt="Ahmad Al Maghribi Logo" class="brand-logo">
+    <h3>AHMAD AL MAGHRIBI</h3>
+  </div>
+
+  <div class="brand-products grid">
+
+    <!-- Kaaf -->
+    <div class="product-card">
+      <img src="shopbybrandsections/AHMAD AL MAGHRIBI/kaaf.png" alt="Kaaf" class="perfume-img">
+      <h4>Kaaf – 100ml</h4>
+      <p>EDP</p>
+      <p class="price">R749</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Kaaf – 100ml" data-price="749">Add to Cart</button>
+    </div>
+
+    <!-- Azure Royal -->
+    <div class="product-card">
+      <img src="shopbybrandsections/AHMAD AL MAGHRIBI/Azure Royal.webp" alt="Azure Royal" class="perfume-img">
+      <h4>Azure Royal – 100ml</h4>
+      <p>EDP</p>
+      <p class="price">R699</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Azure Royal – 100ml" data-price="699">Add to Cart</button>
+    </div>
+
+    <!-- Oud & Roses -->
+    <div class="product-card">
+      <img src="shopbybrandsections/AHMAD AL MAGHRIBI/OudandRoses.png" alt="Oud & Roses" class="perfume-img">
+      <h4>Oud & Roses – Unisex</h4>
+      <p>EDP</p>
+      <p class="price">R849</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Oud & Roses – Unisex" data-price="849">Add to Cart</button>
+    </div>
+
+    <!-- Ignite Oud -->
+    <div class="product-card">
+      <img src="shopbybrandsections/AHMAD AL MAGHRIBI/Ignite Oud.png" alt="Ignite Oud" class="perfume-img">
+      <h4>Ignite Oud – 100ml</h4>
+      <p>EDP</p>
+      <p class="price">R1099</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Ignite Oud – 100ml" data-price="1099">Add to Cart</button>
+    </div>
+
+    <!-- Bin Shaikh -->
+    <div class="product-card">
+      <img src="shopbybrandsections/AHMAD AL MAGHRIBI/Bin Shaikh.png" alt="Bin Shaikh" class="perfume-img">
+      <h4>Bin Shaikh</h4>
+      <p>EDP</p>
+      <p class="price">R1499</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Bin Shaikh" data-price="1499">Add to Cart</button>
+    </div>
+
+    <!-- Marj -->
+    <div class="product-card">
+      <img src="shopbybrandsections/AHMAD AL MAGHRIBI/Marj.png" alt="Marj" class="perfume-img">
+      <h4>Marj – 60ml</h4>
+      <p>EDP</p>
+      <p class="price">R999</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Marj – 60ml" data-price="999">Add to Cart</button>
+    </div>
+
+    <!-- Rose Noir -->
+    <div class="product-card">
+      <img src="shopbybrandsections/AHMAD AL MAGHRIBI/Rose-Noir.png" alt="Rose Noir" class="perfume-img">
+      <h4>Rose Noir – 75ml (Women)</h4>
+      <p>EDP</p>
+      <p class="price">R799</p>
+      <a href="#" target="_blank" class="view-link">View Product</a>
+      <button class="add-to-cart" data-name="Rose Noir – 75ml" data-price="799">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
 
 
 
@@ -414,6 +1392,11 @@ document.addEventListener('DOMContentLoaded', () => {
   closeMenu.addEventListener('click', () => mobileMenu.style.left = '-100%');
 });
 </script>
+
+
+
+<script src="cart.js"></script>
+
 
 </body>
 </html>

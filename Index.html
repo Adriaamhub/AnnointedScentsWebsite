@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AnnointedScents</title>
+  <meta name="description" content="AnnointedSCENTS – Premium Luxury Perfumes in South Africa.">
+  <meta name="keywords" content="Perfumes, Fragrances, Luxury, South Africa, RASASI, ARABIYAT, AFNAN">
+  <meta name="author" content="AnnointedSCENTS">
+
+  <title>AnnointedSCENTS</title>
+
+  <!-- Favicon & Icons -->
   <link rel="icon" type="image/png" href="Images/logo/1759151239466.png">
   <link rel="apple-touch-icon" href="Images/logo/1759151239466.png">
   <link rel="shortcut icon" href="Images/logo/1759151239466.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css">
-  
-</head>
-<body>
 
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-jQ0U+…(shortened)…" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
 
 <!-- Top Bar -->
 <div class="top-bar-bold">
@@ -32,86 +41,91 @@
 
 <!-- Navbar -->
 <header class="navbar">
-  <a href="index.html" class="logo">
-    <img src="Images/logo/1759151239466.png" alt="Logo">
-  </a>
+ <a href="index.html" class="logo">
+  <img src="Images/logo/1759151239466.png" alt="Logo">
+</a>
 
-  <!-- Desktop Menu -->
+<h1 class="logo-title">
+  Anointed Scents
+  <span class="underline"></span>
+</h1>
+
+
+ <!-- Desktop Menu -->
   <ul class="desktop-menu">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
 
-    <!-- Shop By Brand Dropdown -->
-    <li class="dropdown">
-      <a href="shop-by-brand.html">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
-      <ul class="dropdown-menu-brands">
-        <li><a href="shop-by-brand.html#">RASASI</a></li>
-        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
-        <li><a href="shop-by-brand.html">AFNAN</a></li>
-        <li><a href="shop-by-brand.html">ARMAF</a></li>
-        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
-        <li><a href="shop-by-brand.html">LATTAFA</a></li>
-        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
-        <li><a href="shop-by-brand.html">JANAN</a></li>
-        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
-        <li><a href="shop-by-brand.html">MILESTONE</a></li>
-        <li><a href="shop-by-brand.html">EMPER</a></li>
-        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
-        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
+<li class="dropdown">
+  <a href="#">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
+  <ul class="dropdown-menu-brands">
+    <li><a href="shop-by-brand.html#rasasi">RASASI</a></li>
+    <li><a href="shop-by-brand.html#arabiyat">ARABIYAT</a></li>
+    <li><a href="shop-by-brand.html#afnan">AFNAN</a></li>
+    <li><a href="shop-by-brand.html#armaf">ARMAF</a></li>
+    <li><a href="shop-by-brand.html#french-avenue">FRENCH AVENUE</a></li>
+    <li><a href="shop-by-brand.html#lattafa">LATTAFA</a></li>
+    <li><a href="shop-by-brand.html#fragrance-world">FRAGRANCE WORLD</a></li>
+    <li><a href="shop-by-brand.html#janan">JANAN</a></li>
+    <li><a href="shop-by-brand.html#maison-asrar">MAISON ASRAR</a></li>
+    <li><a href="shop-by-brand.html#milestone">MILESTONE</a></li>
+    <li><a href="shop-by-brand.html#emper">EMPER</a></li>
+    <li><a href="shop-by-brand.html#khadlaj">KHADLAJ</a></li>
+    <li><a href="shop-by-brand.html#paris-corner">PARIS CORNER</a></li>
+    <li><a href="shop-by-brand.html#ahmad-maghribi">AHMAD AL MAGHRIBI</a></li>
+  </ul>
+</li>
+
+<li><a href="new-launch.html">New Launch</a></li>
+    <li><a href="social-hub.html">Social Hub</a></li>
+    <li><a href="contact-us.html">Contact Us</a></li>
+     <a href="cart.html" id="cartLink">
+    <i class="fa-solid fa-cart-shopping"></i> Cart 
+    <span id="cart-count" class="cart-count">0</span>
+  </a>
+</li>
+
+  </ul>
+
+     
+  
       </ul>
     </li>
+ <!-- Account Dropdown (Mobile) -->
+    <li class="login-dropdown-mobile">
+      <a href="#" class="navbar-login">
+        <i class="bi bi-person-circle"></i> Account <i class="bi bi-caret-down-fill"></i>
+      </a>
+      <ul class="dropdown-menu-mobile">
+  
+      </ul>
+  </ul>
+
+  
+
+ <!-- Hamburger -->
+
+<div class="menu-icon" id="menuToggle">☰</div>
+
+
+<!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobileMenu">
+  <div class="close-btn" id="closeMenu">✕</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+<li><a href="shop-by-brand.html">shop by brand</a></li>
+ 
+
 
     <li><a href="new-launch.html">New Launch</a></li>
     <li><a href="social-hub.html">Social Hub</a></li>
     <li><a href="contact-us.html">Contact Us</a></li>
     <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+
+   
+
   </ul>
+</nav>
 
-  <!-- Hamburger -->
-  <div class="menu-icon" id="menuToggle">☰</div>
-
-  <!-- Mobile Menu -->
-  <nav class="mobile-menu" id="mobileMenu">
-    <div class="close-btn" id="closeMenu">✕</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-
-      <!-- Mobile Shop By Brand Dropdown -->
-     <li class="dropdown brand-mobile">
-  <a href="#">Shop By Brand <i class="bi bi-caret-down-fill"></i></a>
-  <ul class="dropdown-menu-brands">
-           <li><a href="shop-by-brand.html">RASASI</a></li>
-        <li><a href="shop-by-brand.html">ARABIYAT</a></li>
-        <li><a href="shop-by-brand.html">AFNAN</a></li>
-        <li><a href="shop-by-brand.html">ARMAF</a></li>
-        <li><a href="shop-by-brand.html">FRENCH AVENUE</a></li>
-        <li><a href="shop-by-brand.html">LATTAFA</a></li>
-        <li><a href="shop-by-brand.html">FRAGRANCE WORLD</a></li>
-        <li><a href="shop-by-brand.html">JANAN</a></li>
-        <li><a href="shop-by-brand.html">MAISON ASRAR</a></li>
-        <li><a href="shop-by-brand.html">MILESTONE</a></li>
-        <li><a href="shop-by-brand.html">EMPER</a></li>
-        <li><a href="shop-by-brand.html">KHADLAJ</a></li>
-        <li><a href="shop-by-brand.html">PARIS CORNER</a></li>
-        </ul>
-      </li>
-
-      <li><a href="new-launch.html">New Launch</a></li>
-      <li><a href="social-hub.html">Social Hub</a></li>
-      <li><a href="contact-us.html">Contact Us</a></li>
-      <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
-    </ul>
-  </nav>
-
-  <!-- Account Dropdown -->
-  <div class="login-dropdown">
-    <button class="btn navbar-login">
-      <i class="bi bi-person-circle"></i> Account <i class="bi bi-caret-down-fill"></i>
-    </button>
-    <div class="dropdown-menu">
-      <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
-      <a href="orders.html"><i class="bi bi-bag-check"></i> Orders</a>
-      <a href="logout.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
-    </div>
   </div>
 </header>
 
@@ -281,72 +295,76 @@
 <section class="brands-section">
   <h2 class="brands-title">MY BRANDS</h2>
 
- 
   <div class="brands-carousel" id="brandsCarousel">
 
-    <a href="#" class="brand-card">
-      <img src="brand icons/rasasi.webp" alt="Brand 1 Logo">
+    <a href="shop-by-brand.html#rasasi" class="brand-card">
+      <img src="brand icons/rasasi.webp" alt="RASASI Logo">
       <p>RASASI</p>
     </a>
 
-    <a href="#" class="brand-card">
-      <img src="brand icons/Arabiyat_LOGO_1080_BY_1080_480x480.webp" alt="Brand 2 Logo">
+    <a href="shop-by-brand.html#arabiyat" class="brand-card">
+      <img src="brand icons/Arabiyat_LOGO_1080_BY_1080_480x480.webp" alt="ARABIYAT Logo">
       <p>ARABIYAT</p>
     </a>
 
-    <a href="#" class="brand-card">
-      <img src="afnan_logo.webp" alt="Brand 3 Logo">
+    <a href="shop-by-brand.html#afnan" class="brand-card">
+      <img src="afnan_logo.webp" alt="AFNAN Logo">
       <p>AFNAN</p>
     </a>
 
-    <a href="#" class="brand-card">
-      <img src="brand icons/armaf_logo.webp" alt="Brand 4 Logo">
+    <a href="shop-by-brand.html#armaf" class="brand-card">
+      <img src="brand icons/armaf_logo.webp" alt="ARMAF Logo">
       <p>ARMAF</p>
     </a>
 
-    <a href="#" class="brand-card">
-      <img src="brand icons/french-avenue-logo-modified.png" alt="Brand 5 Logo">
+    <a href="shop-by-brand.html#french-avenue" class="brand-card">
+      <img src="brand icons/french-avenue-logo-modified.png" alt="FRENCH AVENUE Logo">
       <p>FRENCH AVENUE</p>
     </a>
 
-    <a href="#" class="brand-card">
-      <img src="brand icons/LATTAFA.png" alt="Brand 6 Logo">
+    <a href="shop-by-brand.html#lattafa" class="brand-card">
+      <img src="brand icons/LATTAFA.png" alt="LATTAFA Logo">
       <p>LATTAFA</p>
     </a>
 
-     <a href="#" class="brand-card">
-      <img src="brand icons/fragrance-world.webp" alt="Brand 6 Logo">
+    <a href="shop-by-brand.html#fragrance-world" class="brand-card">
+      <img src="brand icons/fragrance-world.webp" alt="FRAGRANCE WORLD Logo">
       <p>FRAGRANCE WORLD</p>
     </a>
 
-    <a href="#" class="brand-card">
-      <img src="brand icons/JANAN.png" alt="Brand 6 Logo">
+    <a href="shop-by-brand.html#janan" class="brand-card">
+      <img src="brand icons/JANAN.png" alt="JANAN Logo">
       <p>JANAN</p>
     </a>
 
-     <a href="#" class="brand-card">
-      <img src="brand icons/maison-asrar-logo-9.png" alt="Brand 6 Logo">
+    <a href="shop-by-brand.html#maison-asrar" class="brand-card">
+      <img src="brand icons/maison-asrar-logo-9.png" alt="MAISON ASRAR Logo">
       <p>MAISON ASRAR</p>
     </a>
 
-     <a href="#" class="brand-card">
-      <img src="brand icons/MILESTONE.webp" alt="Brand 6 Logo">
+    <a href="shop-by-brand.html#milestone" class="brand-card">
+      <img src="brand icons/MILESTONE.webp" alt="MILESTONE Logo">
       <p>MILESTONE</p>
     </a>
 
-     <a href="#" class="brand-card">
-      <img src="brand icons/emper-300x300.png" alt="Brand 6 Logo">
+    <a href="shop-by-brand.html#emper" class="brand-card">
+      <img src="brand icons/emper-300x300.png" alt="EMPER Logo">
       <p>EMPER</p>
     </a>
 
-    <a href="#" class="brand-card">
-      <img src="brand icons/KHADLAJ.webp" alt="Brand 6 Logo">
+    <a href="shop-by-brand.html#khadlaj" class="brand-card">
+      <img src="brand icons/KHADLAJ.webp" alt="KHADLAJ Logo">
       <p>KHADLAJ</p>
     </a>
 
-    <a href="#" class="brand-card">
-      <img src="brand icons/PARIS CORNER.avif" alt="Brand 6 Logo">
+    <a href="shop-by-brand.html#paris-corner" class="brand-card">
+      <img src="brand icons/PARIS CORNER.avif" alt="PARIS CORNER Logo">
       <p>PARIS CORNER</p>
+    </a>
+
+    <a href="shop-by-brand.html#ahmad-al-maghribi" class="brand-card">
+      <img src="brand icons/AHMAD AL MAGHRIBI.png" alt="AHMAD AL MAGHRIBI Logo">
+      <p>AHMAD AL MAGHRIBI</p>
     </a>
 
   </div>
@@ -354,94 +372,47 @@
 
 
 
-<section class="top-selling-fragrances">
-  <h2 class="section-title">TOP SELLING & TRENDING FRAGRANCES</h2>
+<section class="top-selling-fragrances new-launch-section" style="padding:60px 20px; text-align:center; background:white; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.1); margin:40px 0;">
 
-  <!-- Tabs -->
-  <div class="tabs">
-    <input type="radio" name="category" id="tab-women" checked>
-    <label for="tab-women" class="tab-btn">Women</label>
+  <!-- Section Title -->
+  <h3 class="section-title" style="font-size:2.5rem; color:#c2730d; margin-bottom:30px; font-weight:700;">
+    NEW LAUNCH
+  </h3>
 
-    <input type="radio" name="category" id="tab-men">
-    <label for="tab-men" class="tab-btn">Men</label>
+  <!-- Products Grid -->
+  <div class="new-launch-products" style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px;">
+    
+    <div class="product-card" style="background:#fff; padding:15px; border-radius:12px; width:220px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:transform 0.3s;">
+      <img src="new launch/Arabiyat Prestige Marwa.webp" alt="Arabiyat Prestige Marwa" style="width:100%; border-radius:10px; margin-bottom:10px;">
+      <p class="product-name" style="font-weight:600; color:#222; margin:10px 0 5px;">Arabiyat Prestige Marwa</p>
+      <p class="product-price" style="color:#d4a017; font-weight:700;">R1,090</p>
+    </div>
 
-    <input type="radio" name="category" id="tab-unisex">
-    <label for="tab-unisex" class="tab-btn">Unisex</label>
+    <div class="product-card" style="background:#fff; padding:15px; border-radius:12px; width:220px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:transform 0.3s;">
+      <img src="new launch/Arabiyat Prestige - Al Noor.webp" alt="Arabiyat Prestige Al Noor" style="width:100%; border-radius:10px; margin-bottom:10px;">
+      <p class="product-name" style="font-weight:600; color:#222; margin:10px 0 5px;">Arabiyat Prestige Al Noor</p>
+      <p class="product-price" style="color:#d4a017; font-weight:700;">R1,090</p>
+    </div>
+
+    <div class="product-card" style="background:#fff; padding:15px; border-radius:12px; width:220px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:transform 0.3s;">
+      <img src="new launch/Rayhaan Terra.webp" alt="Rayhaan Terra" style="width:100%; border-radius:10px; margin-bottom:10px;">
+      <p class="product-name" style="font-weight:600; color:#222; margin:10px 0 5px;">Rayhaan Terra</p>
+      <p class="product-price" style="color:#d4a017; font-weight:700;">R899</p>
+    </div>
+
   </div>
 
-  <!-- Grids -->
-  <div class="fragrance-grid-wrapper">
-    <!-- Women -->
-    <div class="fragrance-grid category-women">
-      <div class="fragrance-card">
-        <div class="ribbon">R649</div>
-        <img src="top selling/Badee Al Oud Noble Blush.jpg" alt="Badee Al Oud Noble Blush" class="fragrance-img">
-        <p class="fragrance-type">WOMEN FRAGRANCES</p>
-        <p class="fragrance-inspired"><span>Badee Al Oud Noble Blush</span></p>
-        <a href="cart.html?product=Badee Al Oud Noble Blush" class="add-to-cart-btn">Add to Cart</a>
-      </div>
-      <div class="fragrance-card">
-        <div class="ribbon">R599</div>
-        <img src="top selling/lattafa-petra-100ml-ltaf-btra-7854482.webp" alt="Lattafa Petra" class="fragrance-img">
-        <p class="fragrance-type">WOMEN FRAGRANCES</p>
-        <p class="fragrance-inspired"><span>Lattafa Petra</span></p>
-        <a href="cart.html?product=Lattafa Petra" class="add-to-cart-btn">Add to Cart</a>
-      </div>
-      <div class="fragrance-card">
-        <div class="ribbon">R699</div>
-        <img src="top selling/arabiyat prestige 2.jpg" alt="Arabiyat Prestige Bahiya" class="fragrance-img">
-        <p class="fragrance-type">WOMEN FRAGRANCES</p>
-        <p class="fragrance-inspired"><span>Arabiyat Prestige Bahiya</span></p>
-        <a href="cart.html?product=Arabiyat Prestige Bahiya" class="add-to-cart-btn">Add to Cart</a>
-      </div>
-    </div>
-
-    <!-- Men -->
-    <div class="fragrance-grid category-men">
-      <div class="fragrance-card">
-        <div class="ribbon">R1499</div>
-        <img src="top selling/janan platinium.jpg" alt="Janan Platinum" class="fragrance-img">
-        <p class="fragrance-type">MEN FRAGRANCES</p>
-        <p class="fragrance-inspired"><span>Janan Platinum</span></p>
-        <a href="cart.html?product=Janan Platinum" class="add-to-cart-btn">Add to Cart</a>
-      </div>
-      <div class="fragrance-card">
-        <div class="ribbon">R1199</div>
-        <img src="top selling/afnan supremacy collectors edition.jpg" alt="Afnan Supremacy Collector's Edition" class="fragrance-img">
-        <p class="fragrance-type">MEN FRAGRANCES</p>
-        <p class="fragrance-inspired"><span>Afnan Supremacy Collector's Edition</span></p>
-        <a href="cart.html?product=Afnan Supremacy Collector's Edition" class="add-to-cart-btn">Add to Cart</a>
-      </div>
-      <div class="fragrance-card">
-        <div class="ribbon">R799</div>
-        <img src="top selling/khdlaj island dreams.jpg" alt="Khadlaj Island Dreams" class="fragrance-img">
-        <p class="fragrance-type">MEN FRAGRANCES</p>
-        <p class="fragrance-inspired"><span>Khadlaj Island Dreams</span></p>
-        <a href="cart.html?product=Khadlaj Island Dreams" class="add-to-cart-btn">Add to Cart</a>
-      </div>
-    </div>
-
-    <!-- Unisex -->
-    <div class="fragrance-grid category-unisex">
-      <div class="fragrance-card">
-        <div class="ribbon">R799</div>
-        <img src="top selling/champ de rose.jpg" alt="Champ De Rose" class="fragrance-img">
-        <p class="fragrance-type">UNISEX FRAGRANCES</p>
-        <p class="fragrance-inspired"><span>Champ De Rose</span></p>
-        <a href="cart.html?product=Champ De Rose" class="add-to-cart-btn">Add to Cart</a>
-      </div>
-      <div class="fragrance-card">
-        <div class="ribbon">R899</div>
-        <img src="top selling/jacques yves imaginari.jpg" alt="Jacques Yves Imaginari" class="fragrance-img">
-        <p class="fragrance-type">UNISEX FRAGRANCES</p>
-        <p class="fragrance-inspired"><span>Jacques Yves Imaginari</span></p>
-        <a href="cart.html?product=Jacques Yves Imaginari" class="add-to-cart-btn">Add to Cart</a>
-      </div>
-    </div>
-    
+  <!-- View All Button -->
+  <div class="view-new-launch-btn-wrapper" style="text-align:center; margin-top:40px;">
+    <a href="new-launch.html" class="btn gold view-new-launch" style="background:#c2730d; color:#fff; font-weight:700; padding:12px 30px; border-radius:50px; text-decoration:none; transition:all 0.3s;">
+      View New Launches
+    </a>
   </div>
 
 </section>
+
+
+
 
 <section class="coming-soon">
   <div class="coming-soon-inner">
@@ -453,11 +424,11 @@
         <span></span>
       </div>
 
-      <h2 class="glam-title">Glamour Collection</h2>
+      <h2 class="glam-title">Coming Soon</h2>
       <div class="glam-line"></div>
 
       <p>Coming Soon — Stay tuned for exclusive luxury drops!</p>
-      <a href="shop-by-brand.html" class="btn gold">Learn More</a>
+      <a href="coming-soon.html" class="btn gold">Learn More</a>
     </div>
  <div class="glam-circles">
   <span class="spark"></span>
@@ -483,6 +454,8 @@
 
 
 
+
+
 <section class="testimonials">
   <h2 class="testi-title">
     <span>Real</span>
@@ -494,7 +467,7 @@
   <div class="testi-grid">
     <div class="testi-card">
       <h3 class="testi-name">Siya Mabena</h3>
-      <p class="testi-text">Very happy with the service & prompt delivery.</p>
+      <p class="testi-text"> Very happy with the service & prompt delivery. Everything arrived in perfect condition, the scent is amazing, and I’ll definitely be ordering again soon.</p>
     </div>
 
     
@@ -615,7 +588,10 @@
 
     <div class="payment-text">
       <h2>FLEXIBLE PAYMENT</h2>
-      <p>Shop your favourite luxury fragrances now and pay later with our flexible installment options.</p>
+     <p class="flex-pay-text">
+  Shop your favourite luxury fragrances now and pay later with our flexible installment options.
+</p>
+
 
       <a href="learn-more.html" class="btn learn-more">Learn More</a>
     </div>
@@ -644,7 +620,6 @@
         <li><a href="shop-by-brand.html">Shop by Brand</a></li>
         <li><a href="new-launch.html">New Launch</a></li>
         <li><a href="social-hub.html">Social Hub</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact-us.html">Contact Us</a></li>
       </ul>
     </div>
@@ -684,32 +659,24 @@
     <p>&copy; 2025 AnnointedSCENTS. All Rights Reserved.</p>
   </div>
 </footer>
+<script src="cart.js"></script>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".slide");
 
+  /* ===== SLIDER / CAROUSEL ===== */
+  const slides = document.querySelectorAll(".slide");
   const prevBtn = document.querySelector(".prev");
   const nextBtn = document.querySelector(".next");
-
   let index = 0;
   let autoSlide;
 
-
-  
-
-  /* ===== SHOW SLIDE FUNCTION ===== */
   function showSlide(i) {
     slides.forEach(s => s.classList.remove("active"));
-  
-
     slides[i].classList.add("active");
-  
-
-    document.querySelector(".slider-wrapper").style.transform =
-      `translateX(-${i * 100}%)`;
+    document.querySelector(".slider-wrapper").style.transform = `translateX(-${i * 100}%)`;
   }
 
-  /* ===== NEXT & PREV ===== */
   function nextSlide() {
     index = (index + 1) % slides.length;
     showSlide(index);
@@ -720,11 +687,9 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(index);
   }
 
-  nextBtn.addEventListener("click", () => { nextSlide(); resetAutoSlide(); });
-  prevBtn.addEventListener("click", () => { prevSlideFunc(); resetAutoSlide(); });
+  nextBtn?.addEventListener("click", () => { nextSlide(); resetAutoSlide(); });
+  prevBtn?.addEventListener("click", () => { prevSlideFunc(); resetAutoSlide(); });
 
-
-  /* ===== AUTO SLIDE ===== */
   function startAutoSlide() {
     autoSlide = setInterval(nextSlide, 4000);
   }
@@ -736,49 +701,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startAutoSlide();
 
-  /* ===== TOUCH SWIPE (MOBILE) ===== */
+  // Mobile swipe
+  const sliderContainer = document.querySelector(".slider-container");
   let startX = 0;
-
-  document.querySelector(".slider-container").addEventListener("touchstart", e => {
-    startX = e.touches[0].clientX;
-  });
-
-  document.querySelector(".slider-container").addEventListener("touchend", e => {
+  sliderContainer?.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+  sliderContainer?.addEventListener("touchend", e => {
     let endX = e.changedTouches[0].clientX;
-
-    if (startX - endX > 50) { // swipe left
-      nextSlide();
-    } else if (endX - startX > 50) { // swipe right
-      prevSlideFunc();
-    }
-
+    if(startX - endX > 50) nextSlide();
+    else if(endX - startX > 50) prevSlideFunc();
     resetAutoSlide();
   });
-});
-</script>
-<script src="app.js"></script>
 
-<script>
-  // Mobile Menu Toggle
+
+  /* ===== MOBILE MENU ===== */
   const menuToggle = document.getElementById("menuToggle");
-  const mobileMenu = document.getElementById("mobileMenu");
   const closeMenu = document.getElementById("closeMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-  menuToggle.addEventListener("click", () => {
-    mobileMenu.style.left = "0";
+  menuToggle?.addEventListener("click", () => mobileMenu.classList.add("active"));
+  closeMenu?.addEventListener("click", () => mobileMenu.classList.remove("active"));
+
+  // Mobile dropdown toggle
+  document.querySelectorAll(".mobile-menu .dropdown > a").forEach(item => {
+    item.addEventListener("click", e => {
+      e.preventDefault();
+      const parent = item.parentElement;
+      document.querySelectorAll(".mobile-menu .dropdown").forEach(drop => {
+        if(drop !== parent) drop.classList.remove("open");
+      });
+      parent.classList.toggle("open");
+
+      const submenu = parent.querySelector(".dropdown-menu-brands");
+      if(submenu) submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    });
   });
 
-  closeMenu.addEventListener("click", () => {
-    mobileMenu.style.left = "-100%";
-  });
 
-  // Currency Change Function (Placeholder)
-  function changeCurrency(value) {
-    alert("Currency changed to: " + value);
-  }
-
-  // Sticky Navbar & Topbar Shadow on Scroll
-  window.addEventListener("scroll", function() {
+  /* ===== STICKY NAVBAR & TOPBAR ===== */
+  window.addEventListener("scroll", () => {
     const navbar = document.querySelector(".navbar");
     const topbar = document.querySelector(".top-bar-bold");
     if(window.scrollY > 50) {
@@ -791,65 +751,46 @@ document.addEventListener("DOMContentLoaded", () => {
       topbar.style.boxShadow = "none";
     }
   });
-</script>
-<script>
-// Mobile menu toggle
-document.getElementById("menuToggle").onclick = () => {
-  document.getElementById("mobileMenu").classList.add("active");
-};
 
-document.getElementById("closeMenu").onclick = () => {
-  document.getElementById("mobileMenu").classList.remove("active");
-};
 
-// Mobile dropdown logic
-document.querySelectorAll(".mobile-menu .dropdown > a").forEach(item => {
-  item.addEventListener("click", (e) => {
-    e.preventDefault();
+  /* ===== CART LOGIC ===== */
+  function updateCartCount() {
+    const count = JSON.parse(localStorage.getItem("cart"))?.length || 0;
+    const cartCount = document.getElementById("cart-count");
+    const cartCountMobile = document.getElementById("cart-count-mobile");
+    if(cartCount) cartCount.textContent = count;
+    if(cartCountMobile) cartCountMobile.textContent = count;
+  }
 
-    let parent = item.parentElement;
-
-    // Close all others first
-    document.querySelectorAll(".mobile-menu .dropdown").forEach(drop => {
-      if (drop !== parent) drop.classList.remove("open");
+  document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+      const name = button.dataset.name;
+      const price = parseFloat(button.dataset.price);
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const existing = cart.find(item => item.name === name);
+      if(existing) existing.quantity += 1;
+      else cart.push({ name, price, quantity: 1 });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+      showToast(`${name} added to cart`);
     });
-
-    // Toggle current
-    parent.classList.toggle("open");
   });
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
 
-  // MOBILE MENU TOGGLE
-  const menuToggle = document.getElementById("menuToggle");
-  const closeMenu = document.getElementById("closeMenu");
-  const mobileMenu = document.getElementById("mobileMenu");
+  // Toast notification
+  function showToast(text) {
+    const toast = document.createElement("div");
+    toast.className = "site-toast";
+    toast.textContent = text;
+    document.body.appendChild(toast);
+    setTimeout(()=> toast.classList.add("visible"), 10);
+    setTimeout(()=> { toast.classList.remove("visible"); setTimeout(()=> toast.remove(),300); }, 2600);
+  }
 
-  menuToggle.onclick = () => mobileMenu.classList.add("active");
-  closeMenu.onclick = () => mobileMenu.classList.remove("active");
-
-  // MOBILE BRAND DROPDOWN
-  const mobileDropdown = document.querySelector(".mobile-menu .dropdown > a");
-  const mobileBrandMenu = document.querySelector(".mobile-menu .dropdown-menu-brands");
-  const mobileDropdownItem = document.querySelector(".mobile-menu .dropdown");
-
-  mobileDropdown.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    mobileDropdownItem.classList.toggle("open");
-
-    if (mobileBrandMenu.style.display === "block") {
-      mobileBrandMenu.style.display = "none";
-    } else {
-      mobileBrandMenu.style.display = "block";
-    }
-  });
+  // Initialize cart count
+  updateCartCount();
 
 });
 </script>
 
-<script src="counter.js" defer></script>
 </body>
 </html>
