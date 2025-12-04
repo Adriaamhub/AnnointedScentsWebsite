@@ -5158,71 +5158,8 @@ p {
     display: block;
   }
 }
-/* ================================
-   TOPBAR (Pink Background)
-================================ */
-.topbar {
-  width: 100%;
-  background: black; /* Pink */
-  color: #fff;
-  padding: 8px 20px;
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2000; /* Above navbar */
-}
 
-.topbar p {
-  margin: 0;
-  font-weight: 500;
-  letter-spacing: .5px;
-}
 
-.topbar-right a {
-  color: #fff;
-  margin-left: 18px;
-  font-size: 14px;
-  text-decoration: none;
-  transition: .3s ease;
-}
-
-.topbar-right a:hover {
-  color: #ffe6f2; /* soft light pink hover */
-}
-
-/* Prevent Navbar from sliding under Topbar */
-.navbar {
-  margin-top: 42px !important; /* exact height of topbar */
-}
-
-/* ================================
-   MOBILE RESPONSIVE
-================================ */
-@media (max-width: 600px) {
-  .topbar {
-    flex-direction: column;
-    text-align: center;
-    padding: 10px 12px;
-  }
-
-  .topbar-right {
-    margin-top: 4px;
-  }
-
-  .topbar-right a {
-    margin: 0 10px;
-    font-size: 13px;
-  }
-
-  .navbar {
-    margin-top: 60px !important; /* topbar grows taller on mobile */
-  }
-}
 .cart-section {
   padding: 100px 20px 50px; /* padding top for fixed navbar */
   background: #f9f9f9;
@@ -5454,21 +5391,7 @@ body {
 .mobile-menu .dropdown.active .dropdown-menu-brands {
   display: block;
 }
-.top-bar-bold {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-  color: #fff;
-  padding: 8px 20px;
-  font-size: 14px;
-}
 
-.top-bar-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
 
 .top-account-btn {
   color: #fff;
