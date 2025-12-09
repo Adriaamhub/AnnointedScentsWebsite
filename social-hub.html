@@ -197,7 +197,7 @@
     <!-- Video 1 -->
     <div class="video-box">
       <iframe id="video1" width="300" height="170" src="https://www.youtube.com/embed/Eg5o4lnbeIU?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <
+      
       <p>RASASI — Explore the essence</p>
     </div>
 
@@ -241,12 +241,14 @@
   <div class="footer-bottom">
     <p>&copy; 2025 AnnointedSCENTS. All Rights Reserved.</p>
   </div>
-</footer>
 
+  
 <!-- WhatsApp Button -->
 <a href="https://wa.me/0782559811" class="whatsapp-float" target="_blank">
   <i class="bi bi-whatsapp"></i>
 </a>
+</footer>
+
 
 <script src="script.js"></script>
 <script src="https://www.youtube.com/iframe_api"></script>
@@ -254,7 +256,7 @@
   let players = {};
 
   function onYouTubeIframeAPIReady() {
-    ['video1','video2','video3'].forEach(id => {
+    ['video1'].forEach(id => {
       players[id] = new YT.Player(id);
     });
   }

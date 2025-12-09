@@ -414,4 +414,203 @@ document.addEventListener("click", function(e) {
   }
 });
 
+// Mobile Menu Toggle
+document.getElementById("menuToggle").onclick = function () {
+  document.getElementById("mobileMenu").style.left = "0";
+};
+
+document.getElementById("closeMenu").onclick = function () {
+  document.getElementById("mobileMenu").style.left = "-100%";
+};
+
+// Mobile dropdown inside mobile menu
+document.querySelector(".mobile-toggle").addEventListener("click", function (e) {
+  e.preventDefault();
+  document.querySelector(".mobile-dropdown-menu").classList.toggle("open");
+});
+
+const mobileToggle = document.querySelector(".mobile-toggle");
+const mobileDropdown = document.querySelector(".mobile-dropdown-menu");
+
+mobileToggle.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  mobileDropdown.classList.toggle("active");
+  mobileToggle.classList.toggle("active");
+});
+// Tabs
+const loginTab = document.getElementById("loginTab");
+const registerTab = document.getElementById("registerTab");
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+
+// Switch to Register
+document.getElementById("goRegister").onclick = () => {
+  loginForm.classList.remove("active");
+  registerForm.classList.add("active");
+  loginTab.classList.remove("active");
+  registerTab.classList.add("active");
+};
+
+// Switch to Login
+document.getElementById("goLogin").onclick = () => {
+  registerForm.classList.remove("active");
+  loginForm.classList.add("active");
+  registerTab.classList.remove("active");
+  loginTab.classList.add("active");
+};
+
+// Manual tab clicking
+loginTab.onclick = () => {
+  loginForm.classList.add("active");
+  registerForm.classList.remove("active");
+  loginTab.classList.add("active");
+  registerTab.classList.remove("active");
+};
+
+registerTab.onclick = () => {
+  registerForm.classList.add("active");
+  loginForm.classList.remove("active");
+  registerTab.classList.add("active");
+  loginTab.classList.remove("active");
+};
+
+// Show / hide password
+document.querySelectorAll(".toggle-pass").forEach(icon => {
+  icon.addEventListener("click", () => {
+    const target = document.getElementById(icon.dataset.target);
+    target.type = target.type === "password" ? "text" : "password";
+    icon.classList.toggle("fa-eye-slash");
+  });
+});
+const slides = document.querySelectorAll(".bg-slideshow img");
+let current = 0;
+
+setInterval(() => {
+  slides[current].classList.remove("active");
+  current = (current + 1) % slides.length;
+  slides[current].classList.add("active");
+}, 5000); // change every 5 seconds
+// TAB SWITCHING
+const loginTab = document.getElementById("loginTab");
+const registerTab = document.getElementById("registerTab");
+
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+
+loginTab.addEventListener("click", () => {
+  loginTab.classList.add("active");
+  registerTab.classList.remove("active");
+
+  loginForm.classList.add("active");
+  registerForm.classList.remove("active");
+});
+
+registerTab.addEventListener("click", () => {
+  registerTab.classList.add("active");
+  loginTab.classList.remove("active");
+
+  registerForm.classList.add("active");
+  loginForm.classList.remove("active");
+});
+
+// TEXT SWITCH LINKS
+document.getElementById("goRegister").onclick = () => registerTab.click();
+document.getElementById("goLogin").onclick = () => loginTab.click();
+
+// PASSWORD SHOW/HIDE
+document.querySelectorAll(".toggle-pass").forEach(icon => {
+  icon.addEventListener("click", () => {
+    const input = document.getElementById(icon.dataset.target);
+
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("fa-eye");
+      icon.classList.add("fa-eye-slash");
+    } else {
+      input.type = "password";
+      icon.classList.remove("fa-eye-slash");
+      icon.classList.add("fa-eye");
+    }
+  });
+});
+// GET ELEMENTS
+const loginTab = document.getElementById("loginTab");
+const registerTab = document.getElementById("registerTab");
+
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+
+// SWITCH TO LOGIN
+function showLogin() {
+  loginTab.classList.add("active");
+  registerTab.classList.remove("active");
+
+  loginForm.classList.add("active");
+  registerForm.classList.remove("active");
+}
+
+// SWITCH TO REGISTER
+function showRegister() {
+  registerTab.classList.add("active");
+  loginTab.classList.remove("active");
+
+  registerForm.classList.add("active");
+  loginForm.classList.remove("active");
+}
+
+// TAB BUTTONS CLICK
+loginTab.addEventListener("click", showLogin);
+registerTab.addEventListener("click", showRegister);
+
+// TEXT LINKS CLICK
+document.getElementById("goRegister").addEventListener("click", showRegister);
+document.getElementById("goLogin").addEventListener("click", showLogin);
+
+// PASSWORD SHOW/HIDE
+document.querySelectorAll(".toggle-pass").forEach(icon => {
+  icon.addEventListener("click", () => {
+    const input = document.getElementById(icon.dataset.target);
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("fa-eye");
+      icon.classList.add("fa-eye-slash");
+    } else {
+      input.type = "password";
+      icon.classList.remove("fa-eye-slash");
+      icon.classList.add("fa-eye");
+    }
+  });
+});
+
+
+// Select all menu items
+const menuItems = document.querySelectorAll('.mobile-dropdown-menu li');
+
+// Intersection Observer options
+const observerOptions = {
+  root: document.querySelector('.mobile-dropdown-scroll'), // Scroll container
+  rootMargin: '0px',
+  threshold: 0.1 // Trigger when 10% visible
+};
+
+// Callback for observer
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible'); // Add class to trigger drop-in
+      // Optional: unobserve after animation for performance
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+// Create observer
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+// Observe each menu item
+menuItems.forEach(item => observer.observe(item));
+
+
+
 

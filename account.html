@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account – Anointed Scents</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<section class="account-container">
+
+  <div class="account-card">
+
+    <!-- TABS -->
+    <div class="tab-buttons">
+      <button id="loginTab" class="active">Login</button>
+      <button id="registerTab">Register</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm" class="form active">
+      <h2>Welcome Back</h2>
+      <p class="text-small">Login to continue shopping</p>
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Password</label>
+      <div class="password-field">
+        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        <i class="fa-solid fa-eye toggle-pass" data-target="loginPassword"></i>
+      </div>
+
+      <button type="submit" class="btn-auth">Login</button>
+
+      <p class="switch-text">Don't have an account? 
+        <span id="goRegister">Create one</span>
+      </p>
+    </form>
+
+    <!-- REGISTER FORM -->
+    <form id="registerForm" class="form">
+      <h2>Create an Account</h2>
+      <p class="text-small">Start your fragrance journey</p>
+
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required>
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Password</label>
+      <div class="password-field">
+        <input type="password" id="regPassword" placeholder="Create a password" required>
+        <i class="fa-solid fa-eye toggle-pass" data-target="regPassword"></i>
+      </div>
+
+      <button type="submit" class="btn-auth">Register</button>
+
+      <p class="switch-text">Already have an account? 
+        <span id="goLogin">Login</span>
+      </p>
+    </form>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>

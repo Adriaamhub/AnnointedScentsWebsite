@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track Order – Anointed Scents</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  
+ 
+</head>
+
+<body>
+
+<!-- TRACK ORDER SECTION -->
+<section class="track-container">
+  <h2>Track Your Order</h2>
+  <p>Enter your order number to check delivery status.</p>
+
+  <input type="text" id="orderId" class="track-input" placeholder="Enter Order ID" required>
+  <input type="text" id="orderEmail" class="track-input" placeholder="Email / Phone Number" required>
+
+  <button class="track-btn" onclick="trackOrder()">Check Status</button>
+
+  <!-- Status Box -->
+  <div id="statusBox" class="status-box">
+    <h3 style="color:#c2730d; margin-bottom:10px;">Order Status</h3>
+
+    <div class="status-step"><i class="fa-solid fa-circle-check"></i> Order Placed</div>
+    <div class="status-step"><i class="fa-solid fa-box"></i> Processing</div>
+    <div class="status-step"><i class="fa-solid fa-truck-moving"></i> Shipped</div>
+    <div class="status-step"><i class="fa-solid fa-truck"></i> Out for Delivery</div>
+    <div class="status-step"><i class="fa-solid fa-house"></i> Delivered</div>
+
+  </div>
+</section>
+
+<script>
+  function trackOrder() {
+    let id = document.getElementById("orderId").value.trim();
+    let email = document.getElementById("orderEmail").value.trim();
+    let box = document.getElementById("statusBox");
+
+    if (id === "" || email === "") {
+      alert("Please enter your Order ID and Email/Phone.");
+      return;
+    }
+
+    // SHOW STATUS (You can replace this with real backend later)
+    box.style.display = "block";
+  }
+</script>
+
+<?php include 'footer.html'; ?>
+
+</body>
+</html>
