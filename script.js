@@ -612,5 +612,7 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 menuItems.forEach(item => observer.observe(item));
 
 
-
+window.addEventListener("load", () => {
+  document.querySelector(".p10-preloader").classList.add("hide-preloader");
+});
 
