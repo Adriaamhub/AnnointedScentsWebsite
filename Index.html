@@ -25,9 +25,9 @@
 <body>
 
 
-
 <!-- Navbar -->
 <header class="navbar">
+  
   <a href="index.html" class="logo">
     <img src="icons/ChatGPT Image Dec 9, 2025, 09_40_24 AM.png" alt="Logo">
   </a>
@@ -140,11 +140,6 @@
 </header>
 
 
-
- 
-
-
-
 <!-- Hero Section -->
 <section class="hero">
   <div class="slide active" style="background-image:url('hero section images/MOMENTO.jpeg')">
@@ -230,7 +225,7 @@
 
   <div class="col right">
     <div class="right-inner">
-      <img src="hero1.png" alt="Men's fragrance bottles" class="product" />
+      <img src="split/9 pm5.jpg" alt="Men's fragrance bottles" class="product" />
       <div class="right-text">
    <div class="line kicker">Most Popular</div>
 
@@ -306,6 +301,7 @@
 
   </div>
 </section>
+
 
 <!-- MY BRANDS SECTION (UPGRADED FULL VERSION) -->
 <section class="brands-section">
@@ -395,43 +391,64 @@
 
 
 
-<section class="top-selling-fragrances new-launch-section" style="padding:30px 20px; text-align:center; background:white; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.1); margin:40px 0;">
+<section class="new-launch-section">
+  <h2 class="section-title">NEW LAUNCH</h2>
 
-  <!-- Section Title -->
-  <h3 class="section-title" style="font-size:2.5rem; color:#c2730d; margin-bottom:30px; font-weight:700;">
-    NEW LAUNCH
-  </h3>
+  <div class="carousel-wrapper">
+    <div class="new-launch-carousel" id="newLaunchCarousel">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="new launch/Arabiyat Prestige Marwa.webp" alt="Arabiyat Prestige Marwa">
+        </div>
+        <div class="product-info">
+          <p class="product-name">Arabiyat Prestige Marwa</p>
+          <p class="product-price">R1,090</p>
+        </div>
+      </div>
 
-  <!-- Products Grid -->
-  <div class="new-launch-products" style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px;">
-    
-    <div class="product-card" style="background:#fff; padding:15px; border-radius:12px; width:220px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:transform 0.3s;">
-      <img src="new launch/Arabiyat Prestige Marwa.webp" alt="Arabiyat Prestige Marwa" style="width:100%; border-radius:10px; margin-bottom:10px;">
-      <p class="product-name" style="font-weight:600; color:#222; margin:10px 0 5px;">Arabiyat Prestige Marwa</p>
-      <p class="product-price" style="color:#d4a017; font-weight:700;">R1,090</p>
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="new launch/Arabiyat Prestige - Al Noor.webp" alt="Arabiyat Prestige Al Noor">
+        </div>
+        <div class="product-info">
+          <p class="product-name">Arabiyat Prestige Al Noor</p>
+          <p class="product-price">R1,090</p>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="new launch/Rayhaan Terra.webp" alt="Rayhaan Terra">
+        </div>
+        <div class="product-info">
+          <p class="product-name">Rayhaan Terra</p>
+          <p class="product-price">R899</p>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="new launch/Arabiyat Prestige - Al Noor_.jpg" alt="Example Product 4">
+        </div>
+        <div class="product-info">
+          <p class="product-name">Arabiyat Prestige - Al Noor_</p>
+          <p class="product-price">R1,150</p>
+        </div>
+      </div>
     </div>
 
-    <div class="product-card" style="background:#fff; padding:15px; border-radius:12px; width:220px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:transform 0.3s;">
-      <img src="new launch/Arabiyat Prestige - Al Noor.webp" alt="Arabiyat Prestige Al Noor" style="width:100%; border-radius:10px; margin-bottom:10px;">
-      <p class="product-name" style="font-weight:600; color:#222; margin:10px 0 5px;">Arabiyat Prestige Al Noor</p>
-      <p class="product-price" style="color:#d4a017; font-weight:700;">R1,090</p>
-    </div>
-
-    <div class="product-card" style="background:#fff; padding:15px; border-radius:12px; width:220px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:transform 0.3s;">
-      <img src="new launch/Rayhaan Terra.webp" alt="Rayhaan Terra" style="width:100%; border-radius:10px; margin-bottom:10px;">
-      <p class="product-name" style="font-weight:600; color:#222; margin:10px 0 5px;">Rayhaan Terra</p>
-      <p class="product-price" style="color:#d4a017; font-weight:700;">R899</p>
-    </div>
-
+    <!-- Arrows -->
+    <div class="carousel-arrow prev" onclick="prevSlide()">&#10094;</div>
+    <div class="carousel-arrow next" onclick="nextSlide()">&#10095;</div>
   </div>
 
-  <!-- View All Button -->
-  <div class="view-new-launch-btn-wrapper" style="text-align:center; margin-top:40px;">
-    <a href="new-launch.html" class="btn gold view-new-launch" style="background:#c2730d; color:#fff; font-weight:700; padding:12px 30px; border-radius:50px; text-decoration:none; transition:all 0.3s;">
-      View New Launches
-    </a>
+  <div class="view-new-launch-btn-wrapper">
+    <a href="new-launch.html" class="btn view-new-launch">View All New Launches</a>
   </div>
-
 </section>
 
 
@@ -542,6 +559,12 @@
 </section>
 
 <section class="milestone-section">
+  <div class="magic-line pink" style="top: 10%; left: -20%; animation-duration: 12s;"></div>
+<div class="magic-line white" style="top: 40%; left: 10%; animation-duration: 14s;"></div>
+<div class="magic-line pink" style="top: 70%; left: -30%; animation-duration: 10s;"></div>
+<div class="magic-line white" style="top: 20%; left: 80%; animation-duration: 16s;"></div>
+<div class="magic-line pink" style="top: 50%; left: 60%; animation-duration: 11s;"></div>
+
   <div class="milestone-overlay"></div>
 
   <div class="milestone-content">
@@ -551,7 +574,7 @@
     <div class="milestone-grid">
 
       <div class="milestone-box">
-        <h3 class="counter" data-target="10">2</h3>
+        <h3 class="counter" data-target="10">4</h3>
 
         <p>Years of Experience</p>
       </div>
@@ -580,27 +603,29 @@
 
 <!-- ==============================
        THE ESSENCE OF ELEGANCE
-  ============================== -->
+================================= -->
 <section class="essence-section">
+  
   <div class="essence-overlay"></div>
+
   <div class="essence-content">
-   <h2 class="essence-title premium-heading">THE ESSENCE OF ELEGANCE</h2>
-    <p>Discover fragrances that speak the language of luxury — timeless, bold, and unforgettable.</p>
-   
+    <h2 class="essence-title premium-heading">THE ESSENCE OF ELEGANCE</h2>
+    <p>
+      Discover fragrances that speak the language of luxury — timeless, bold, and unforgettable.
+    </p>
   </div>
 
-  
   <div class="gold-underline"></div>
 
- <div class="essence-text">
-  <p>
-    Discover the true essence of elegance with our premium collection of luxurious fragrances. 
-    Each scent is carefully crafted to embody sophistication, confidence, and timeless beauty. 
-    
-  </p>
-</div>
+  <div class="essence-text">
+    <p>
+      Discover the true essence of elegance with our premium collection of luxurious fragrances.
+      Each scent is carefully crafted to embody sophistication, confidence, and timeless beauty.
+    </p>
+  </div>
 
 </section>
+
 
 <section class="payment-section">
   <div class="payment-container">

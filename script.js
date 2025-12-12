@@ -615,4 +615,92 @@ menuItems.forEach(item => observer.observe(item));
 window.addEventListener("load", () => {
   document.querySelector(".p10-preloader").classList.add("hide-preloader");
 });
+const carousel = document.getElementById('newLaunchCarousel');
+let index = 0;
+
+function updateCarousel() {
+  const cardWidth = carousel.querySelector('.product-card').offsetWidth + 25; // include gap
+  carousel.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+function nextSlide() {
+  if (index < carousel.children.length - 1) index++;
+  else index = 0;
+  updateCarousel();
+}
+
+function prevSlide() {
+  if (index > 0) index--;
+  else index = carousel.children.length - 1;
+  updateCarousel();
+}
+
+// Optional: auto-slide
+setInterval(nextSlide, 4000);
+
+  // Animate counters when in viewport
+  const counters = document.querySelectorAll('.counter');
+
+  const options = {
+    root: null,
+    threshold: 0.5, // trigger when 50% visible
+  };
+
+  const startCounter = (entry) => {
+    const counter = entry.target;
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const increment = target / 200; // adjust speed
+
+    const updateCount = () => {
+      count += increment;
+      if (count < target) {
+        counter.textContent = Math.ceil(count);
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.textContent = target;
+      }
+    };
+    updateCount();
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCounter(entry);
+        observer.unobserve(entry.target); // animate only once
+      }
+    });
+  }, options);
+
+  counters.forEach(counter => observer.observe(counter));
+const carousel = document.querySelector('.new-launch-carousel');
+const nextBtn = document.querySelector('.carousel-arrow.next');
+const prevBtn = document.querySelector('.carousel-arrow.prev');
+
+const cardWidth = document.querySelector('.product-card').offsetWidth + 25; // card width + gap
+let scrollPosition = 0;
+
+// Next button
+nextBtn.addEventListener('click', () => {
+  const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+  scrollPosition += cardWidth;
+  if (scrollPosition > maxScroll) scrollPosition = 0; // loop back to start
+  carousel.scrollTo({
+    left: scrollPosition,
+    behavior: 'smooth'
+  });
+});
+
+// Previous button
+prevBtn.addEventListener('click', () => {
+  const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+  scrollPosition -= cardWidth;
+  if (scrollPosition < 0) scrollPosition = maxScroll; // loop to end
+  carousel.scrollTo({
+    left: scrollPosition,
+    behavior: 'smooth'
+  });
+});
+
 
